@@ -121,8 +121,8 @@ Functions</h2></td></tr>
 <tr class="memitem:aeee02a7cab8bb3a7a5475ecb2354796a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jouer_8c.html#aeee02a7cab8bb3a7a5475ecb2354796a">attaque</a> (<a class="el" href="joueurs_8h.html#af9b80b32df724c709b18bba024d55866">joueur_t</a> *j, <a class="el" href="structmonstre.html">monstre_t</a> *m, int target, int BonusDamage)</td></tr>
 <tr class="memdesc:aeee02a7cab8bb3a7a5475ecb2354796a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui permet d'attaquer un monstre.  <br /></td></tr>
 <tr class="separator:aeee02a7cab8bb3a7a5475ecb2354796a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0705362ae02f3513065e6ee85268e2da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jouer_8c.html#a0705362ae02f3513065e6ee85268e2da">inCombat</a> (<a class="el" href="_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a> *window, SDL_Renderer *renderer, <a class="el" href="joueurs_8h.html#af9b80b32df724c709b18bba024d55866">joueur_t</a> *j, <a class="el" href="structmonstre.html">monstre_t</a> *m)</td></tr>
-<tr class="memdesc:a0705362ae02f3513065e6ee85268e2da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combat entre le joueur et le monstre.  <br /></td></tr>
+<tr class="memitem:a0705362ae02f3513065e6ee85268e2da"><td class="memItemLeft" align="right" valign="top"><a id="a0705362ae02f3513065e6ee85268e2da" name="a0705362ae02f3513065e6ee85268e2da"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>inCombat</b> (<a class="el" href="_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a> *window, SDL_Renderer *renderer, <a class="el" href="joueurs_8h.html#af9b80b32df724c709b18bba024d55866">joueur_t</a> *j, <a class="el" href="structmonstre.html">monstre_t</a> *m)</td></tr>
 <tr class="separator:a0705362ae02f3513065e6ee85268e2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affd24f2bf542cfae5862466520018ea3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jouer_8c.html#affd24f2bf542cfae5862466520018ea3">SpawnAllElements</a> (<a class="el" href="_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a> *window, SDL_Renderer *renderer, <a class="el" href="struct_s_d_l___texture_map.html">SDL_TextureMap_t</a> *MonstreTextureListe, <a class="el" href="struct_s_d_l___texture_map.html">SDL_TextureMap_t</a> *ItemTextureListe, <a class="el" href="structitem_map_list.html">itemMapList_t</a> *<a class="el" href="structitem_map_list.html">itemMapList</a>, <a class="el" href="structliste_mst.html">listeMst_t</a> *monstre_list)</td></tr>
 <tr class="memdesc:affd24f2bf542cfae5862466520018ea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fais Spawn tous les éléments de la map.  <br /></td></tr>
@@ -254,58 +254,6 @@ Functions</h2></td></tr>
     <tr><td class="paramname">y</td><td></td></tr>
     <tr><td class="paramname">w</td><td></td></tr>
     <tr><td class="paramname">h</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
-
-</div>
-</div>
-<a id="a0705362ae02f3513065e6ee85268e2da" name="a0705362ae02f3513065e6ee85268e2da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0705362ae02f3513065e6ee85268e2da">&#9670;&#160;</a></span>inCombat()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int inCombat </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SDL_Renderer *&#160;</td>
-          <td class="paramname"><em>renderer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="joueurs_8h.html#af9b80b32df724c709b18bba024d55866">joueur_t</a> *&#160;</td>
-          <td class="paramname"><em>j</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structmonstre.html">monstre_t</a> *&#160;</td>
-          <td class="paramname"><em>m</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Combat entre le joueur et le monstre. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">window</td><td></td></tr>
-    <tr><td class="paramname">renderer</td><td></td></tr>
-    <tr><td class="paramname">j</td><td></td></tr>
-    <tr><td class="paramname">m</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -513,6 +461,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>int 0 si tout s'est bien passé, 1 sinon </dd></dl>
 
 </div>
 </div>

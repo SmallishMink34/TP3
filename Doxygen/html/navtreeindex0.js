@@ -17,7 +17,7 @@ var NAVTREEINDEX0 =
 "_display_8h.html#af16b2a90cd594dcded65fbd11c7a6e7d":[3,0,1,0,12],
 "_display_8h.html#af26c884dc592b6954cd1a76287f92afc":[3,0,1,0,3],
 "_display_8h_source.html":[3,0,1,0],
-"_joueur_01en_01position_01_072_00_011_08_01avec_01100_01points_01de_01vie_0cn-example.html":[4,0],
+"_joueur_01en_01position_01_072_00_011_08_01avec_01100_01points_01de_01vie_0cn-example.html":[4,1],
 "_monstre_8h.html":[3,0,5,0],
 "_monstre_8h.html#a20a1702b94e7ca1dc2d7b0b82a05d8da":[3,0,5,0,6],
 "_monstre_8h.html#a31b495efd71735a6df45542e85de6958":[3,0,5,0,5],
@@ -27,6 +27,7 @@ var NAVTREEINDEX0 =
 "_monstre_8h.html#ab97f6f53e359e71656a3c826bc567f63":[3,0,5,0,3],
 "_monstre_8h.html#ac983ed2a10d134fb8db90344e2d97112":[3,0,5,0,8],
 "_monstre_8h_source.html":[3,0,5,0],
+"_return-example.html":[4,0],
 "_s_d_l_8h.html":[3,0,6,0,3],
 "_s_d_l_8h.html#a04dc570990c697eed95681216801710d":[3,0,6,0,3,8],
 "_s_d_l_8h.html#a14e9091982e09097985e10e3ca65debb":[3,0,6,0,3,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaacd473484a07dfdc628c4a02fbf9f83c9":[3,0,6,0,15,65,16],
 "_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaad56f8934fe24ee4c0cd9329e3c57c0c2":[3,0,6,0,15,65,52],
 "_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaad9238862d7aeaebff88be6453ee0fbab":[3,0,6,0,15,65,47],
-"_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaadb3154654baf003910e75d74b507a82b":[3,0,6,0,15,65,51],
-"_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaadefb8866b9d28be21c2c33c35cc66c4b":[3,0,6,0,15,65,13]
+"_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaadb3154654baf003910e75d74b507a82b":[3,0,6,0,15,65,51]
 };

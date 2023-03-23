@@ -55,14 +55,13 @@ var searchData=
   ['img_5fsavejpg_5frw_52',['IMG_SaveJPG_RW',['../_s_d_l__image_8h.html#ae319e6660d7d42fa1885ab3ea38c72c7',1,'SDL_image.h']]],
   ['img_5fsavepng_53',['IMG_SavePNG',['../_s_d_l__image_8h.html#a4570b11898b9350e5478d3b4394c5d70',1,'SDL_image.h']]],
   ['img_5fsavepng_5frw_54',['IMG_SavePNG_RW',['../_s_d_l__image_8h.html#a7cf088e13df693a3dcff2d1d563cf4c0',1,'SDL_image.h']]],
-  ['incombat_55',['inCombat',['../jouer_8c.html#a0705362ae02f3513065e6ee85268e2da',1,'jouer.c']]],
-  ['initcaseinv_56',['initCaseInv',['../item_8h.html#a2ee56e2dd41231221efeb1c0f7c8e182',1,'item.c']]],
-  ['initinventory_57',['initInventory',['../item_8h.html#ae5343abd007bb602d0c3b3edcad8c3bb',1,'item.c']]],
-  ['inititem_58',['initItem',['../item_8h.html#a79c68db5e3d92473da8cab75b6895634',1,'item.c']]],
-  ['inititemmaplist_59',['initItemMapList',['../item_8h.html#ab3a449d35896169af4b3ae41c0f47bdc',1,'item.c']]],
-  ['initsprite_60',['initSprite',['../sprite_8h.html#a743d225bc9c6901c15dd6c0ccdf8f916',1,'sprite.c']]],
-  ['int_61',['int',['../struct_s_d_l___r_wops.html#a1eaac7a271585ada805ca27aaf39e3cd',1,'SDL_RWops']]],
-  ['itemaddtoinv_62',['ItemAddToInv',['../item_8h.html#a8dc97f12517b489e28ae469e7d3c0b46',1,'item.c']]],
-  ['itemcheckcase_63',['itemCheckCase',['../item_8h.html#a79cc0c21dcda947471276abdad7d2b03',1,'item.c']]],
-  ['itemremovefrominv_64',['ItemRemoveFromInv',['../item_8h.html#a0026e0868620ff131956b0a184f52864',1,'item.c']]]
+  ['initcaseinv_55',['initCaseInv',['../item_8h.html#a2ee56e2dd41231221efeb1c0f7c8e182',1,'item.c']]],
+  ['initinventory_56',['initInventory',['../item_8h.html#ae5343abd007bb602d0c3b3edcad8c3bb',1,'item.c']]],
+  ['inititem_57',['initItem',['../item_8h.html#a79c68db5e3d92473da8cab75b6895634',1,'item.c']]],
+  ['inititemmaplist_58',['initItemMapList',['../item_8h.html#ab3a449d35896169af4b3ae41c0f47bdc',1,'item.c']]],
+  ['initsprite_59',['initSprite',['../sprite_8h.html#a743d225bc9c6901c15dd6c0ccdf8f916',1,'sprite.c']]],
+  ['int_60',['int',['../struct_s_d_l___r_wops.html#a1eaac7a271585ada805ca27aaf39e3cd',1,'SDL_RWops']]],
+  ['itemaddtoinv_61',['ItemAddToInv',['../item_8h.html#a8dc97f12517b489e28ae469e7d3c0b46',1,'item.c']]],
+  ['itemcheckcase_62',['itemCheckCase',['../item_8h.html#a79cc0c21dcda947471276abdad7d2b03',1,'item.c']]],
+  ['itemremovefrominv_63',['ItemRemoveFromInv',['../item_8h.html#a0026e0868620ff131956b0a184f52864',1,'item.c']]]
 ];

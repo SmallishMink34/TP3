@@ -25,8 +25,9 @@ int \mbox{\hyperlink{jouer_8c_aa81802d271e42d407b7c1513d71ca07b}{between\+Coords
 \begin{DoxyCompactList}\small\item\em Renvoie 1 si le joueur est dans la zone de clic. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{jouer_8c_aeee02a7cab8bb3a7a5475ecb2354796a}{attaque}} (\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$j, \mbox{\hyperlink{structmonstre}{monstre\+\_\+t}} $\ast$m, int target, int Bonus\+Damage)
 \begin{DoxyCompactList}\small\item\em Fonction qui permet d\textquotesingle{}attaquer un monstre. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{jouer_8c_a0705362ae02f3513065e6ee85268e2da}{in\+Combat}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$window, SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$j, \mbox{\hyperlink{structmonstre}{monstre\+\_\+t}} $\ast$m)
-\begin{DoxyCompactList}\small\item\em Combat entre le joueur et le monstre. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{jouer_8c_a0705362ae02f3513065e6ee85268e2da}\label{jouer_8c_a0705362ae02f3513065e6ee85268e2da}} 
+int {\bfseries in\+Combat} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$window, SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$j, \mbox{\hyperlink{structmonstre}{monstre\+\_\+t}} $\ast$m)
+\item 
 void \mbox{\hyperlink{jouer_8c_affd24f2bf542cfae5862466520018ea3}{Spawn\+All\+Elements}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$window, SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\+\_\+\+Texture\+Map\+\_\+t}} $\ast$Monstre\+Texture\+Liste, \mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\+\_\+\+Texture\+Map\+\_\+t}} $\ast$Item\+Texture\+Liste, \mbox{\hyperlink{structitem_map_list}{item\+Map\+List\+\_\+t}} $\ast$\mbox{\hyperlink{structitem_map_list}{item\+Map\+List}}, \mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$monstre\+\_\+list)
 \begin{DoxyCompactList}\small\item\em Fais Spawn tous les éléments de la map. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{jouer_8c_a0747136cb650a2a2c87359839e18afa9}{jouer}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$window, SDL\+\_\+\+Renderer $\ast$renderer)
@@ -100,30 +101,6 @@ Renvoie 1 si le joueur est dans la zone de clic.
 {\em w} & \\
 \hline
 {\em h} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-int 
-\end{DoxyReturn}
-\mbox{\Hypertarget{jouer_8c_a0705362ae02f3513065e6ee85268e2da}\label{jouer_8c_a0705362ae02f3513065e6ee85268e2da}} 
-\index{jouer.c@{jouer.c}!inCombat@{inCombat}}
-\index{inCombat@{inCombat}!jouer.c@{jouer.c}}
-\doxysubsubsection{\texorpdfstring{inCombat()}{inCombat()}}
-{\footnotesize\ttfamily int in\+Combat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$}]{window,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$}]{j,  }\item[{\mbox{\hyperlink{structmonstre}{monstre\+\_\+t}} $\ast$}]{m }\end{DoxyParamCaption})}
-
-
-
-Combat entre le joueur et le monstre. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em window} & \\
-\hline
-{\em renderer} & \\
-\hline
-{\em j} & \\
-\hline
-{\em m} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -220,3 +197,6 @@ Fais Spawn tous les éléments de la map.
 {\em monstre\+\_\+list} & \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 si tout s\textquotesingle{}est bien passé, 1 sinon 
+\end{DoxyReturn}

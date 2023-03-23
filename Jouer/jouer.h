@@ -56,7 +56,9 @@ int betweenCoords(int mousex, int mousey, int x, int y, int w, int h);
  * \param renderer 
  * \param j 
  * \param m 
+ * 
  * \return int 
+ * \example Return 1 si le joueur est vivant, 0 si il exit via la croix, 2 si il est mort
  */
 int inCombat(SDL_Window *window, SDL_Renderer *renderer, joueur_t*j, monstre_t *m);
 
@@ -76,8 +78,10 @@ int jouer(SDL_Window * window, SDL_Renderer * renderer);
  * \param ItemTextureListe 
  * \param itemMapList 
  * \param monstre_list 
+ * 
+ * \return int 0 si tout s'est bien passé, 1 sinon
  */
-void SpawnAllElements(SDL_Window *window, SDL_Renderer *renderer, SDL_TextureMap_t *MonstreTextureListe, SDL_TextureMap_t *ItemTextureListe, itemMapList_t * itemMapList, listeMst_t * monstre_list);
+int SpawnAllElements(SDL_Window *window, SDL_Renderer *renderer, SDL_TextureMap_t *MonstreTextureListe, SDL_TextureMap_t *ItemTextureListe, itemMapList_t * itemMapList, listeMst_t * monstre_list);
 
 /**
  * \brief Affiche le menu

@@ -309,7 +309,8 @@ int inCombat(SDL_Window *window, SDL_Renderer *renderer, joueur_t*j, monstre_t *
         SDL_Quit();
         return 0;
     }else{
-        
+        printf("%d", j->life);
+        if (j->life <= 0) return 2;
         return 1;
     }
 }
@@ -317,17 +318,19 @@ int inCombat(SDL_Window *window, SDL_Renderer *renderer, joueur_t*j, monstre_t *
 void SpawnAllElements(SDL_Window *window, SDL_Renderer *renderer, SDL_TextureMap_t *MonstreTextureListe, SDL_TextureMap_t *ItemTextureListe, itemMapList_t * itemMapList, listeMst_t * monstre_list){
     // Ajout des différents Elements sur la map
     int error;
-    for (int i = 0; i < random(10,15); i++){
+
+    for (int i = 0; i < random(10,16); i++){
         do{
             error = AjouterMonstreMap(MonstreTextureListe, renderer, window, monstre_list, random(0, TMAP), random(0, TMAP));
-        }while (error == 1);
+            if (error == 1) errorsuccessive++;
+        }while (error == 1 );
     }
 
     item_t *item;
     item_t *Potion = initItem(1, "Potion", 1,"Potion", "src\\image\\item\\Potion.png", 0);
     item_t *sword = initItem(2, "Sword", 1,"Weapon", "src\\image\\item\\sword1.png", 10);
     item_t *sword2 = initItem(3, "Sword2", 1,"Weapon", "src\\image\\item\\sword2.png", 20);
-    
+    int errorsuccessive = 0;
     for (int i = 0; i < 4; i++){
         do{
             switch (random(0, 3)){
@@ -344,7 +347,9 @@ void SpawnAllElements(SDL_Window *window, SDL_Renderer *renderer, SDL_TextureMap
             }
             
             error = AjouterItemMap(ItemTextureListe, renderer, window, itemMapList, item,random(0, TMAP), random(0, TMAP));
-        }while (error == 1);
+            if (error == 1) errorsuccessive++;
+            else errorsuccessive = 0;
+        }while (error == 1 && errorsuccessive < 10);
     }
     
 }
@@ -378,12 +383,12 @@ int jouer(SDL_Window *window, SDL_Renderer *renderer){
     SDL_Texture *texture3 = SDL_RenderTexture(renderer, window, "src/image/path/path3.png");
     SDL_Texture *texture4 = SDL_RenderTexture(renderer, window, "src/image/path/path4.png");
     SDL_Texture *texture5 = SDL_RenderTexture(renderer, window, "src/image/path/path5.png");
-    int tableauRandomAngle[TMAP][TMAP];
-    int tableauRandom[TMAP][TMAP];
+    int tableauRandomAngle[TMAP+2][TMAP+2];
+    int tableauRandom[TMAP+2][TMAP+2];
 
      // Tableau de la carte aléatoire
-    for (int i = 0; i < TMAP; i++){
-        for (int j = 0; j < TMAP; j++){
+    for (int i = 0; i < TMAP+2; i++){
+        for (int j = 0; j < TMAP+2; j++){
             tableauRandom[i][j] = random(0, 5); // Aléatoire entre les texture des chemins
             tableauRandomAngle[i][j] = random(0, 4); // 0 = 0°, 1 = 90°, 2 = 180°, 3 = 270°
         }
@@ -398,17 +403,18 @@ int jouer(SDL_Window *window, SDL_Renderer *renderer){
     // Texte nombre de monstre
     SDL_Texture *texte = NULL;
     SDL_Surface *surfaceMessage = NULL;
-
+    SDL_Texture *TextureMessageVague = NULL;
+    char vagueText[50];
     char nombreMonstre[50];
-
     sprintf(nombreMonstre, "Nombre de monstre : %d", MonstreTextureListe->nbTexture);
-    printf("%s", nombreMonstre);
     surfaceMessage = TTF_RenderText_Solid(font24, nombreMonstre, White);
     texte = SDL_CreateTextureFromSurface(renderer, surfaceMessage);
     SDL_FreeSurface(surfaceMessage);
 
-    
-    
+    sprintf(vagueText, "Vague : %d", 1);
+    surfaceMessage = TTF_RenderText_Solid(font24, vagueText, White);
+    TextureMessageVague = SDL_CreateTextureFromSurface(renderer, surfaceMessage);
+    SDL_FreeSurface(surfaceMessage);
 
     int PlayerPosX = getPositionJoueurX(j);
     int PlayerPosY = getPositionJoueurY(j);
@@ -438,26 +444,29 @@ int jouer(SDL_Window *window, SDL_Renderer *renderer){
         if (InCombat == 1){
             if (inCombat(window, renderer, j, monstreInCombat) == 1){
                 RemoveMonstreMap(MonstreTextureListe, renderer, window, monstre_list, monstreInCombat);
-                
+                if (MonstreTextureListe->nbTexture == 0){
+                    vague++;
+
+                    SpawnAllElements(window, renderer, MonstreTextureListe, ItemTextureListe, itemMapList, monstre_list);
+                    
+                    sprintf(vagueText, "Vague : %d", vague);
+                    surfaceMessage = TTF_RenderText_Solid(font24, vagueText, White);
+                    TextureMessageVague = SDL_CreateTextureFromSurface(renderer, surfaceMessage);
+                    SDL_FreeSurface(surfaceMessage);
+
+                }
                 sprintf(nombreMonstre, "Nombre de monstre : %d", MonstreTextureListe->nbTexture);
-                printf("%s", nombreMonstre);
                 surfaceMessage = TTF_RenderText_Solid(font24, nombreMonstre, White);
                 texte = SDL_CreateTextureFromSurface(renderer, surfaceMessage);
                 SDL_FreeSurface(surfaceMessage);
                 InCombat = 0;
                 rectJ.w = (200/j->maxlife)*j->life;
-                printf("Fin du combat 1\n");
+
             }else{
-                printf("Fin du combat\n");
-                return 0;
+
+                Started = SDL_FALSE;
             }
         }else{
-
-            if (MonstreTextureListe->nbTexture == 0){
-                vague++;
-                SpawnAllElements(window, renderer, MonstreTextureListe, ItemTextureListe, itemMapList, monstre_list);
-                return 0;
-            }
 
             /* Evenements */
             SDL_Event event;
@@ -591,8 +600,9 @@ int jouer(SDL_Window *window, SDL_Renderer *renderer){
             }
 
             // Generation de la map
-            for (int i = 0; i <= TMAP+1; i++){ // +1 Pour gerer les bordures
+            for (int i = 0; i <= TMAP; i++){ // +1 Pour gerer les bordures
                 for (int i2 = 0; i2 <= TMAP+1 ; i2++){
+                   
                     switch (tableauRandom[i][i2]){
                         case 0:
                             SDL_RenderImage(renderer, texture, i*TAILLE_CASE + cam->offx*TAILLE_CASE, i2*TAILLE_CASE+cam->offy*TAILLE_CASE, TAILLE_CASE, TAILLE_CASE, tableauRandomAngle[i][i2]*90);
@@ -634,14 +644,12 @@ int jouer(SDL_Window *window, SDL_Renderer *renderer){
                 afficher_inv(window, renderer, InventaireJoueur, font24, White);
             }else{
                 SDL_RenderImage(renderer, texte, 350, 20, 128, 32, 0);
+                SDL_RenderImage(renderer, TextureMessageVague, 650, 20, 128, 32, 0);
                 SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // Rectangle rouge (vie)
                 SDL_RenderFillRect(renderer, &rectJ2);
                 SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255); // Rectangle rouge (vie)
                 SDL_RenderFillRect(renderer, &rectJ);
             }
-
-            
-
 
             SDL_RenderPresent(renderer);
         }
@@ -655,6 +663,8 @@ int jouer(SDL_Window *window, SDL_Renderer *renderer){
     SDL_DestroyTexture(texture3);
     SDL_DestroyTexture(texture4);
     SDL_DestroyTexture(texture5);
+    SDL_DestroyTexture(texte);
+    SDL_DestroyTexture(TextureMessageVague);
 
     for (int i = 0; i < ItemTextureListe->nbTexture; i++){ // Destruction des textures des items
         SDL_DestroyTexture(ItemTextureListe->listeTexture[i]->texture);
@@ -675,10 +685,8 @@ int jouer(SDL_Window *window, SDL_Renderer *renderer){
     free(InventaireJoueur);
 
 
-    
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-    SDL_Quit();
+    menu(window, renderer);
+
 
     
     return 0;

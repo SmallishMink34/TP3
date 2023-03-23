@@ -54,15 +54,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_cam_8h.html",
-"_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaae00ac6995dfb7b92bfae68b9f47ae07a",
-"_s_d_l__hints_8h.html#a1237426d89c35965c9740792e318db61",
-"_s_d_l__joystick_8h.html#a16c10474f6a3d861babfe1ae424cb1a5",
-"_s_d_l__pixels_8h.html#a31d328d11619b5f5ed0a14612cbb429a",
-"_s_d_l__render_8h.html#afe68207df287bda5b85a4bb84e720522",
-"_s_d_l__scancode_8h.html#a82ab7cff701034fb40a47b5b3a02777bade01dec031d4f7bdf44e06d41859275a",
-"_s_d_l__test__fuzzer_8h.html#abc660d9b04554c8c2717325224b88b6a",
-"_s_d_l__video_8h.html#a2de24951bbc6626dc259ec0db5ae8ed4acc5dc0cb2c0e9e16d64dbdbde177d775",
-"globals_func_e.html",
+"_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaadefb8866b9d28be21c2c33c35cc66c4b",
+"_s_d_l__hints_8h.html#a10b6e40601439f51131d8a264070ab2e",
+"_s_d_l__joystick_8h.html#a13d9a1e3c5cbe2591cd5214aad48fed8",
+"_s_d_l__pixels_8h.html#a26dc44b5dac11825abb4b59ac5af76e3",
+"_s_d_l__render_8h.html#afdc8a35ce033f5111843ac9518dc47a4",
+"_s_d_l__scancode_8h.html#a82ab7cff701034fb40a47b5b3a02777baddec465900094b7363f5a97244659af7",
+"_s_d_l__test__fuzzer_8h.html#ab945d938652f887b7389afabc5442588",
+"_s_d_l__video_8h.html#a2de24951bbc6626dc259ec0db5ae8ed4ac48c7a4cf9eff0fa154878988b6697db",
+"globals_func_d.html",
 "struct_s_d_l___joy_battery_event.html",
 "union_s_d_l___event.html#a32ed3513e4b2533a94bb7bc123294720"
 ];
