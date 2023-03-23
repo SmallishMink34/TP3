@@ -766,9 +766,11 @@ int rules(SDL_Window *window, SDL_Renderer *renderer){
     SDL_bool Started = SDL_TRUE;
 
     SDL_Texture *texture = SDL_RenderTexture(renderer, window, "src/image/Images/background-rules.jpg");
+    SDL_Texture *texture2 = SDL_RenderTexture(renderer, window, "src/image/Images/background-rules2.jpg");
+
 
     int mode;
-
+    int page = 1;
     while (Started){
         /* Evenements */
         SDL_Event event;
@@ -782,6 +784,10 @@ int rules(SDL_Window *window, SDL_Renderer *renderer){
                         case SDLK_ESCAPE:
                             Started = SDL_FALSE;
                             break;
+                        case SDLK_SPACE:
+                            page++;
+                            if (page > 2) page = 1;
+                            break;
                     }
                     break;
                 case SDL_MOUSEBUTTONDOWN:
@@ -794,8 +800,14 @@ int rules(SDL_Window *window, SDL_Renderer *renderer){
                     break;
             }
         }
-
-        SDL_RenderImage(renderer, texture, 0, 0, WindowsW, WindowsH,0);
+        switch (page){
+            case 1:
+                SDL_RenderImage(renderer, texture, 0, 0, WindowsW, WindowsH,0);
+                break;
+            case 2:
+                SDL_RenderImage(renderer, texture2, 0, 0, WindowsW, WindowsH,0);
+                break;
+        }
 
         SDL_RenderPresent(renderer);
     }

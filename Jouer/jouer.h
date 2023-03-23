@@ -81,7 +81,7 @@ int jouer(SDL_Window * window, SDL_Renderer * renderer);
  * 
  * \return int 0 si tout s'est bien passé, 1 sinon
  */
-int SpawnAllElements(SDL_Window *window, SDL_Renderer *renderer, SDL_TextureMap_t *MonstreTextureListe, SDL_TextureMap_t *ItemTextureListe, itemMapList_t * itemMapList, listeMst_t * monstre_list);
+void SpawnAllElements(SDL_Window *window, SDL_Renderer *renderer, SDL_TextureMap_t *MonstreTextureListe, SDL_TextureMap_t *ItemTextureListe, itemMapList_t * itemMapList, listeMst_t * monstre_list);
 
 /**
  * \brief Affiche le menu
