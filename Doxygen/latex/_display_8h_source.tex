@@ -1,0 +1,51 @@
+\hypertarget{_display_8h_source}{}\doxysection{Display.\+h}
+\label{_display_8h_source}\index{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Display/Display.h@{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Display/Display.h}}
+\mbox{\hyperlink{_display_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}../Monstre/Monstre.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}../Joueur/joueurs.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}../sdl\(\backslash\)include\(\backslash\)SDL.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}../Item/item.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#ifndef\ DISPLAY\_H}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ DISPLAY\_H}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_element_on_map}{ElementOnMap}}\{}
+\DoxyCodeLine{00030\ \ \ \ \ SDL\_Texture\ *\ texture;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ x;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ y;}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_element_on_map}{ElementOnMap}}\ \mbox{\hyperlink{struct_element_on_map}{ElementOnMap\_t}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\_TextureMap}}\{}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{struct_element_on_map}{ElementOnMap\_t}}\ *listeTexture[TMAP*TMAP];}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ nbTexture;}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\_TextureMap}}\ \mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\_TextureMap\_t}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\_TextureMap\_t}}\ *\mbox{\hyperlink{_display_8h_a73a83e094e8442029637b7e575257011}{CreateTextureMap}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_display_8h_a85c29afe8758ebd4b900c943edd3c0d8}{afficher}}(\mbox{\hyperlink{structliste_mst}{listeMst\_t}}\ *\ monstre\_list,\ \mbox{\hyperlink{structjoueur}{joueur\_t}}\ *\ j\ ,\textcolor{keywordtype}{int}\ TailleMap);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_display_8h_af26c884dc592b6954cd1a76287f92afc}{afficher\_zoom}}(\mbox{\hyperlink{structliste_mst}{listeMst\_t}}\ *\ monstre\_list,\ \mbox{\hyperlink{structjoueur}{joueur\_t}}\ *\ j\ ,\textcolor{keywordtype}{int}\ TailleMap);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_display_8h_abed124ab111ee095d48f08e2a3ea4446}{SDL\_ExitWithError}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *message);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_display_8h_ac4b6577390e9e8cf564c0c5b412442dd}{SDL\_RenderImage}}(SDL\_Renderer\ *renderer,\ SDL\_Texture\ *texture,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h,\ \textcolor{keywordtype}{int}\ angle);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_display_8h_aa68244ada1ac35e981e68cfdcd014baf}{SDL\_CreateImage}}(SDL\_Renderer\ *renderer,\ \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\_Window}}\ *win,\ \textcolor{keywordtype}{char}\ *path,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00115\ SDL\_Texture\ *\mbox{\hyperlink{_display_8h_af16b2a90cd594dcded65fbd11c7a6e7d}{SDL\_RenderTexture}}(SDL\_Renderer\ *renderer,\ \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\_Window}}\ *win,\ \textcolor{keywordtype}{char}\ *path);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00128\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_display_8h_ac242299ab097f2a162803401787dfa84}{AjouterMonstreMap}}(\mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\_TextureMap\_t}}\ *MonstreTexture,SDL\_Renderer\ *renderer,\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\_Window}}\ *win,\ \mbox{\hyperlink{structliste_mst}{listeMst\_t}}*\ monstre\_list,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00140\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_display_8h_acb01cec2a6ce023a27225f1b1b6deac9}{AjouterItemMap}}(\mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\_TextureMap\_t}}\ *ItemTextureListe,\ SDL\_Renderer\ *renderer,\ \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\_Window}}\ *win,\ \mbox{\hyperlink{structitem_map_list}{itemMapList\_t}}\ *itemMap,\ \mbox{\hyperlink{structitem}{item\_t}}\ *\mbox{\hyperlink{structitem}{item}},\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00152\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{_display_8h_a4043f7fc8603c4f227d8b14ea6fd3caa}{RemoveMonstreMap}}(\mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\_TextureMap\_t}}\ *MonstreTexture,SDL\_Renderer\ *renderer,\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\_Window}}\ *win,\ \mbox{\hyperlink{structliste_mst}{listeMst\_t}}*\ monstre\_list,\ \mbox{\hyperlink{structmonstre}{monstre\_t}}\ *m);}
+\DoxyCodeLine{00163\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{_display_8h_aec0d21e8f5e10f556826b97284d8de83}{RemoveItemMap}}(\mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\_TextureMap\_t}}\ *ItemTextureListe,\ SDL\_Renderer\ *renderer,\ \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\_Window}}\ *win,\ \mbox{\hyperlink{structitem_map_list}{itemMapList\_t}}\ *itemMap,\ \mbox{\hyperlink{structitem}{item\_t}}\ *\mbox{\hyperlink{structitem}{item}});}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

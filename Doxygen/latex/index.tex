@@ -1,0 +1,29 @@
+\label{index_md_C__Users_matth_OneDrive_Documents_S2_Methodo_TP3_Readme}%
+\Hypertarget{index_md_C__Users_matth_OneDrive_Documents_S2_Methodo_TP3_Readme}%
+Ce jeu est un programme C réalisant le TP3 de Méthodo 1 a la FST de Vandoeuvres-\/lès-\/\+Nancy. Il a été réalisé avec SDL2. C\textquotesingle{}est un RPG de plateau 2D.\hypertarget{index_autotoc_md1}{}\doxysection{Les règles}\label{index_autotoc_md1}
+Ce jeu ce joue a 1 joueur sur un plateau 2D. Le personnage spawn au milieu d\textquotesingle{}un plateau de 40 par 40 est tente de survivre le plus longtemps possible au fil des manches. Il est capable de se deplacer, de combattre des ennemies dans une ruelle. Le personnage peut récuperer des armes et des potions pour s\textquotesingle{}améliorer.\hypertarget{index_autotoc_md2}{}\doxysection{Bibliothèques}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{_cam_8h}{Cam.\+h}}
+\item \mbox{\hyperlink{_display_8h}{Display.\+h}}
+\item \mbox{\hyperlink{item_8h}{item.\+h}}
+\item \mbox{\hyperlink{jouer_8h_source}{jouer.\+h}}
+\item \mbox{\hyperlink{joueurs_8h}{joueurs.\+h}}
+\item \mbox{\hyperlink{_monstre_8h}{Monstre.\+h}}
+\item \mbox{\hyperlink{_s_d_l_8h}{sdl.\+h}}
+\item \mbox{\hyperlink{sprite_8h}{sprite.\+h}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysection{FAQ}\label{index_autotoc_md3}
+\hypertarget{index_autotoc_md4}{}\doxysubsubsection{Les projet ce découpent-\/il en module indépendant}\label{index_autotoc_md4}
+Non, il est bien découpée en plusieurs module, mais ils ne sont pas indépendant. l\textquotesingle{}utilisation de SDL2 rend difficile l\textquotesingle{}utilisation de plusieurs module sans importer des fonctions et autres fichiers dans certains module. Notament, le fichier \mbox{\hyperlink{_display_8h}{Display.\+h}} qui est importer dans plusieurs autres modules\hypertarget{index_autotoc_md5}{}\doxysection{Ajouts}\label{index_autotoc_md5}
+\hypertarget{index_autotoc_md6}{}\doxysubsubsection{SDL}\label{index_autotoc_md6}
+L\textquotesingle{}intégralité du projet est géré avec la bibliothèque de rendu SDL2, permettant l\textquotesingle{}affichage.\hypertarget{index_autotoc_md7}{}\doxysubsubsection{Caméra}\label{index_autotoc_md7}
+Le joueur se déplace sur une carte de 40x40 blocs, ainsi la caméra le suit.\hypertarget{index_autotoc_md8}{}\doxysubsubsection{Items}\label{index_autotoc_md8}
+A chaque manche, la carte regénére des monstres et des items capable d\textquotesingle{}être récuperés.\hypertarget{index_autotoc_md9}{}\doxysubsubsection{Inventaire}\label{index_autotoc_md9}
+Les items sont rangés les uns à la suite des autres dans l\textquotesingle{}inventaire (Key \+: I) Les armes peuvent être séléctionnés, tandis que les potions peuvent être consommée.\hypertarget{index_autotoc_md10}{}\doxysubsubsection{Système de Combat}\label{index_autotoc_md10}
+Le Système de combat a été modifier en implémantant un Système de Tour par tour. Le joueur se bat contre un ennemi dans une ruelle. Il a la capacité d\textquotesingle{}attaqué avec des armes ou en utilisant son mana. Il peut également esquiver les attaques ennemis. Néanmoins,l\textquotesingle{}ennemi est également capable d\textquotesingle{}esquiver et d\textquotesingle{}attaquer.\hypertarget{index_autotoc_md11}{}\doxysubsubsection{Les règles}\label{index_autotoc_md11}
+Les règles sont ré-\/expliqués dans le menu \char`\"{}\+Rules\char`\"{}. \hypertarget{index_autotoc_md12}{}\doxysection{Authors}\label{index_autotoc_md12}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/SmallishMink34}{\texttt{ @\+Matthéo Moulias}}
+\item @\+Sami Benzid 
+\end{DoxyItemize}

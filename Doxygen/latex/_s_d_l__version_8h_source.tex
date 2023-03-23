@@ -1,0 +1,88 @@
+\hypertarget{_s_d_l__version_8h_source}{}\doxysection{SDL\+\_\+version.\+h}
+\label{_s_d_l__version_8h_source}\index{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/sdl/include/SDL\_version.h@{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/sdl/include/SDL\_version.h}}
+\mbox{\hyperlink{_s_d_l__version_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ Simple\ DirectMedia\ Layer}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ Copyright\ (C)\ 1997-\/2023\ Sam\ Lantinga\ <slouken@libsdl.org>}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ This\ software\ is\ provided\ 'as-\/is',\ without\ any\ express\ or\ implied}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ warranty.\ \ In\ no\ event\ will\ the\ authors\ be\ held\ liable\ for\ any\ damages}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ arising\ from\ the\ use\ of\ this\ software.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ Permission\ is\ granted\ to\ anyone\ to\ use\ this\ software\ for\ any\ purpose,}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ including\ commercial\ applications,\ and\ to\ alter\ it\ and\ redistribute\ it}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ freely,\ subject\ to\ the\ following\ restrictions:}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ 1.\ The\ origin\ of\ this\ software\ must\ not\ be\ misrepresented;\ you\ must\ not}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ \ claim\ that\ you\ wrote\ the\ original\ software.\ If\ you\ use\ this\ software}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ \ in\ a\ product,\ an\ acknowledgment\ in\ the\ product\ documentation\ would\ be}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ \ appreciated\ but\ is\ not\ required.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ 2.\ Altered\ source\ versions\ must\ be\ plainly\ marked\ as\ such,\ and\ must\ not\ be}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ \ misrepresented\ as\ being\ the\ original\ software.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ 3.\ This\ notice\ may\ not\ be\ removed\ or\ altered\ from\ any\ source\ distribution.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#ifndef\ SDL\_version\_h\_}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ SDL\_version\_h\_}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_s_d_l__stdinc_8h}{SDL\_stdinc.h}}"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{begin__code_8h}{begin\_code.h}}"{}}}
+\DoxyCodeLine{00034\ \textcolor{comment}{/*\ Set\ up\ for\ C\ function\ definitions,\ even\ when\ using\ C++\ */}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00036\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_s_d_l__version}{SDL\_version}}}
+\DoxyCodeLine{00052\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ Uint8\ \mbox{\hyperlink{struct_s_d_l__version_a302f1b7284c3bcdfa0dee1aa267b955e}{major}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ Uint8\ \mbox{\hyperlink{struct_s_d_l__version_a8eb06ff08bc41ff4eed7c42fc8b40d50}{minor}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ Uint8\ \mbox{\hyperlink{struct_s_d_l__version_af8399ce0bb7205f4761fa050d33ea71e}{patch}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \}\ \mbox{\hyperlink{struct_s_d_l__version}{SDL\_version}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{comment}{/*\ Printable\ format:\ "{}\%d.\%d.\%d"{},\ MAJOR,\ MINOR,\ PATCHLEVEL}}
+\DoxyCodeLine{00059\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ SDL\_MAJOR\_VERSION\ \ \ 2}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ SDL\_MINOR\_VERSION\ \ \ 26}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ SDL\_PATCHLEVEL\ \ \ \ \ \ 4}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ SDL\_VERSION(x)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\ \ \ \ (x)-\/>major\ =\ SDL\_MAJOR\_VERSION;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\ \ \ \ (x)-\/>minor\ =\ SDL\_MINOR\_VERSION;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\ \ \ \ (x)-\/>patch\ =\ SDL\_PATCHLEVEL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{comment}{/*\ TODO:\ Remove\ this\ whole\ block\ in\ SDL\ 3\ */}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#if\ SDL\_MAJOR\_VERSION\ <\ 3}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ SDL\_VERSIONNUM(X,\ Y,\ Z)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\ \ \ \ ((X)*1000\ +\ (Y)*100\ +\ (Z))}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ SDL\_COMPILEDVERSION\ \(\backslash\)}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\ \ \ \ SDL\_VERSIONNUM(SDL\_MAJOR\_VERSION,\ SDL\_MINOR\_VERSION,\ SDL\_PATCHLEVEL)}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SDL\_MAJOR\_VERSION\ <\ 3\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ SDL\_VERSION\_ATLEAST(X,\ Y,\ Z)\ \(\backslash\)}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\ \ \ \ ((SDL\_MAJOR\_VERSION\ >=\ X)\ \&\&\ \(\backslash\)}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\ \ \ \ \ (SDL\_MAJOR\_VERSION\ >\ X\ ||\ SDL\_MINOR\_VERSION\ >=\ Y)\ \&\&\ \(\backslash\)}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\ \ \ \ \ (SDL\_MAJOR\_VERSION\ >\ X\ ||\ SDL\_MINOR\_VERSION\ >\ Y\ ||\ SDL\_PATCHLEVEL\ >=\ Z))}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00141\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__version_8h_a4204ecbb600f51ee50515979e60bf8f3}{SDL\_GetVersion}}(\mbox{\hyperlink{struct_s_d_l__version}{SDL\_version}}\ *\ ver);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00170\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *SDLCALL\ \mbox{\hyperlink{_s_d_l__version_8h_a2bfe0579c07429a1090fdcc42a49460d}{SDL\_GetRevision}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00193\ \textcolor{keyword}{extern}\ SDL\_DEPRECATED\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__version_8h_a3aaf4a973a60915fd9a30de51b17c3e4}{SDL\_GetRevisionNumber}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \textcolor{comment}{/*\ Ends\ C\ function\ definitions\ when\ using\ C++\ */}}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00198\ \}}
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{close__code_8h}{close\_code.h}}"{}}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SDL\_version\_h\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \textcolor{comment}{/*\ vi:\ set\ ts=4\ sw=4\ expandtab:\ */}}
+
+\end{DoxyCode}

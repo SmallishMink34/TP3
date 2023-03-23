@@ -1,0 +1,29 @@
+\hypertarget{sprite_8h_source}{}\doxysection{sprite.\+h}
+\label{sprite_8h_source}\index{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Sprites/sprite.h@{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Sprites/sprite.h}}
+\mbox{\hyperlink{sprite_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}../sdl\(\backslash\)include\(\backslash\)SDL.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#ifndef\ SPRITE\_H}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ SPRITE\_H}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_sprite}{Sprite}}\{}
+\DoxyCodeLine{00025\ \ \ \ \ SDL\_Texture\ *image[10];}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ rect[10];}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ frame;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ nbFrame;\ \textcolor{comment}{//\ Nombre\ de\ frame\ de\ l'animation}}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_sprite}{Sprite}}\ \mbox{\hyperlink{struct_sprite}{Sprite\_t}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00043\ \mbox{\hyperlink{struct_sprite}{Sprite\_t}}\ *\mbox{\hyperlink{sprite_8h_a743d225bc9c6901c15dd6c0ccdf8f916}{initSprite}}(SDL\_Renderer\ *renderer,\ \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\_Window}}\ *win,\textcolor{keywordtype}{char}\ *path,\textcolor{keywordtype}{int}\ StartFrame,\ \textcolor{keywordtype}{int}\ nbFrame);}
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sprite_8h_a2a65d1b661f758fad143778f12d0a93d}{drawSprite}}(\mbox{\hyperlink{struct_sprite}{Sprite\_t}}\ *sprite,\ SDL\_Renderer\ *renderer,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h);}
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sprite_8h_aafd7be42c145a62d0cc931ae200ca0e0}{freeSprite}}(\mbox{\hyperlink{struct_sprite}{Sprite\_t}}\ *sprite);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

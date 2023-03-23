@@ -1,0 +1,21 @@
+
+\begin{DoxyRefList}
+\item[Global \mbox{\hyperlink{_s_d_l__version_8h_a3aaf4a973a60915fd9a30de51b17c3e4}{SDL\+\_\+\+Get\+Revision\+Number}} (void)]\label{deprecated__deprecated000006}%
+\Hypertarget{deprecated__deprecated000006}%
+Use \mbox{\hyperlink{_s_d_l__version_8h_a2bfe0579c07429a1090fdcc42a49460d}{SDL\+\_\+\+Get\+Revision()}} instead; if SDL was carefully built, it will return a git hash. 
+\item[Global \mbox{\hyperlink{_s_d_l__ttf_8h_a2ba3940255fc228728d9eb0c5a815aad}{SDL\+\_\+\+TTF\+\_\+\+COMPILEDVERSION}} ]\label{deprecated__deprecated000001}%
+\Hypertarget{deprecated__deprecated000001}%
+, use SDL\+\_\+\+TTF\+\_\+\+VERSION\+\_\+\+ATLEAST or SDL\+\_\+\+TTF\+\_\+\+VERSION instead.  
+\item[File \mbox{\hyperlink{_s_d_l__types_8h}{SDL\+\_\+types.h}} ]\label{deprecated__deprecated000005}%
+\Hypertarget{deprecated__deprecated000005}%
+  
+\item[Global \mbox{\hyperlink{_s_d_l__ttf_8h_afa971c6ffc92e8d5e2a08cc396549756}{TTF\+\_\+\+Get\+Font\+Kerning\+Size}} (TTF\+\_\+\+Font $\ast$font, int prev\+\_\+index, int index)]\label{deprecated__deprecated000002}%
+\Hypertarget{deprecated__deprecated000002}%
+This function accidentally requires Free\+Type font indexes, not codepoints, which we don\textquotesingle{}t expose through this API, so it could give wildly incorrect results, especially with non-\/\+ASCII values. Going forward, please use \mbox{\hyperlink{_s_d_l__ttf_8h_a0e86fd47f470d6f21c47622035da50bd}{TTF\+\_\+\+Get\+Font\+Kerning\+Size\+Glyphs()}} instead, which does what you probably expected this function to do. 
+\item[Global \mbox{\hyperlink{_s_d_l__ttf_8h_a56c4ce011601169540e6771a037f126a}{TTF\+\_\+\+Set\+Direction}} (int direction)]\label{deprecated__deprecated000003}%
+\Hypertarget{deprecated__deprecated000003}%
+This function expects an hb\+\_\+direction\+\_\+t value, from Harf\+Buzz, cast to an int, and affects all fonts globally. Please use \mbox{\hyperlink{_s_d_l__ttf_8h_a4986991c40e1353397099d2134928010}{TTF\+\_\+\+Set\+Font\+Direction()}} instead, which uses an enum supplied by SDL\+\_\+ttf itself and operates on a per-\/font basis. 
+\item[Global \mbox{\hyperlink{_s_d_l__ttf_8h_a6ed08cb4253538af931e5e97505a856d}{TTF\+\_\+\+Set\+Script}} (int script)]\label{deprecated__deprecated000004}%
+\Hypertarget{deprecated__deprecated000004}%
+This function expects an hb\+\_\+script\+\_\+t value, from Harf\+Buzz, cast to an int, and affects all fonts globally. Please use \mbox{\hyperlink{_s_d_l__ttf_8h_ac893167cd8ad82c0342157c15d99dff2}{TTF\+\_\+\+Set\+Font\+Script\+Name()}} instead, which accepts a string that is converted to an equivalent int internally, and operates on a per-\/font basis.
+\end{DoxyRefList}

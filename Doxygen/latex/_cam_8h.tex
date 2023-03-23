@@ -1,0 +1,86 @@
+\hypertarget{_cam_8h}{}\doxysection{C\+:/\+Users/matth/\+One\+Drive/\+Documents/\+S2/\+Methodo/\+TP3/\+Camera/\+Cam.h File Reference}
+\label{_cam_8h}\index{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Camera/Cam.h@{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Camera/Cam.h}}
+
+
+Fichier qui gère la camera du jeu.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_camera}{Camera}}
+\begin{DoxyCompactList}\small\item\em Create un Camera\+\_\+t. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_cam_8h_ae1b73108d1f1d322559281c55166c979}\label{_cam_8h_ae1b73108d1f1d322559281c55166c979}} 
+typedef struct \mbox{\hyperlink{struct_camera}{Camera}} {\bfseries Camera\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_camera}{Camera\+\_\+t}} $\ast$ \mbox{\hyperlink{_cam_8h_a9d690b718a674f61a833b24e8dead955}{Camera\+\_\+new}} (int offx, int offy)
+\begin{DoxyCompactList}\small\item\em Create un Camera\+\_\+t. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_cam_8h_ac3c72a6200829511ba7d2ab0ef5269be}{Camera\+\_\+move}} (\mbox{\hyperlink{struct_camera}{Camera\+\_\+t}} $\ast$cam, int x, int y)
+\begin{DoxyCompactList}\small\item\em Crée une camera avec les coordonnées Souhaité (ici le Joueur) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fichier qui gère la camera du jeu. 
+
+\begin{DoxyAuthor}{Author}
+M Moulias 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/03-\/23
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_cam_8h_ac3c72a6200829511ba7d2ab0ef5269be}\label{_cam_8h_ac3c72a6200829511ba7d2ab0ef5269be}} 
+\index{Cam.h@{Cam.h}!Camera\_move@{Camera\_move}}
+\index{Camera\_move@{Camera\_move}!Cam.h@{Cam.h}}
+\doxysubsubsection{\texorpdfstring{Camera\_move()}{Camera\_move()}}
+{\footnotesize\ttfamily void Camera\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_camera}{Camera\+\_\+t}} $\ast$}]{cam,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Crée une camera avec les coordonnées Souhaité (ici le Joueur) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cam} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_cam_8h_a9d690b718a674f61a833b24e8dead955}\label{_cam_8h_a9d690b718a674f61a833b24e8dead955}} 
+\index{Cam.h@{Cam.h}!Camera\_new@{Camera\_new}}
+\index{Camera\_new@{Camera\_new}!Cam.h@{Cam.h}}
+\doxysubsubsection{\texorpdfstring{Camera\_new()}{Camera\_new()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_camera}{Camera\+\_\+t}} $\ast$ Camera\+\_\+new (\begin{DoxyParamCaption}\item[{int}]{offx,  }\item[{int}]{offy }\end{DoxyParamCaption})}
+
+
+
+Create un Camera\+\_\+t. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offx} & \\
+\hline
+{\em offy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Camera\+\_\+t$\ast$ 
+\end{DoxyReturn}

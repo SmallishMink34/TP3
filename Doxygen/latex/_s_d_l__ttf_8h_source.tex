@@ -1,0 +1,332 @@
+\hypertarget{_s_d_l__ttf_8h_source}{}\doxysection{SDL\+\_\+ttf.\+h}
+\label{_s_d_l__ttf_8h_source}\index{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/sdl/include/SDL2/SDL\_ttf.h@{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/sdl/include/SDL2/SDL\_ttf.h}}
+\mbox{\hyperlink{_s_d_l__ttf_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ SDL\_ttf:\ \ A\ companion\ library\ to\ SDL\ for\ working\ with\ TrueType\ (tm)\ fonts}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ Copyright\ (C)\ 2001-\/2023\ Sam\ Lantinga\ <slouken@libsdl.org>}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ This\ software\ is\ provided\ 'as-\/is',\ without\ any\ express\ or\ implied}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ warranty.\ \ In\ no\ event\ will\ the\ authors\ be\ held\ liable\ for\ any\ damages}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ arising\ from\ the\ use\ of\ this\ software.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ Permission\ is\ granted\ to\ anyone\ to\ use\ this\ software\ for\ any\ purpose,}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ including\ commercial\ applications,\ and\ to\ alter\ it\ and\ redistribute\ it}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ freely,\ subject\ to\ the\ following\ restrictions:}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ 1.\ The\ origin\ of\ this\ software\ must\ not\ be\ misrepresented;\ you\ must\ not}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ \ claim\ that\ you\ wrote\ the\ original\ software.\ If\ you\ use\ this\ software}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ \ in\ a\ product,\ an\ acknowledgment\ in\ the\ product\ documentation\ would\ be}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ \ appreciated\ but\ is\ not\ required.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ 2.\ Altered\ source\ versions\ must\ be\ plainly\ marked\ as\ such,\ and\ must\ not\ be}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ \ misrepresented\ as\ being\ the\ original\ software.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ 3.\ This\ notice\ may\ not\ be\ removed\ or\ altered\ from\ any\ source\ distribution.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#ifndef\ SDL\_TTF\_H\_}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ SDL\_TTF\_H\_}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}../SDL.h"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}../begin\_code.h"{}}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{/*\ Set\ up\ for\ C\ function\ definitions,\ even\ when\ using\ C++\ */}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00044\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ SDL\_TTF\_MAJOR\_VERSION\ \ \ 2}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ SDL\_TTF\_MINOR\_VERSION\ \ \ 20}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ SDL\_TTF\_PATCHLEVEL\ \ \ \ \ \ 2}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ SDL\_TTF\_VERSION(X)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\ \ \ \ (X)-\/>major\ =\ SDL\_TTF\_MAJOR\_VERSION;\ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\ \ \ \ (X)-\/>minor\ =\ SDL\_TTF\_MINOR\_VERSION;\ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\ \ \ \ (X)-\/>patch\ =\ SDL\_TTF\_PATCHLEVEL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ TTF\_MAJOR\_VERSION\ \ \ SDL\_TTF\_MAJOR\_VERSION}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ TTF\_MINOR\_VERSION\ \ \ SDL\_TTF\_MINOR\_VERSION}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ TTF\_PATCHLEVEL\ \ \ \ \ \ SDL\_TTF\_PATCHLEVEL}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ TTF\_VERSION(X)\ \ \ \ \ \ SDL\_TTF\_VERSION(X)}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#if\ SDL\_TTF\_MAJOR\_VERSION\ <\ 3\ \&\&\ SDL\_MAJOR\_VERSION\ <\ 3}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ SDL\_TTF\_COMPILEDVERSION\ \(\backslash\)}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\ \ \ \ SDL\_VERSIONNUM(SDL\_TTF\_MAJOR\_VERSION,\ SDL\_TTF\_MINOR\_VERSION,\ SDL\_TTF\_PATCHLEVEL)}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SDL\_TTF\_MAJOR\_VERSION\ <\ 3\ \&\&\ SDL\_MAJOR\_VERSION\ <\ 3\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ SDL\_TTF\_VERSION\_ATLEAST(X,\ Y,\ Z)\ \(\backslash\)}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\ \ \ \ ((SDL\_TTF\_MAJOR\_VERSION\ >=\ X)\ \&\&\ \(\backslash\)}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\ \ \ \ \ (SDL\_TTF\_MAJOR\_VERSION\ >\ X\ ||\ SDL\_TTF\_MINOR\_VERSION\ >=\ Y)\ \&\&\ \(\backslash\)}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\ \ \ \ \ (SDL\_TTF\_MAJOR\_VERSION\ >\ X\ ||\ SDL\_TTF\_MINOR\_VERSION\ >\ Y\ ||\ SDL\_TTF\_PATCHLEVEL\ >=\ Z))}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{comment}{/*\ Make\ sure\ this\ is\ defined\ (only\ available\ in\ newer\ SDL\ versions)\ */}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#ifndef\ SDL\_DEPRECATED}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ SDL\_DEPRECATED}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_s_d_l__version}{SDL\_version}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a0cf457e7d1e15d02a596174ab1dcff3f}{TTF\_Linked\_Version}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00128\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_af0587dba519f792befc7e68162ebe348}{TTF\_GetFreeTypeVersion}}(\textcolor{keywordtype}{int}\ *major,\ \textcolor{keywordtype}{int}\ *minor,\ \textcolor{keywordtype}{int}\ *patch);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00141\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_ab2d204bce5e94643e1fce603cdd4913b}{TTF\_GetHarfBuzzVersion}}(\textcolor{keywordtype}{int}\ *major,\ \textcolor{keywordtype}{int}\ *minor,\ \textcolor{keywordtype}{int}\ *patch);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#define\ UNICODE\_BOM\_NATIVE\ \ 0xFEFF}}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#define\ UNICODE\_BOM\_SWAPPED\ 0xFFFE}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00159\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_add7c76cfa21f474c1261f0afc2bc9cea}{TTF\_ByteSwappedUNICODE}}(SDL\_bool\ swapped);}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00164\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\_TTF\_Font\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00186\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a766731737c2ca9121924bcef57889128}{TTF\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00205\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a3a6f3ed91f8ce0d6a1aaf9352c5e9a8e}{TTF\_OpenFont}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file,\ \textcolor{keywordtype}{int}\ ptsize);}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00229\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a5f1e45bf1814915099b879a03203f0a8}{TTF\_OpenFontIndex}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file,\ \textcolor{keywordtype}{int}\ ptsize,\ \textcolor{keywordtype}{long}\ index);}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00254\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_aae080416313819a910740cbeefe22df8}{TTF\_OpenFontRW}}(\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\_RWops}}\ *src,\ \textcolor{keywordtype}{int}\ freesrc,\ \textcolor{keywordtype}{int}\ ptsize);}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00284\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_ad39997fa79b0755ff5070cc0f03c614b}{TTF\_OpenFontIndexRW}}(\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\_RWops}}\ *src,\ \textcolor{keywordtype}{int}\ freesrc,\ \textcolor{keywordtype}{int}\ ptsize,\ \textcolor{keywordtype}{long}\ index);}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00307\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_ad658e0676e74533830f4d91af8272ed1}{TTF\_OpenFontDPI}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file,\ \textcolor{keywordtype}{int}\ ptsize,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ hdpi,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vdpi);}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00335\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a52d069e0ffc24a44fb054824f7360abd}{TTF\_OpenFontIndexDPI}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file,\ \textcolor{keywordtype}{int}\ ptsize,\ \textcolor{keywordtype}{long}\ index,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ hdpi,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vdpi);}
+\DoxyCodeLine{00336\ }
+\DoxyCodeLine{00364\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a9a898c06926fab72476d1d4e4ff7449b}{TTF\_OpenFontDPIRW}}(\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\_RWops}}\ *src,\ \textcolor{keywordtype}{int}\ freesrc,\ \textcolor{keywordtype}{int}\ ptsize,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ hdpi,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vdpi);}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00398\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a10eded5942d286d37a5a4d664d046940}{TTF\_OpenFontIndexDPIRW}}(\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\_RWops}}\ *src,\ \textcolor{keywordtype}{int}\ freesrc,\ \textcolor{keywordtype}{int}\ ptsize,\ \textcolor{keywordtype}{long}\ index,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ hdpi,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vdpi);}
+\DoxyCodeLine{00399\ }
+\DoxyCodeLine{00411\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a01622fe9156aa1baafede29b09a06fcb}{TTF\_SetFontSize}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \textcolor{keywordtype}{int}\ ptsize);}
+\DoxyCodeLine{00412\ }
+\DoxyCodeLine{00426\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a9172b824ce9ff9dfe06c40a366910a32}{TTF\_SetFontSizeDPI}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \textcolor{keywordtype}{int}\ ptsize,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ hdpi,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vdpi);}
+\DoxyCodeLine{00427\ }
+\DoxyCodeLine{00431\ \textcolor{preprocessor}{\#define\ TTF\_STYLE\_NORMAL\ \ \ \ \ \ \ \ 0x00}}
+\DoxyCodeLine{00432\ \textcolor{preprocessor}{\#define\ TTF\_STYLE\_BOLD\ \ \ \ \ \ \ \ \ \ 0x01}}
+\DoxyCodeLine{00433\ \textcolor{preprocessor}{\#define\ TTF\_STYLE\_ITALIC\ \ \ \ \ \ \ \ 0x02}}
+\DoxyCodeLine{00434\ \textcolor{preprocessor}{\#define\ TTF\_STYLE\_UNDERLINE\ \ \ \ \ 0x04}}
+\DoxyCodeLine{00435\ \textcolor{preprocessor}{\#define\ TTF\_STYLE\_STRIKETHROUGH\ 0x08}}
+\DoxyCodeLine{00436\ }
+\DoxyCodeLine{00455\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a14e696b18d6a0dd199d8515cad637db1}{TTF\_GetFontStyle}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font);}
+\DoxyCodeLine{00456\ }
+\DoxyCodeLine{00477\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_aa503af9d6b9e24d596927bda18f127af}{TTF\_SetFontStyle}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \textcolor{keywordtype}{int}\ style);}
+\DoxyCodeLine{00478\ }
+\DoxyCodeLine{00489\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a086d541c84b679ec0b1c366cb74bd5d4}{TTF\_GetFontOutline}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font);}
+\DoxyCodeLine{00490\ }
+\DoxyCodeLine{00501\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a7da12acc22bd9cb9c9296952fbda31e4}{TTF\_SetFontOutline}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \textcolor{keywordtype}{int}\ outline);}
+\DoxyCodeLine{00502\ }
+\DoxyCodeLine{00503\ }
+\DoxyCodeLine{00507\ \textcolor{preprocessor}{\#define\ TTF\_HINTING\_NORMAL\ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00508\ \textcolor{preprocessor}{\#define\ TTF\_HINTING\_LIGHT\ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00509\ \textcolor{preprocessor}{\#define\ TTF\_HINTING\_MONO\ \ \ \ \ \ \ \ \ \ \ \ 2}}
+\DoxyCodeLine{00510\ \textcolor{preprocessor}{\#define\ TTF\_HINTING\_NONE\ \ \ \ \ \ \ \ \ \ \ \ 3}}
+\DoxyCodeLine{00511\ \textcolor{preprocessor}{\#define\ TTF\_HINTING\_LIGHT\_SUBPIXEL\ \ 4}}
+\DoxyCodeLine{00512\ }
+\DoxyCodeLine{00531\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_ada9b1fcf2f99949ae9fdeecd16ae161f}{TTF\_GetFontHinting}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font);}
+\DoxyCodeLine{00532\ }
+\DoxyCodeLine{00553\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a20b981697804f033b5f1c883f69ef7ed}{TTF\_SetFontHinting}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \textcolor{keywordtype}{int}\ hinting);}
+\DoxyCodeLine{00554\ }
+\DoxyCodeLine{00558\ \textcolor{preprocessor}{\#define\ TTF\_WRAPPED\_ALIGN\_LEFT\ \ \ \ \ \ 0}}
+\DoxyCodeLine{00559\ \textcolor{preprocessor}{\#define\ TTF\_WRAPPED\_ALIGN\_CENTER\ \ \ \ 1}}
+\DoxyCodeLine{00560\ \textcolor{preprocessor}{\#define\ TTF\_WRAPPED\_ALIGN\_RIGHT\ \ \ \ \ 2}}
+\DoxyCodeLine{00561\ }
+\DoxyCodeLine{00578\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac90752aedd3c923c32d97f70d8c0bfef}{TTF\_GetFontWrappedAlign}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font);}
+\DoxyCodeLine{00579\ }
+\DoxyCodeLine{00596\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_ad0f35de084c0727b6640505ca26962c9}{TTF\_SetFontWrappedAlign}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \textcolor{keywordtype}{int}\ align);}
+\DoxyCodeLine{00597\ }
+\DoxyCodeLine{00608\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a58edd2675b2863bbad2188e7bd8cf496}{TTF\_FontHeight}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font);}
+\DoxyCodeLine{00609\ }
+\DoxyCodeLine{00620\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac9141f8ea39a51e5c2680237d8664c7c}{TTF\_FontAscent}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font);}
+\DoxyCodeLine{00621\ }
+\DoxyCodeLine{00632\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a03b50763ced86438f00954ca77462259}{TTF\_FontDescent}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font);}
+\DoxyCodeLine{00633\ }
+\DoxyCodeLine{00642\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a49434e1ca98064611f06ec6ad2b47011}{TTF\_FontLineSkip}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font);}
+\DoxyCodeLine{00643\ }
+\DoxyCodeLine{00652\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_afb4cb064f896513a04b0cc3b4c82783c}{TTF\_GetFontKerning}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font);}
+\DoxyCodeLine{00653\ }
+\DoxyCodeLine{00667\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a603b837e7511507afc5eb1d16b19ef6c}{TTF\_SetFontKerning}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \textcolor{keywordtype}{int}\ allowed);}
+\DoxyCodeLine{00668\ }
+\DoxyCodeLine{00677\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{long}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a8b9d32e67c5fa4563689c3961f770c15}{TTF\_FontFaces}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font);}
+\DoxyCodeLine{00678\ }
+\DoxyCodeLine{00693\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_adef57fd3e2916b09beb8267c82f82dd8}{TTF\_FontFaceIsFixedWidth}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font);}
+\DoxyCodeLine{00694\ }
+\DoxyCodeLine{00709\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a2560794aaa1de9538bae4db6f45d226a}{TTF\_FontFaceFamilyName}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font);}
+\DoxyCodeLine{00710\ }
+\DoxyCodeLine{00725\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a15a1274e3ad1fe4dfa003ce1aeca3fba}{TTF\_FontFaceStyleName}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font);}
+\DoxyCodeLine{00726\ }
+\DoxyCodeLine{00747\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a34c7f34425cfec59cb6d107ae7647887}{TTF\_GlyphIsProvided}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ Uint16\ ch);}
+\DoxyCodeLine{00748\ }
+\DoxyCodeLine{00763\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a8daa4ff37509ab136a17b35387761b2f}{TTF\_GlyphIsProvided32}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ Uint32\ ch);}
+\DoxyCodeLine{00764\ }
+\DoxyCodeLine{00788\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_ad2a5a4984534c969ff71f80750b1fe55}{TTF\_GlyphMetrics}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ Uint16\ ch,}
+\DoxyCodeLine{00789\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ *minx,\ \textcolor{keywordtype}{int}\ *maxx,}
+\DoxyCodeLine{00790\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ *miny,\ \textcolor{keywordtype}{int}\ *maxy,\ \textcolor{keywordtype}{int}\ *advance);}
+\DoxyCodeLine{00791\ }
+\DoxyCodeLine{00809\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a3a62de0adf56df6f6d6442df440ea1e0}{TTF\_GlyphMetrics32}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ Uint32\ ch,}
+\DoxyCodeLine{00810\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ *minx,\ \textcolor{keywordtype}{int}\ *maxx,}
+\DoxyCodeLine{00811\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ *miny,\ \textcolor{keywordtype}{int}\ *maxy,\ \textcolor{keywordtype}{int}\ *advance);}
+\DoxyCodeLine{00812\ }
+\DoxyCodeLine{00837\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_aeb0bb513b51be10a5df91830a21eadb8}{TTF\_SizeText}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \textcolor{keywordtype}{int}\ *w,\ \textcolor{keywordtype}{int}\ *h);}
+\DoxyCodeLine{00838\ }
+\DoxyCodeLine{00857\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a4d6df828756cff027ccd878fde2213e9}{TTF\_SizeUTF8}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \textcolor{keywordtype}{int}\ *w,\ \textcolor{keywordtype}{int}\ *h);}
+\DoxyCodeLine{00858\ }
+\DoxyCodeLine{00882\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_ade0bf8412406700360997cd7adaf92a7}{TTF\_SizeUNICODE}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \textcolor{keyword}{const}\ Uint16\ *text,\ \textcolor{keywordtype}{int}\ *w,\ \textcolor{keywordtype}{int}\ *h);}
+\DoxyCodeLine{00883\ }
+\DoxyCodeLine{00911\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_ad50619eaf12cf311c044818ab2722615}{TTF\_MeasureText}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \textcolor{keywordtype}{int}\ measure\_width,\ \textcolor{keywordtype}{int}\ *extent,\ \textcolor{keywordtype}{int}\ *count);}
+\DoxyCodeLine{00912\ }
+\DoxyCodeLine{00935\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_af423902fa4f4a7a1fdafbdd8228203be}{TTF\_MeasureUTF8}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \textcolor{keywordtype}{int}\ measure\_width,\ \textcolor{keywordtype}{int}\ *extent,\ \textcolor{keywordtype}{int}\ *count);}
+\DoxyCodeLine{00936\ }
+\DoxyCodeLine{00964\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a38d99022443de2c539eaad37fbfd356d}{TTF\_MeasureUNICODE}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \textcolor{keyword}{const}\ Uint16\ *text,\ \textcolor{keywordtype}{int}\ measure\_width,\ \textcolor{keywordtype}{int}\ *extent,\ \textcolor{keywordtype}{int}\ *count);}
+\DoxyCodeLine{00965\ }
+\DoxyCodeLine{00998\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a40818af46aa1591333d3734152a02f07}{TTF\_RenderText\_Solid}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{00999\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg);}
+\DoxyCodeLine{01000\ }
+\DoxyCodeLine{01029\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_aa68127157495ec3b63d62a8febbb22ea}{TTF\_RenderUTF8\_Solid}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg);}
+\DoxyCodeLine{01031\ }
+\DoxyCodeLine{01063\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a03ab14f6ddd4782c29dc61fa429bab95}{TTF\_RenderUNICODE\_Solid}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Uint16\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg);}
+\DoxyCodeLine{01065\ }
+\DoxyCodeLine{01096\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_ad25e102471960d7042eac23ca70c3dc6}{TTF\_RenderText\_Solid\_Wrapped}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ Uint32\ wrapLength);}
+\DoxyCodeLine{01098\ }
+\DoxyCodeLine{01125\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a831c8a8a825db90ff4406f777db2e1b8}{TTF\_RenderUTF8\_Solid\_Wrapped}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ Uint32\ wrapLength);}
+\DoxyCodeLine{01127\ }
+\DoxyCodeLine{01158\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a7b7509375df94d0595236c02b63aa2ed}{TTF\_RenderUNICODE\_Solid\_Wrapped}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Uint16\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ Uint32\ wrapLength);}
+\DoxyCodeLine{01160\ }
+\DoxyCodeLine{01192\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a32ad50c1db0c1d5399bdb2470ce32b69}{TTF\_RenderGlyph\_Solid}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Uint16\ ch,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg);}
+\DoxyCodeLine{01194\ }
+\DoxyCodeLine{01224\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a0ea8cc65d463d944ab1825a3ed2040b8}{TTF\_RenderGlyph32\_Solid}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Uint32\ ch,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg);}
+\DoxyCodeLine{01226\ }
+\DoxyCodeLine{01260\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a88eb47356450068a4741d3b52c8fc2a3}{TTF\_RenderText\_Shaded}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ bg);}
+\DoxyCodeLine{01262\ }
+\DoxyCodeLine{01290\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a93c9a88e31fa39d8691f4ad65ed8299e}{TTF\_RenderUTF8\_Shaded}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ bg);}
+\DoxyCodeLine{01292\ }
+\DoxyCodeLine{01325\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a0c1d4277c9e85c6de890eb9621a81def}{TTF\_RenderUNICODE\_Shaded}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Uint16\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ bg);}
+\DoxyCodeLine{01327\ }
+\DoxyCodeLine{01359\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_ad7b3337d199911340ae415b5d5f9fa2c}{TTF\_RenderText\_Shaded\_Wrapped}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ bg,\ Uint32\ wrapLength);}
+\DoxyCodeLine{01361\ }
+\DoxyCodeLine{01389\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_ae781122858a820b6f8574a13097bf8c4}{TTF\_RenderUTF8\_Shaded\_Wrapped}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ bg,\ Uint32\ wrapLength);}
+\DoxyCodeLine{01391\ }
+\DoxyCodeLine{01423\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a408831abbd0efd5d7e9715af1f0d3c29}{TTF\_RenderUNICODE\_Shaded\_Wrapped}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Uint16\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ bg,\ Uint32\ wrapLength);}
+\DoxyCodeLine{01425\ }
+\DoxyCodeLine{01458\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a985c8d64368bf74aeabbf92a281b487e}{TTF\_RenderGlyph\_Shaded}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01459\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Uint16\ ch,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ bg);}
+\DoxyCodeLine{01460\ }
+\DoxyCodeLine{01491\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a2d5f9651bf9e0886e74a0ed89a783bd3}{TTF\_RenderGlyph32\_Shaded}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01492\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Uint32\ ch,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ bg);}
+\DoxyCodeLine{01493\ }
+\DoxyCodeLine{01526\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_aab246fd7087f737dd55420960f30d5c8}{TTF\_RenderText\_Blended}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01527\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg);}
+\DoxyCodeLine{01528\ }
+\DoxyCodeLine{01555\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a4ea1dcff830ac93b032920c1cd7a2326}{TTF\_RenderUTF8\_Blended}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01556\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg);}
+\DoxyCodeLine{01557\ }
+\DoxyCodeLine{01589\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a01203e7347c8d44f3a5740ce6583476c}{TTF\_RenderUNICODE\_Blended}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01590\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Uint16\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg);}
+\DoxyCodeLine{01591\ }
+\DoxyCodeLine{01622\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a2876d3b87d41bd17c26b0c4bd20d1144}{TTF\_RenderText\_Blended\_Wrapped}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01623\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ Uint32\ wrapLength);}
+\DoxyCodeLine{01624\ }
+\DoxyCodeLine{01651\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_af7a999e3557d8690f9a0fec888ca2be0}{TTF\_RenderUTF8\_Blended\_Wrapped}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01652\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ Uint32\ wrapLength);}
+\DoxyCodeLine{01653\ }
+\DoxyCodeLine{01684\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a3258b989986159f67e913c7ff41dd397}{TTF\_RenderUNICODE\_Blended\_Wrapped}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01685\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Uint16\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ Uint32\ wrapLength);}
+\DoxyCodeLine{01686\ }
+\DoxyCodeLine{01718\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a1af073a022c2f1c2360a83e031078c2a}{TTF\_RenderGlyph\_Blended}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01719\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Uint16\ ch,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg);}
+\DoxyCodeLine{01720\ }
+\DoxyCodeLine{01750\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_ae7e792eca4b254bbae075715b5631904}{TTF\_RenderGlyph32\_Blended}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01751\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Uint32\ ch,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg);}
+\DoxyCodeLine{01752\ }
+\DoxyCodeLine{01786\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a3a98fa2d2f2558de24b66e6e47315659}{TTF\_RenderText\_LCD}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01787\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ bg);}
+\DoxyCodeLine{01788\ }
+\DoxyCodeLine{01816\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a81a28df1aade84449f39993d4d431ce3}{TTF\_RenderUTF8\_LCD}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01817\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ bg);}
+\DoxyCodeLine{01818\ }
+\DoxyCodeLine{01851\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_accc83e66df57705014ff4fd6236fa596}{TTF\_RenderUNICODE\_LCD}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01852\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Uint16\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ bg);}
+\DoxyCodeLine{01853\ }
+\DoxyCodeLine{01886\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_afcf645efbdf02bdc60e3fb8eb6dfc4e4}{TTF\_RenderText\_LCD\_Wrapped}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01887\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ bg,\ Uint32\ wrapLength);}
+\DoxyCodeLine{01888\ }
+\DoxyCodeLine{01917\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a13020471d2458b89e95f133f7e42c758}{TTF\_RenderUTF8\_LCD\_Wrapped}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01918\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ bg,\ Uint32\ wrapLength);}
+\DoxyCodeLine{01919\ }
+\DoxyCodeLine{01952\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a6df54faf8d1d9ca37838f14b44f0c1a9}{TTF\_RenderUNICODE\_LCD\_Wrapped}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01953\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Uint16\ *text,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ bg,\ Uint32\ wrapLength);}
+\DoxyCodeLine{01954\ }
+\DoxyCodeLine{01987\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a3a25fac4f0f9f83eb2447f9a32ab5ca5}{TTF\_RenderGlyph\_LCD}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{01988\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Uint16\ ch,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ bg);}
+\DoxyCodeLine{01989\ }
+\DoxyCodeLine{02019\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a348f486a75af11ace6956a75676951d2}{TTF\_RenderGlyph32\_LCD}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,}
+\DoxyCodeLine{02020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Uint32\ ch,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ fg,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ bg);}
+\DoxyCodeLine{02021\ }
+\DoxyCodeLine{02022\ }
+\DoxyCodeLine{02023\ \textcolor{comment}{/*\ For\ compatibility\ with\ previous\ versions,\ here\ are\ the\ old\ functions\ */}}
+\DoxyCodeLine{02024\ \textcolor{preprocessor}{\#define\ TTF\_RenderText(font,\ text,\ fg,\ bg)\ \ \(\backslash\)}}
+\DoxyCodeLine{02025\ \textcolor{preprocessor}{\ \ \ \ TTF\_RenderText\_Shaded(font,\ text,\ fg,\ bg)}}
+\DoxyCodeLine{02026\ \textcolor{preprocessor}{\#define\ TTF\_RenderUTF8(font,\ text,\ fg,\ bg)\ \ \(\backslash\)}}
+\DoxyCodeLine{02027\ \textcolor{preprocessor}{\ \ \ \ TTF\_RenderUTF8\_Shaded(font,\ text,\ fg,\ bg)}}
+\DoxyCodeLine{02028\ \textcolor{preprocessor}{\#define\ TTF\_RenderUNICODE(font,\ text,\ fg,\ bg)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{02029\ \textcolor{preprocessor}{\ \ \ \ TTF\_RenderUNICODE\_Shaded(font,\ text,\ fg,\ bg)}}
+\DoxyCodeLine{02030\ }
+\DoxyCodeLine{02055\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a006b7c83a8ff15bb9f9d453d48ba3e51}{TTF\_CloseFont}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font);}
+\DoxyCodeLine{02056\ }
+\DoxyCodeLine{02075\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_aa215d7d4fe202960904507a6ad4e6097}{TTF\_Quit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{02076\ }
+\DoxyCodeLine{02097\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a28768607fd8a55a3ab06531eaf721c15}{TTF\_WasInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{02098\ }
+\DoxyCodeLine{02118\ \textcolor{keyword}{extern}\ SDL\_DEPRECATED\ DECLSPEC\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__ttf_8h_afa971c6ffc92e8d5e2a08cc396549756}{TTF\_GetFontKerningSize}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \textcolor{keywordtype}{int}\ prev\_index,\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{02119\ }
+\DoxyCodeLine{02141\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__ttf_8h_a0e86fd47f470d6f21c47622035da50bd}{TTF\_GetFontKerningSizeGlyphs}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ Uint16\ previous\_ch,\ Uint16\ ch);}
+\DoxyCodeLine{02142\ }
+\DoxyCodeLine{02158\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__ttf_8h_a66a105430c6d4e28299a29223833f285}{TTF\_GetFontKerningSizeGlyphs32}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ Uint32\ previous\_ch,\ Uint32\ ch);}
+\DoxyCodeLine{02159\ }
+\DoxyCodeLine{02177\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__ttf_8h_aa96511b8c3a7ab3357134beb2754e9ff}{TTF\_SetFontSDF}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ SDL\_bool\ on\_off);}
+\DoxyCodeLine{02178\ }
+\DoxyCodeLine{02190\ \textcolor{keyword}{extern}\ DECLSPEC\ SDL\_bool\ \mbox{\hyperlink{_s_d_l__ttf_8h_a4b098a06a88dcf481f63ce68ce4c5ff5}{TTF\_GetFontSDF}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font);}
+\DoxyCodeLine{02191\ }
+\DoxyCodeLine{02197\ \textcolor{preprocessor}{\#define\ TTF\_SetError\ \ \ \ SDL\_SetError}}
+\DoxyCodeLine{02198\ }
+\DoxyCodeLine{02204\ \textcolor{preprocessor}{\#define\ TTF\_GetError\ \ \ \ SDL\_GetError}}
+\DoxyCodeLine{02205\ }
+\DoxyCodeLine{02211\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{02212\ \{}
+\DoxyCodeLine{02213\ \ \ TTF\_DIRECTION\_LTR\ =\ 0,\ \ \ \ \textcolor{comment}{/*\ Left\ to\ Right\ */}}
+\DoxyCodeLine{02214\ \ \ TTF\_DIRECTION\_RTL,\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Right\ to\ Left\ */}}
+\DoxyCodeLine{02215\ \ \ TTF\_DIRECTION\_TTB,\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Top\ to\ Bottom\ */}}
+\DoxyCodeLine{02216\ \ \ TTF\_DIRECTION\_BTT\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Bottom\ to\ Top\ */}}
+\DoxyCodeLine{02217\ \}\ \mbox{\hyperlink{_s_d_l__ttf_8h_a1520f18272c8f9ce64830fcd288e6a46}{TTF\_Direction}};}
+\DoxyCodeLine{02218\ }
+\DoxyCodeLine{02241\ \textcolor{keyword}{extern}\ SDL\_DEPRECATED\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a56c4ce011601169540e6771a037f126a}{TTF\_SetDirection}}(\textcolor{keywordtype}{int}\ direction);\ \textcolor{comment}{/*\ hb\_direction\_t\ */}}
+\DoxyCodeLine{02242\ }
+\DoxyCodeLine{02264\ \textcolor{keyword}{extern}\ SDL\_DEPRECATED\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a6ed08cb4253538af931e5e97505a856d}{TTF\_SetScript}}(\textcolor{keywordtype}{int}\ script);\ \textcolor{comment}{/*\ hb\_script\_t\ */}}
+\DoxyCodeLine{02265\ }
+\DoxyCodeLine{02287\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_a4986991c40e1353397099d2134928010}{TTF\_SetFontDirection}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \mbox{\hyperlink{_s_d_l__ttf_8h_a1520f18272c8f9ce64830fcd288e6a46}{TTF\_Direction}}\ direction);}
+\DoxyCodeLine{02288\ }
+\DoxyCodeLine{02306\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac893167cd8ad82c0342157c15d99dff2}{TTF\_SetFontScriptName}}(\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *script);}
+\DoxyCodeLine{02307\ }
+\DoxyCodeLine{02308\ \textcolor{comment}{/*\ Ends\ C\ function\ definitions\ when\ using\ C++\ */}}
+\DoxyCodeLine{02309\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{02310\ \}}
+\DoxyCodeLine{02311\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{02312\ \textcolor{preprocessor}{\#include\ "{}../close\_code.h"{}}}
+\DoxyCodeLine{02313\ }
+\DoxyCodeLine{02314\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SDL\_TTF\_H\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{02315\ }
+\DoxyCodeLine{02316\ \textcolor{comment}{/*\ vi:\ set\ ts=4\ sw=4\ expandtab:\ */}}
+
+\end{DoxyCode}

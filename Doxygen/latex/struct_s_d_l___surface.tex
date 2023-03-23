@@ -1,0 +1,121 @@
+\hypertarget{struct_s_d_l___surface}{}\doxysection{SDL\+\_\+\+Surface Struct Reference}
+\label{struct_s_d_l___surface}\index{SDL\_Surface@{SDL\_Surface}}
+
+
+A collection of pixels used in software blitting.  
+
+
+
+
+{\ttfamily \#include $<$SDL\+\_\+surface.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+Uint32 \mbox{\hyperlink{struct_s_d_l___surface_a048097c5cc2146ce1ff2450684f1b51c}{flags}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___pixel_format}{SDL\+\_\+\+Pixel\+Format}} $\ast$ \mbox{\hyperlink{struct_s_d_l___surface_a9d191a5bbd871cd7b4ded2158b4f61e8}{format}}
+\item 
+\mbox{\Hypertarget{struct_s_d_l___surface_aac374e320caaadeca4874add33b62af2}\label{struct_s_d_l___surface_aac374e320caaadeca4874add33b62af2}} 
+int {\bfseries w}
+\item 
+int \mbox{\hyperlink{struct_s_d_l___surface_a16611451551e3d15916bae723c3f59f7}{h}}
+\item 
+int \mbox{\hyperlink{struct_s_d_l___surface_a05c8b22d2905f7a52fa31b13f85c70f3}{pitch}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct_s_d_l___surface_aaf78c2553b191735d6902cafb68a92ff}{pixels}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct_s_d_l___surface_afd0ffb02780e738d4c0a10ab833b7834}{userdata}}
+\item 
+int \mbox{\hyperlink{struct_s_d_l___surface_a3656313f0cb42dffd0c00864ca333c25}{locked}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct_s_d_l___surface_ac17f9ee42c45f943d03b7abdd8f65b26}{list\+\_\+blitmap}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___rect}{SDL\+\_\+\+Rect}} \mbox{\hyperlink{struct_s_d_l___surface_ada87d50bed22f849936519c4912a5a98}{clip\+\_\+rect}}
+\item 
+SDL\+\_\+\+Blit\+Map $\ast$ \mbox{\hyperlink{struct_s_d_l___surface_a1256568039ad9cbd373992917cf9993d}{map}}
+\item 
+int \mbox{\hyperlink{struct_s_d_l___surface_a6022c8a609170c7365fb96e83cb2df48}{refcount}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A collection of pixels used in software blitting. 
+
+\begin{DoxyNote}{Note}
+This structure should be treated as read-\/only, except for {\ttfamily pixels}, which, if not NULL, contains the raw pixel data for the surface. 
+\end{DoxyNote}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_s_d_l___surface_ada87d50bed22f849936519c4912a5a98}\label{struct_s_d_l___surface_ada87d50bed22f849936519c4912a5a98}} 
+\index{SDL\_Surface@{SDL\_Surface}!clip\_rect@{clip\_rect}}
+\index{clip\_rect@{clip\_rect}!SDL\_Surface@{SDL\_Surface}}
+\doxysubsubsection{\texorpdfstring{clip\_rect}{clip\_rect}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___rect}{SDL\+\_\+\+Rect}} clip\+\_\+rect}
+
+clipping information Read-\/only \mbox{\Hypertarget{struct_s_d_l___surface_a048097c5cc2146ce1ff2450684f1b51c}\label{struct_s_d_l___surface_a048097c5cc2146ce1ff2450684f1b51c}} 
+\index{SDL\_Surface@{SDL\_Surface}!flags@{flags}}
+\index{flags@{flags}!SDL\_Surface@{SDL\_Surface}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily Uint32 flags}
+
+Read-\/only \mbox{\Hypertarget{struct_s_d_l___surface_a9d191a5bbd871cd7b4ded2158b4f61e8}\label{struct_s_d_l___surface_a9d191a5bbd871cd7b4ded2158b4f61e8}} 
+\index{SDL\_Surface@{SDL\_Surface}!format@{format}}
+\index{format@{format}!SDL\_Surface@{SDL\_Surface}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___pixel_format}{SDL\+\_\+\+Pixel\+Format}}$\ast$ format}
+
+Read-\/only \mbox{\Hypertarget{struct_s_d_l___surface_a16611451551e3d15916bae723c3f59f7}\label{struct_s_d_l___surface_a16611451551e3d15916bae723c3f59f7}} 
+\index{SDL\_Surface@{SDL\_Surface}!h@{h}}
+\index{h@{h}!SDL\_Surface@{SDL\_Surface}}
+\doxysubsubsection{\texorpdfstring{h}{h}}
+{\footnotesize\ttfamily int h}
+
+Read-\/only \mbox{\Hypertarget{struct_s_d_l___surface_ac17f9ee42c45f943d03b7abdd8f65b26}\label{struct_s_d_l___surface_ac17f9ee42c45f943d03b7abdd8f65b26}} 
+\index{SDL\_Surface@{SDL\_Surface}!list\_blitmap@{list\_blitmap}}
+\index{list\_blitmap@{list\_blitmap}!SDL\_Surface@{SDL\_Surface}}
+\doxysubsubsection{\texorpdfstring{list\_blitmap}{list\_blitmap}}
+{\footnotesize\ttfamily void$\ast$ list\+\_\+blitmap}
+
+list of Blit\+Map that hold a reference to this surface Private \mbox{\Hypertarget{struct_s_d_l___surface_a3656313f0cb42dffd0c00864ca333c25}\label{struct_s_d_l___surface_a3656313f0cb42dffd0c00864ca333c25}} 
+\index{SDL\_Surface@{SDL\_Surface}!locked@{locked}}
+\index{locked@{locked}!SDL\_Surface@{SDL\_Surface}}
+\doxysubsubsection{\texorpdfstring{locked}{locked}}
+{\footnotesize\ttfamily int locked}
+
+information needed for surfaces requiring locks Read-\/only \mbox{\Hypertarget{struct_s_d_l___surface_a1256568039ad9cbd373992917cf9993d}\label{struct_s_d_l___surface_a1256568039ad9cbd373992917cf9993d}} 
+\index{SDL\_Surface@{SDL\_Surface}!map@{map}}
+\index{map@{map}!SDL\_Surface@{SDL\_Surface}}
+\doxysubsubsection{\texorpdfstring{map}{map}}
+{\footnotesize\ttfamily SDL\+\_\+\+Blit\+Map$\ast$ map}
+
+info for fast blit mapping to other surfaces Private \mbox{\Hypertarget{struct_s_d_l___surface_a05c8b22d2905f7a52fa31b13f85c70f3}\label{struct_s_d_l___surface_a05c8b22d2905f7a52fa31b13f85c70f3}} 
+\index{SDL\_Surface@{SDL\_Surface}!pitch@{pitch}}
+\index{pitch@{pitch}!SDL\_Surface@{SDL\_Surface}}
+\doxysubsubsection{\texorpdfstring{pitch}{pitch}}
+{\footnotesize\ttfamily int pitch}
+
+Read-\/only \mbox{\Hypertarget{struct_s_d_l___surface_aaf78c2553b191735d6902cafb68a92ff}\label{struct_s_d_l___surface_aaf78c2553b191735d6902cafb68a92ff}} 
+\index{SDL\_Surface@{SDL\_Surface}!pixels@{pixels}}
+\index{pixels@{pixels}!SDL\_Surface@{SDL\_Surface}}
+\doxysubsubsection{\texorpdfstring{pixels}{pixels}}
+{\footnotesize\ttfamily void$\ast$ pixels}
+
+Read-\/write \mbox{\Hypertarget{struct_s_d_l___surface_a6022c8a609170c7365fb96e83cb2df48}\label{struct_s_d_l___surface_a6022c8a609170c7365fb96e83cb2df48}} 
+\index{SDL\_Surface@{SDL\_Surface}!refcount@{refcount}}
+\index{refcount@{refcount}!SDL\_Surface@{SDL\_Surface}}
+\doxysubsubsection{\texorpdfstring{refcount}{refcount}}
+{\footnotesize\ttfamily int refcount}
+
+Reference count -- used when freeing surface Read-\/mostly \mbox{\Hypertarget{struct_s_d_l___surface_afd0ffb02780e738d4c0a10ab833b7834}\label{struct_s_d_l___surface_afd0ffb02780e738d4c0a10ab833b7834}} 
+\index{SDL\_Surface@{SDL\_Surface}!userdata@{userdata}}
+\index{userdata@{userdata}!SDL\_Surface@{SDL\_Surface}}
+\doxysubsubsection{\texorpdfstring{userdata}{userdata}}
+{\footnotesize\ttfamily void$\ast$ userdata}
+
+Application data associated with the surface Read-\/write 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/matth/\+One\+Drive/\+Documents/\+S2/\+Methodo/\+TP3/sdl/include/\mbox{\hyperlink{_s_d_l__surface_8h}{SDL\+\_\+surface.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,254 @@
+\hypertarget{_s_d_l__joystick_8h_source}{}\doxysection{SDL\+\_\+joystick.\+h}
+\label{_s_d_l__joystick_8h_source}\index{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/sdl/include/SDL\_joystick.h@{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/sdl/include/SDL\_joystick.h}}
+\mbox{\hyperlink{_s_d_l__joystick_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ Simple\ DirectMedia\ Layer}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ Copyright\ (C)\ 1997-\/2023\ Sam\ Lantinga\ <slouken@libsdl.org>}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ This\ software\ is\ provided\ 'as-\/is',\ without\ any\ express\ or\ implied}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ warranty.\ \ In\ no\ event\ will\ the\ authors\ be\ held\ liable\ for\ any\ damages}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ arising\ from\ the\ use\ of\ this\ software.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ Permission\ is\ granted\ to\ anyone\ to\ use\ this\ software\ for\ any\ purpose,}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ including\ commercial\ applications,\ and\ to\ alter\ it\ and\ redistribute\ it}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ freely,\ subject\ to\ the\ following\ restrictions:}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ 1.\ The\ origin\ of\ this\ software\ must\ not\ be\ misrepresented;\ you\ must\ not}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ \ claim\ that\ you\ wrote\ the\ original\ software.\ If\ you\ use\ this\ software}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ \ in\ a\ product,\ an\ acknowledgment\ in\ the\ product\ documentation\ would\ be}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ \ appreciated\ but\ is\ not\ required.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ 2.\ Altered\ source\ versions\ must\ be\ plainly\ marked\ as\ such,\ and\ must\ not\ be}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ \ misrepresented\ as\ being\ the\ original\ software.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ 3.\ This\ notice\ may\ not\ be\ removed\ or\ altered\ from\ any\ source\ distribution.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#ifndef\ SDL\_joystick\_h\_}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ SDL\_joystick\_h\_}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_s_d_l__stdinc_8h}{SDL\_stdinc.h}}"{}}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_s_d_l__error_8h}{SDL\_error.h}}"{}}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_s_d_l__guid_8h}{SDL\_guid.h}}"{}}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{begin__code_8h}{begin\_code.h}}"{}}}
+\DoxyCodeLine{00049\ \textcolor{comment}{/*\ Set\ up\ for\ C\ function\ definitions,\ even\ when\ using\ C++\ */}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00051\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{struct\ }\_SDL\_Joystick;}
+\DoxyCodeLine{00070\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\_SDL\_Joystick\ SDL\_Joystick;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{comment}{/*\ A\ structure\ that\ encodes\ the\ stable\ unique\ id\ for\ a\ joystick\ device\ */}}
+\DoxyCodeLine{00073\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{struct_s_d_l___g_u_i_d}{SDL\_GUID}}\ \mbox{\hyperlink{struct_s_d_l___g_u_i_d}{SDL\_JoystickGUID}};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{typedef}\ Sint32\ \mbox{\hyperlink{_s_d_l__joystick_8h_a3c3d32500cb08f76ee8077983912c0bd}{SDL\_JoystickID}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00085\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ SDL\_JOYSTICK\_TYPE\_UNKNOWN,}
+\DoxyCodeLine{00087\ \ \ \ \ SDL\_JOYSTICK\_TYPE\_GAMECONTROLLER,}
+\DoxyCodeLine{00088\ \ \ \ \ SDL\_JOYSTICK\_TYPE\_WHEEL,}
+\DoxyCodeLine{00089\ \ \ \ \ SDL\_JOYSTICK\_TYPE\_ARCADE\_STICK,}
+\DoxyCodeLine{00090\ \ \ \ \ SDL\_JOYSTICK\_TYPE\_FLIGHT\_STICK,}
+\DoxyCodeLine{00091\ \ \ \ \ SDL\_JOYSTICK\_TYPE\_DANCE\_PAD,}
+\DoxyCodeLine{00092\ \ \ \ \ SDL\_JOYSTICK\_TYPE\_GUITAR,}
+\DoxyCodeLine{00093\ \ \ \ \ SDL\_JOYSTICK\_TYPE\_DRUM\_KIT,}
+\DoxyCodeLine{00094\ \ \ \ \ SDL\_JOYSTICK\_TYPE\_ARCADE\_PAD,}
+\DoxyCodeLine{00095\ \ \ \ \ SDL\_JOYSTICK\_TYPE\_THROTTLE}
+\DoxyCodeLine{00096\ \}\ SDL\_JoystickType;}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00099\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ SDL\_JOYSTICK\_POWER\_UNKNOWN\ =\ -\/1,}
+\DoxyCodeLine{00101\ \ \ \ \ SDL\_JOYSTICK\_POWER\_EMPTY,\ \ \ \textcolor{comment}{/*\ <=\ 5\%\ */}}
+\DoxyCodeLine{00102\ \ \ \ \ SDL\_JOYSTICK\_POWER\_LOW,\ \ \ \ \ \textcolor{comment}{/*\ <=\ 20\%\ */}}
+\DoxyCodeLine{00103\ \ \ \ \ SDL\_JOYSTICK\_POWER\_MEDIUM,\ \ \textcolor{comment}{/*\ <=\ 70\%\ */}}
+\DoxyCodeLine{00104\ \ \ \ \ SDL\_JOYSTICK\_POWER\_FULL,\ \ \ \ \textcolor{comment}{/*\ <=\ 100\%\ */}}
+\DoxyCodeLine{00105\ \ \ \ \ SDL\_JOYSTICK\_POWER\_WIRED,}
+\DoxyCodeLine{00106\ \ \ \ \ SDL\_JOYSTICK\_POWER\_MAX}
+\DoxyCodeLine{00107\ \}\ SDL\_JoystickPowerLevel;}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{comment}{/*\ Set\ max\ recognized\ G-\/force\ from\ accelerometer}}
+\DoxyCodeLine{00110\ \textcolor{comment}{\ \ \ See\ src/joystick/uikit/SDL\_sysjoystick.m\ for\ notes\ on\ why\ this\ is\ needed}}
+\DoxyCodeLine{00111\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ SDL\_IPHONE\_MAX\_GFORCE\ 5.0}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{comment}{/*\ Function\ prototypes\ */}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00134\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a4a2e0bedda1b7d0ac957607e944bfba0}{SDL\_LockJoysticks}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00149\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_add3a6baa4646469b34c42df028c59be0}{SDL\_UnlockJoysticks}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00163\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a2ab130eaa28f8e3bd544a5432041a311}{SDL\_NumJoysticks}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00180\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a7b146627cc69693b6ab6acd9b39a94c9}{SDL\_JoystickNameForIndex}}(\textcolor{keywordtype}{int}\ device\_index);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00197\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a6e7c149b0a067b5e1272bc6f4bbd14bc}{SDL\_JoystickPathForIndex}}(\textcolor{keywordtype}{int}\ device\_index);}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00205\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_ad882a8dd3fe4278725a7fc212b755db7}{SDL\_JoystickGetDevicePlayerIndex}}(\textcolor{keywordtype}{int}\ device\_index);}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00223\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___g_u_i_d}{SDL\_JoystickGUID}}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_afdbf5289ff5452afb1bd869ffcf250b5}{SDL\_JoystickGetDeviceGUID}}(\textcolor{keywordtype}{int}\ device\_index);}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00238\ \textcolor{keyword}{extern}\ DECLSPEC\ Uint16\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_afb8ba88559debca4ab2c702b8500d5fe}{SDL\_JoystickGetDeviceVendor}}(\textcolor{keywordtype}{int}\ device\_index);}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00253\ \textcolor{keyword}{extern}\ DECLSPEC\ Uint16\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a6330470720659333e6ef60994942a855}{SDL\_JoystickGetDeviceProduct}}(\textcolor{keywordtype}{int}\ device\_index);}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00268\ \textcolor{keyword}{extern}\ DECLSPEC\ Uint16\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a10972ad002df75e76ed68c18e1188e5e}{SDL\_JoystickGetDeviceProductVersion}}(\textcolor{keywordtype}{int}\ device\_index);}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00282\ \textcolor{keyword}{extern}\ DECLSPEC\ SDL\_JoystickType\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a368a06b0fd51d453bb4692dcc2c42b69}{SDL\_JoystickGetDeviceType}}(\textcolor{keywordtype}{int}\ device\_index);}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00297\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{_s_d_l__joystick_8h_a3c3d32500cb08f76ee8077983912c0bd}{SDL\_JoystickID}}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a6c46ea976c7a65d49b38d31b42d11652}{SDL\_JoystickGetDeviceInstanceID}}(\textcolor{keywordtype}{int}\ device\_index);}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00319\ \textcolor{keyword}{extern}\ DECLSPEC\ SDL\_Joystick\ *SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a69452f7f7e11db54292f64db9a629029}{SDL\_JoystickOpen}}(\textcolor{keywordtype}{int}\ device\_index);}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00330\ \textcolor{keyword}{extern}\ DECLSPEC\ SDL\_Joystick\ *SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a16e92e23a46579db3a3419f784f2a026}{SDL\_JoystickFromInstanceID}}(\mbox{\hyperlink{_s_d_l__joystick_8h_a3c3d32500cb08f76ee8077983912c0bd}{SDL\_JoystickID}}\ instance\_id);}
+\DoxyCodeLine{00331\ }
+\DoxyCodeLine{00341\ \textcolor{keyword}{extern}\ DECLSPEC\ SDL\_Joystick\ *SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_ab872247fcafb96d4e3f71ac8ab98cc45}{SDL\_JoystickFromPlayerIndex}}(\textcolor{keywordtype}{int}\ player\_index);}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00350\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_ac72e7fbcf14ab9d1d061b48b60ee63f1}{SDL\_JoystickAttachVirtual}}(SDL\_JoystickType\ type,}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ naxes,}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nbuttons,}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nhats);}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00363\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc}{SDL\_VirtualJoystickDesc}}}
+\DoxyCodeLine{00364\ \{}
+\DoxyCodeLine{00365\ \ \ \ \ Uint16\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_af3dfa75284e4a702980f86990a97aae9}{version}};\ \ \ \ \ }
+\DoxyCodeLine{00366\ \ \ \ \ Uint16\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_a8db4a3e9f29940892f2773bca31c74e1}{type}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00367\ \ \ \ \ Uint16\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_ac7215dc25856f367711fbe0df5d55c74}{naxes}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00368\ \ \ \ \ Uint16\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_a73f4865beed182355e8420fccbf8cdae}{nbuttons}};\ \ \ \ }
+\DoxyCodeLine{00369\ \ \ \ \ Uint16\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_a80d285e07f44eeae35af8967022cee0f}{nhats}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00370\ \ \ \ \ Uint16\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_a2904df50afa56b561aa75f802b008176}{vendor\_id}};\ \ \ }
+\DoxyCodeLine{00371\ \ \ \ \ Uint16\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_ad250438c581148976c913742d6dba22f}{product\_id}};\ \ }
+\DoxyCodeLine{00372\ \ \ \ \ Uint16\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_a489489d55916facdcdfcc2f20fe18309}{padding}};\ \ \ \ \ }
+\DoxyCodeLine{00373\ \ \ \ \ Uint32\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_a554b4f6efffc5cf08bb9ac1a022a09f1}{button\_mask}};\ }
+\DoxyCodeLine{00375\ \ \ \ \ Uint32\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_a626a0b8640e5baa2e762e3d89f0f314b}{axis\_mask}};\ \ \ }
+\DoxyCodeLine{00377\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_a8f8f80d37794cde9472343e4487ba3eb}{name}};\ \ \ }
+\DoxyCodeLine{00379\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_afd0ffb02780e738d4c0a10ab833b7834}{userdata}};\ \ \ \ \ }
+\DoxyCodeLine{00380\ \ \ \ \ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_a9e39e1a9fbad6d5f87e8e10d614f0579}{void}}\ (SDLCALL\ *Update)(\textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_afd0ffb02780e738d4c0a10ab833b7834}{userdata}});\ }
+\DoxyCodeLine{00381\ \ \ \ \ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_a9e39e1a9fbad6d5f87e8e10d614f0579}{void}}\ (SDLCALL\ *SetPlayerIndex)(\textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_afd0ffb02780e738d4c0a10ab833b7834}{userdata}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_ac46dd81307b498cca4749973c32fbfe0}{player\_index}});\ }
+\DoxyCodeLine{00382\ \ \ \ \ int\ (SDLCALL\ *Rumble)(\textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_afd0ffb02780e738d4c0a10ab833b7834}{userdata}},\ Uint16\ low\_frequency\_rumble,\ Uint16\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_a7c0990f7ed8f06e8d66eba66d8fac9a2}{high\_frequency\_rumble}});\ }
+\DoxyCodeLine{00383\ \ \ \ \ int\ (SDLCALL\ *RumbleTriggers)(\textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_afd0ffb02780e738d4c0a10ab833b7834}{userdata}},\ Uint16\ left\_rumble,\ Uint16\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_ae28ca1a08a19ac2dd1c076f1c98f43cd}{right\_rumble}});\ }
+\DoxyCodeLine{00384\ \ \ \ \ int\ (SDLCALL\ *SetLED)(\textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_afd0ffb02780e738d4c0a10ab833b7834}{userdata}},\ Uint8\ red,\ Uint8\ green,\ Uint8\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_a7533a1638632b1b6d4c6a131114c3cf1}{blue}});\ }
+\DoxyCodeLine{00385\ \ \ \ \ int\ (SDLCALL\ *SendEffect)(\textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_afd0ffb02780e738d4c0a10ab833b7834}{userdata}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc_a91e04a3b33c04fe398cdf7be052bd678}{size}});\ }
+\DoxyCodeLine{00387\ \}\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc}{SDL\_VirtualJoystickDesc}};}
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00392\ \textcolor{preprocessor}{\#define\ SDL\_VIRTUAL\_JOYSTICK\_DESC\_VERSION\ \ \ 1}}
+\DoxyCodeLine{00393\ }
+\DoxyCodeLine{00401\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a4166ce7dc20f4fa5dfd8f09e1d1ed04d}{SDL\_JoystickAttachVirtualEx}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_s_d_l___virtual_joystick_desc}{SDL\_VirtualJoystickDesc}}\ *desc);}
+\DoxyCodeLine{00402\ }
+\DoxyCodeLine{00412\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_ae1cff0f737264b2d885bff05a9c5b33f}{SDL\_JoystickDetachVirtual}}(\textcolor{keywordtype}{int}\ device\_index);}
+\DoxyCodeLine{00413\ }
+\DoxyCodeLine{00422\ \textcolor{keyword}{extern}\ DECLSPEC\ SDL\_bool\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a718be0fe686e838f1d0db00d523ff47a}{SDL\_JoystickIsVirtual}}(\textcolor{keywordtype}{int}\ device\_index);}
+\DoxyCodeLine{00423\ }
+\DoxyCodeLine{00444\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a68d808bc0054c5cd068b0d0ff7c5ef7d}{SDL\_JoystickSetVirtualAxis}}(SDL\_Joystick\ *joystick,\ \textcolor{keywordtype}{int}\ axis,\ Sint16\ value);}
+\DoxyCodeLine{00445\ }
+\DoxyCodeLine{00462\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_aa895270395be528f6658006a5c02a799}{SDL\_JoystickSetVirtualButton}}(SDL\_Joystick\ *joystick,\ \textcolor{keywordtype}{int}\ button,\ Uint8\ value);}
+\DoxyCodeLine{00463\ }
+\DoxyCodeLine{00480\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a3f1bcde55e0486bee726f7748c1ca971}{SDL\_JoystickSetVirtualHat}}(SDL\_Joystick\ *joystick,\ \textcolor{keywordtype}{int}\ hat,\ Uint8\ value);}
+\DoxyCodeLine{00481\ }
+\DoxyCodeLine{00494\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a6f3a290c0367a7607d6ebbaa50721eec}{SDL\_JoystickName}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00495\ }
+\DoxyCodeLine{00507\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a23ac23506edeb0ffe4b5bce6f48d7bae}{SDL\_JoystickPath}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00508\ }
+\DoxyCodeLine{00520\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a1b3543511c1839f9c06aeea65b574e77}{SDL\_JoystickGetPlayerIndex}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00521\ }
+\DoxyCodeLine{00531\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a552d1be1bccb9cd81191ddf5f576fa31}{SDL\_JoystickSetPlayerIndex}}(SDL\_Joystick\ *joystick,\ \textcolor{keywordtype}{int}\ player\_index);}
+\DoxyCodeLine{00532\ }
+\DoxyCodeLine{00548\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___g_u_i_d}{SDL\_JoystickGUID}}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_acc85c770af41eae76948e11c678f92ca}{SDL\_JoystickGetGUID}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00549\ }
+\DoxyCodeLine{00560\ \textcolor{keyword}{extern}\ DECLSPEC\ Uint16\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a13d9a1e3c5cbe2591cd5214aad48fed8}{SDL\_JoystickGetVendor}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00561\ }
+\DoxyCodeLine{00572\ \textcolor{keyword}{extern}\ DECLSPEC\ Uint16\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a0f4732dffd2a769a2346f4091b2f3199}{SDL\_JoystickGetProduct}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00573\ }
+\DoxyCodeLine{00584\ \textcolor{keyword}{extern}\ DECLSPEC\ Uint16\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_afe6bbdbc0c81170d237fae42bec05665}{SDL\_JoystickGetProductVersion}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00585\ }
+\DoxyCodeLine{00597\ \textcolor{keyword}{extern}\ DECLSPEC\ Uint16\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a4d930819d9a2fbb637b87a1f282d08c5}{SDL\_JoystickGetFirmwareVersion}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00598\ }
+\DoxyCodeLine{00610\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_afd37d9ca54a83fec1ba34b103047ad61}{SDL\_JoystickGetSerial}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00611\ }
+\DoxyCodeLine{00620\ \textcolor{keyword}{extern}\ DECLSPEC\ SDL\_JoystickType\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_ad21afdbdd915c013cacefb7e79bfe3bf}{SDL\_JoystickGetType}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00621\ }
+\DoxyCodeLine{00637\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a7f615ef8040e7e9de3af6482d8d9908c}{SDL\_JoystickGetGUIDString}}(\mbox{\hyperlink{struct_s_d_l___g_u_i_d}{SDL\_JoystickGUID}}\ guid,\ \textcolor{keywordtype}{char}\ *pszGUID,\ \textcolor{keywordtype}{int}\ cbGUID);}
+\DoxyCodeLine{00638\ }
+\DoxyCodeLine{00653\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{struct_s_d_l___g_u_i_d}{SDL\_JoystickGUID}}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_aef9d131a6a6838847731cf8094944b46}{SDL\_JoystickGetGUIDFromString}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *pchGUID);}
+\DoxyCodeLine{00654\ }
+\DoxyCodeLine{00672\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_ac266b1b21e974189827e5cf87f01f895}{SDL\_GetJoystickGUIDInfo}}(\mbox{\hyperlink{struct_s_d_l___g_u_i_d}{SDL\_JoystickGUID}}\ guid,\ Uint16\ *vendor,\ Uint16\ *product,\ Uint16\ *version,\ Uint16\ *crc16);}
+\DoxyCodeLine{00673\ }
+\DoxyCodeLine{00686\ \textcolor{keyword}{extern}\ DECLSPEC\ SDL\_bool\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a222cd2d664acbea2dad78b891df4b89a}{SDL\_JoystickGetAttached}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00687\ }
+\DoxyCodeLine{00699\ \textcolor{keyword}{extern}\ DECLSPEC\ \mbox{\hyperlink{_s_d_l__joystick_8h_a3c3d32500cb08f76ee8077983912c0bd}{SDL\_JoystickID}}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_ab38dfc6428e15c2476478418075d4c83}{SDL\_JoystickInstanceID}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00700\ }
+\DoxyCodeLine{00718\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a865c2e087fe69a3a30c87243729ecdea}{SDL\_JoystickNumAxes}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00719\ }
+\DoxyCodeLine{00736\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a755d087bb16270087bfced7501656a6d}{SDL\_JoystickNumBalls}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00737\ }
+\DoxyCodeLine{00750\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_aa62ea91c7c4ca2d12804a9fb3760e448}{SDL\_JoystickNumHats}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00751\ }
+\DoxyCodeLine{00764\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_adfc662e571011ae7ec303101ab34e53a}{SDL\_JoystickNumButtons}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00765\ }
+\DoxyCodeLine{00776\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a3ea23a9504ea56f2778147dbf39a029f}{SDL\_JoystickUpdate}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00777\ }
+\DoxyCodeLine{00801\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a51ba353843fd4477f6a485ac4ef35d00}{SDL\_JoystickEventState}}(\textcolor{keywordtype}{int}\ state);}
+\DoxyCodeLine{00802\ }
+\DoxyCodeLine{00803\ \textcolor{preprocessor}{\#define\ SDL\_JOYSTICK\_AXIS\_MAX\ \ \ 32767}}
+\DoxyCodeLine{00804\ \textcolor{preprocessor}{\#define\ SDL\_JOYSTICK\_AXIS\_MIN\ \ \ -\/32768}}
+\DoxyCodeLine{00805\ }
+\DoxyCodeLine{00828\ \textcolor{keyword}{extern}\ DECLSPEC\ Sint16\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_ac6fbda13b93679bedfc34733d4b2e748}{SDL\_JoystickGetAxis}}(SDL\_Joystick\ *joystick,}
+\DoxyCodeLine{00829\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ axis);}
+\DoxyCodeLine{00830\ }
+\DoxyCodeLine{00845\ \textcolor{keyword}{extern}\ DECLSPEC\ SDL\_bool\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a3b87809500c342149471e1abf0ace40c}{SDL\_JoystickGetAxisInitialState}}(SDL\_Joystick\ *joystick,}
+\DoxyCodeLine{00846\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ axis,\ Sint16\ *state);}
+\DoxyCodeLine{00847\ }
+\DoxyCodeLine{00851\ \textcolor{comment}{/*\ @\{\ */}}
+\DoxyCodeLine{00852\ \textcolor{preprocessor}{\#define\ SDL\_HAT\_CENTERED\ \ \ \ 0x00}}
+\DoxyCodeLine{00853\ \textcolor{preprocessor}{\#define\ SDL\_HAT\_UP\ \ \ \ \ \ \ \ \ \ 0x01}}
+\DoxyCodeLine{00854\ \textcolor{preprocessor}{\#define\ SDL\_HAT\_RIGHT\ \ \ \ \ \ \ 0x02}}
+\DoxyCodeLine{00855\ \textcolor{preprocessor}{\#define\ SDL\_HAT\_DOWN\ \ \ \ \ \ \ \ 0x04}}
+\DoxyCodeLine{00856\ \textcolor{preprocessor}{\#define\ SDL\_HAT\_LEFT\ \ \ \ \ \ \ \ 0x08}}
+\DoxyCodeLine{00857\ \textcolor{preprocessor}{\#define\ SDL\_HAT\_RIGHTUP\ \ \ \ \ (SDL\_HAT\_RIGHT|SDL\_HAT\_UP)}}
+\DoxyCodeLine{00858\ \textcolor{preprocessor}{\#define\ SDL\_HAT\_RIGHTDOWN\ \ \ (SDL\_HAT\_RIGHT|SDL\_HAT\_DOWN)}}
+\DoxyCodeLine{00859\ \textcolor{preprocessor}{\#define\ SDL\_HAT\_LEFTUP\ \ \ \ \ \ (SDL\_HAT\_LEFT|SDL\_HAT\_UP)}}
+\DoxyCodeLine{00860\ \textcolor{preprocessor}{\#define\ SDL\_HAT\_LEFTDOWN\ \ \ \ (SDL\_HAT\_LEFT|SDL\_HAT\_DOWN)}}
+\DoxyCodeLine{00861\ \textcolor{comment}{/*\ @\}\ */}}
+\DoxyCodeLine{00862\ }
+\DoxyCodeLine{00886\ \textcolor{keyword}{extern}\ DECLSPEC\ Uint8\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a2215030cf283295569fee41fd0251e01}{SDL\_JoystickGetHat}}(SDL\_Joystick\ *joystick,}
+\DoxyCodeLine{00887\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ hat);}
+\DoxyCodeLine{00888\ }
+\DoxyCodeLine{00908\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_ac7a5a4c17f6a5a4ef9f5bc78e50913df}{SDL\_JoystickGetBall}}(SDL\_Joystick\ *joystick,}
+\DoxyCodeLine{00909\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ball,\ \textcolor{keywordtype}{int}\ *dx,\ \textcolor{keywordtype}{int}\ *dy);}
+\DoxyCodeLine{00910\ }
+\DoxyCodeLine{00923\ \textcolor{keyword}{extern}\ DECLSPEC\ Uint8\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_aaf7789eb03bc42525691e075e2a36131}{SDL\_JoystickGetButton}}(SDL\_Joystick\ *joystick,}
+\DoxyCodeLine{00924\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ button);}
+\DoxyCodeLine{00925\ }
+\DoxyCodeLine{00944\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a307c87a4de5aec2d1ca22856d94930fa}{SDL\_JoystickRumble}}(SDL\_Joystick\ *joystick,\ Uint16\ low\_frequency\_rumble,\ Uint16\ high\_frequency\_rumble,\ Uint32\ duration\_ms);}
+\DoxyCodeLine{00945\ }
+\DoxyCodeLine{00969\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a0d248aa2e25ac62d30444583180ff539}{SDL\_JoystickRumbleTriggers}}(SDL\_Joystick\ *joystick,\ Uint16\ left\_rumble,\ Uint16\ right\_rumble,\ Uint32\ duration\_ms);}
+\DoxyCodeLine{00970\ }
+\DoxyCodeLine{00982\ \textcolor{keyword}{extern}\ DECLSPEC\ SDL\_bool\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a7a5a92f4eb93dde4e58d5155ce22b7a7}{SDL\_JoystickHasLED}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00983\ }
+\DoxyCodeLine{00994\ \textcolor{keyword}{extern}\ DECLSPEC\ SDL\_bool\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_afa0e29b3b5738184da3cc281de3e4896}{SDL\_JoystickHasRumble}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{00995\ }
+\DoxyCodeLine{01006\ \textcolor{keyword}{extern}\ DECLSPEC\ SDL\_bool\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a815f02f2cbced249cb4b0018dfd3a777}{SDL\_JoystickHasRumbleTriggers}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{01007\ }
+\DoxyCodeLine{01022\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a4e3e052e175f47fe02c63e92a59f4b04}{SDL\_JoystickSetLED}}(SDL\_Joystick\ *joystick,\ Uint8\ red,\ Uint8\ green,\ Uint8\ blue);}
+\DoxyCodeLine{01023\ }
+\DoxyCodeLine{01034\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{int}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a16c10474f6a3d861babfe1ae424cb1a5}{SDL\_JoystickSendEffect}}(SDL\_Joystick\ *joystick,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{01035\ }
+\DoxyCodeLine{01045\ \textcolor{keyword}{extern}\ DECLSPEC\ \textcolor{keywordtype}{void}\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_aafa0951b40ec2e200c098495c3dd4943}{SDL\_JoystickClose}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{01046\ }
+\DoxyCodeLine{01056\ \textcolor{keyword}{extern}\ DECLSPEC\ SDL\_JoystickPowerLevel\ SDLCALL\ \mbox{\hyperlink{_s_d_l__joystick_8h_a192bbea3553394a6e9c80f77e431fd76}{SDL\_JoystickCurrentPowerLevel}}(SDL\_Joystick\ *joystick);}
+\DoxyCodeLine{01057\ }
+\DoxyCodeLine{01058\ \textcolor{comment}{/*\ Ends\ C\ function\ definitions\ when\ using\ C++\ */}}
+\DoxyCodeLine{01059\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{01060\ \}}
+\DoxyCodeLine{01061\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01062\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{close__code_8h}{close\_code.h}}"{}}}
+\DoxyCodeLine{01063\ }
+\DoxyCodeLine{01064\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SDL\_joystick\_h\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{01065\ }
+\DoxyCodeLine{01066\ \textcolor{comment}{/*\ vi:\ set\ ts=4\ sw=4\ expandtab:\ */}}
+
+\end{DoxyCode}

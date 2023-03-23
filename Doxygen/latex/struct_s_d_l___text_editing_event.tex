@@ -1,0 +1,73 @@
+\hypertarget{struct_s_d_l___text_editing_event}{}\doxysection{SDL\+\_\+\+Text\+Editing\+Event Struct Reference}
+\label{struct_s_d_l___text_editing_event}\index{SDL\_TextEditingEvent@{SDL\_TextEditingEvent}}
+
+
+Keyboard text editing event structure (event.\+edit.$\ast$)  
+
+
+
+
+{\ttfamily \#include $<$SDL\+\_\+events.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+Uint32 \mbox{\hyperlink{struct_s_d_l___text_editing_event_aa40a9b05c3154032b9f2d7220e9f08dc}{type}}
+\item 
+Uint32 \mbox{\hyperlink{struct_s_d_l___text_editing_event_abf1ed7edeab81db9c05d899836a44a2f}{timestamp}}
+\item 
+Uint32 \mbox{\hyperlink{struct_s_d_l___text_editing_event_a78d9995068d6f40cd78bb8db7351b0a1}{window\+ID}}
+\item 
+char \mbox{\hyperlink{struct_s_d_l___text_editing_event_a43f22bc8cbe64d36f1e02c7f4ca9b445}{text}} \mbox{[}SDL\+\_\+\+TEXTEDITINGEVENT\+\_\+\+TEXT\+\_\+\+SIZE\mbox{]}
+\item 
+Sint32 \mbox{\hyperlink{struct_s_d_l___text_editing_event_adb4db5cb1d25adb3d1c10bf8f00bab48}{start}}
+\item 
+Sint32 \mbox{\hyperlink{struct_s_d_l___text_editing_event_ae693591537f87d589b5a4fca7cbbf4dd}{length}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Keyboard text editing event structure (event.\+edit.$\ast$) 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_s_d_l___text_editing_event_ae693591537f87d589b5a4fca7cbbf4dd}\label{struct_s_d_l___text_editing_event_ae693591537f87d589b5a4fca7cbbf4dd}} 
+\index{SDL\_TextEditingEvent@{SDL\_TextEditingEvent}!length@{length}}
+\index{length@{length}!SDL\_TextEditingEvent@{SDL\_TextEditingEvent}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily Sint32 length}
+
+The length of selected editing text \mbox{\Hypertarget{struct_s_d_l___text_editing_event_adb4db5cb1d25adb3d1c10bf8f00bab48}\label{struct_s_d_l___text_editing_event_adb4db5cb1d25adb3d1c10bf8f00bab48}} 
+\index{SDL\_TextEditingEvent@{SDL\_TextEditingEvent}!start@{start}}
+\index{start@{start}!SDL\_TextEditingEvent@{SDL\_TextEditingEvent}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily Sint32 start}
+
+The start cursor of selected editing text \mbox{\Hypertarget{struct_s_d_l___text_editing_event_a43f22bc8cbe64d36f1e02c7f4ca9b445}\label{struct_s_d_l___text_editing_event_a43f22bc8cbe64d36f1e02c7f4ca9b445}} 
+\index{SDL\_TextEditingEvent@{SDL\_TextEditingEvent}!text@{text}}
+\index{text@{text}!SDL\_TextEditingEvent@{SDL\_TextEditingEvent}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily char text\mbox{[}SDL\+\_\+\+TEXTEDITINGEVENT\+\_\+\+TEXT\+\_\+\+SIZE\mbox{]}}
+
+The editing text \mbox{\Hypertarget{struct_s_d_l___text_editing_event_abf1ed7edeab81db9c05d899836a44a2f}\label{struct_s_d_l___text_editing_event_abf1ed7edeab81db9c05d899836a44a2f}} 
+\index{SDL\_TextEditingEvent@{SDL\_TextEditingEvent}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!SDL\_TextEditingEvent@{SDL\_TextEditingEvent}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily Uint32 timestamp}
+
+In milliseconds, populated using \mbox{\hyperlink{_s_d_l__timer_8h_a0b9bc71d6287e0ffafdc3419760fe2b3}{SDL\+\_\+\+Get\+Ticks()}} \mbox{\Hypertarget{struct_s_d_l___text_editing_event_aa40a9b05c3154032b9f2d7220e9f08dc}\label{struct_s_d_l___text_editing_event_aa40a9b05c3154032b9f2d7220e9f08dc}} 
+\index{SDL\_TextEditingEvent@{SDL\_TextEditingEvent}!type@{type}}
+\index{type@{type}!SDL\_TextEditingEvent@{SDL\_TextEditingEvent}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily Uint32 type}
+
+\mbox{\hyperlink{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa1b80c465df69c0b6d06f026ce7a230e3}{SDL\+\_\+\+TEXTEDITING}} \mbox{\Hypertarget{struct_s_d_l___text_editing_event_a78d9995068d6f40cd78bb8db7351b0a1}\label{struct_s_d_l___text_editing_event_a78d9995068d6f40cd78bb8db7351b0a1}} 
+\index{SDL\_TextEditingEvent@{SDL\_TextEditingEvent}!windowID@{windowID}}
+\index{windowID@{windowID}!SDL\_TextEditingEvent@{SDL\_TextEditingEvent}}
+\doxysubsubsection{\texorpdfstring{windowID}{windowID}}
+{\footnotesize\ttfamily Uint32 window\+ID}
+
+The window with keyboard focus, if any 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/matth/\+One\+Drive/\+Documents/\+S2/\+Methodo/\+TP3/sdl/include/\mbox{\hyperlink{_s_d_l__events_8h}{SDL\+\_\+events.\+h}}\end{DoxyCompactItemize}

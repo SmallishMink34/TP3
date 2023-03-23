@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "display.h": "c",
+        "stdlib.h": "c",
+        "time.h": "c",
+        "monstre.h": "c",
+        "jouer.h": "c",
+        "joueurs.h": "c",
+        "sdl.h": "c",
+        "sprite.h": "c",
+        "sdl_image.h": "c",
+        "begin_code.h": "c",
+        "close_code.h": "c",
+        "sdl_ttf.h": "c",
+        "system_error": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}

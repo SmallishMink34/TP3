@@ -1,0 +1,233 @@
+\hypertarget{joueurs_8h}{}\doxysection{C\+:/\+Users/matth/\+One\+Drive/\+Documents/\+S2/\+Methodo/\+TP3/\+Joueur/joueurs.h File Reference}
+\label{joueurs_8h}\index{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Joueur/joueurs.h@{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Joueur/joueurs.h}}
+
+
+Structure du joueurs.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../sdl\textbackslash{}include\textbackslash{}\+SDL.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Camera/\+Cam.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Sprites/sprite.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structjoueur}{joueur}}
+\begin{DoxyCompactList}\small\item\em Structure du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structjoueur}{joueur}} \mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{joueurs_8h_a045753a774830d8c014f847415f3fdc2}{deplacement}} (\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$j)
+\begin{DoxyCompactList}\small\item\em Deplace le joueur dans la direction souhaité (Clavier dans la console) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$ \mbox{\hyperlink{joueurs_8h_a8f3b89e10a8203c56d5c189e4cf5799b}{creation\+Joueur}} (int x, int y, SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$win)
+\begin{DoxyCompactList}\small\item\em Création d\textquotesingle{}un joueur. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{joueurs_8h_a023da2b401dc0b71c1173b2bdbd44766}{to\+String\+Jr}} (\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$j)
+\begin{DoxyCompactList}\small\item\em Affiche les informations Joueurs. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{joueurs_8h_a6fd163c3116ce9c945a4e142521dce49}{life\+Joueur}} (\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$j, int degat)
+\begin{DoxyCompactList}\small\item\em Modifie les points de vie du joueur. \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{joueurs_8h_af8045c2e053fc1a7d45b3f25ad226b7b}{get\+Position\+Joueur}} (\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$j)
+\begin{DoxyCompactList}\small\item\em Recuperer la position du joueur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{joueurs_8h_ac50e3fa66e0376ef12fcd1b75922cc58}{get\+Position\+JoueurX}} (\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$j)
+\begin{DoxyCompactList}\small\item\em Recuperer la position du joueur en X. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{joueurs_8h_a97dbdfd4e6d08f3fa7b0891fe6455486}{get\+Position\+JoueurY}} (\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$j)
+\begin{DoxyCompactList}\small\item\em Recuperer la position du joueur en Y. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{joueurs_8h_a752e295282192afcc90bb017b6975fa8}{deplaceto}} (\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$j, char c, \mbox{\hyperlink{struct_camera}{Camera\+\_\+t}} $\ast$cam)
+\begin{DoxyCompactList}\small\item\em Deplace le joueur dans la direction souhaité (Gère la camera) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure du joueurs. 
+
+\begin{DoxyAuthor}{Author}
+M Moulias 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/03-\/02 
+\end{DoxyDate}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{joueurs_8h_af9b80b32df724c709b18bba024d55866}\label{joueurs_8h_af9b80b32df724c709b18bba024d55866}} 
+\index{joueurs.h@{joueurs.h}!joueur\_t@{joueur\_t}}
+\index{joueur\_t@{joueur\_t}!joueurs.h@{joueurs.h}}
+\doxysubsubsection{\texorpdfstring{joueur\_t}{joueur\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}}}
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{joueurs_8h_a8f3b89e10a8203c56d5c189e4cf5799b}\label{joueurs_8h_a8f3b89e10a8203c56d5c189e4cf5799b}} 
+\index{joueurs.h@{joueurs.h}!creationJoueur@{creationJoueur}}
+\index{creationJoueur@{creationJoueur}!joueurs.h@{joueurs.h}}
+\doxysubsubsection{\texorpdfstring{creationJoueur()}{creationJoueur()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$ creation\+Joueur (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$}]{win }\end{DoxyParamCaption})}
+
+
+
+Création d\textquotesingle{}un joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em renderer} & \\
+\hline
+{\em win} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+joueur\+\_\+t$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{joueurs_8h_a045753a774830d8c014f847415f3fdc2}\label{joueurs_8h_a045753a774830d8c014f847415f3fdc2}} 
+\index{joueurs.h@{joueurs.h}!deplacement@{deplacement}}
+\index{deplacement@{deplacement}!joueurs.h@{joueurs.h}}
+\doxysubsubsection{\texorpdfstring{deplacement()}{deplacement()}}
+{\footnotesize\ttfamily int deplacement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$}]{j }\end{DoxyParamCaption})}
+
+
+
+Deplace le joueur dans la direction souhaité (Clavier dans la console) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{joueurs_8h_a752e295282192afcc90bb017b6975fa8}\label{joueurs_8h_a752e295282192afcc90bb017b6975fa8}} 
+\index{joueurs.h@{joueurs.h}!deplaceto@{deplaceto}}
+\index{deplaceto@{deplaceto}!joueurs.h@{joueurs.h}}
+\doxysubsubsection{\texorpdfstring{deplaceto()}{deplaceto()}}
+{\footnotesize\ttfamily int deplaceto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$}]{j,  }\item[{char}]{c,  }\item[{\mbox{\hyperlink{struct_camera}{Camera\+\_\+t}} $\ast$}]{cam }\end{DoxyParamCaption})}
+
+
+
+Deplace le joueur dans la direction souhaité (Gère la camera) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & \\
+\hline
+{\em c} & \\
+\hline
+{\em cam} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{joueurs_8h_af8045c2e053fc1a7d45b3f25ad226b7b}\label{joueurs_8h_af8045c2e053fc1a7d45b3f25ad226b7b}} 
+\index{joueurs.h@{joueurs.h}!getPositionJoueur@{getPositionJoueur}}
+\index{getPositionJoueur@{getPositionJoueur}!joueurs.h@{joueurs.h}}
+\doxysubsubsection{\texorpdfstring{getPositionJoueur()}{getPositionJoueur()}}
+{\footnotesize\ttfamily int $\ast$ get\+Position\+Joueur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$}]{j }\end{DoxyParamCaption})}
+
+
+
+Recuperer la position du joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{joueurs_8h_ac50e3fa66e0376ef12fcd1b75922cc58}\label{joueurs_8h_ac50e3fa66e0376ef12fcd1b75922cc58}} 
+\index{joueurs.h@{joueurs.h}!getPositionJoueurX@{getPositionJoueurX}}
+\index{getPositionJoueurX@{getPositionJoueurX}!joueurs.h@{joueurs.h}}
+\doxysubsubsection{\texorpdfstring{getPositionJoueurX()}{getPositionJoueurX()}}
+{\footnotesize\ttfamily int get\+Position\+JoueurX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$}]{j }\end{DoxyParamCaption})}
+
+
+
+Recuperer la position du joueur en X. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{joueurs_8h_a97dbdfd4e6d08f3fa7b0891fe6455486}\label{joueurs_8h_a97dbdfd4e6d08f3fa7b0891fe6455486}} 
+\index{joueurs.h@{joueurs.h}!getPositionJoueurY@{getPositionJoueurY}}
+\index{getPositionJoueurY@{getPositionJoueurY}!joueurs.h@{joueurs.h}}
+\doxysubsubsection{\texorpdfstring{getPositionJoueurY()}{getPositionJoueurY()}}
+{\footnotesize\ttfamily int get\+Position\+JoueurY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$}]{j }\end{DoxyParamCaption})}
+
+
+
+Recuperer la position du joueur en Y. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{joueurs_8h_a6fd163c3116ce9c945a4e142521dce49}\label{joueurs_8h_a6fd163c3116ce9c945a4e142521dce49}} 
+\index{joueurs.h@{joueurs.h}!lifeJoueur@{lifeJoueur}}
+\index{lifeJoueur@{lifeJoueur}!joueurs.h@{joueurs.h}}
+\doxysubsubsection{\texorpdfstring{lifeJoueur()}{lifeJoueur()}}
+{\footnotesize\ttfamily int life\+Joueur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$}]{j,  }\item[{int}]{degat }\end{DoxyParamCaption})}
+
+
+
+Modifie les points de vie du joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & joueur\+\_\+t$\ast$ \\
+\hline
+{\em degat} & int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & si le joueur est mort \\
+\hline
+{\em 0} & si le joueur est vivant \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{joueurs_8h_a023da2b401dc0b71c1173b2bdbd44766}\label{joueurs_8h_a023da2b401dc0b71c1173b2bdbd44766}} 
+\index{joueurs.h@{joueurs.h}!toStringJr@{toStringJr}}
+\index{toStringJr@{toStringJr}!joueurs.h@{joueurs.h}}
+\doxysubsubsection{\texorpdfstring{toStringJr()}{toStringJr()}}
+{\footnotesize\ttfamily char $\ast$ to\+String\+Jr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$}]{j }\end{DoxyParamCaption})}
+
+
+
+Affiche les informations Joueurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ 
+\end{DoxyReturn}

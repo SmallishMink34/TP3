@@ -1,0 +1,3027 @@
+\hypertarget{_s_d_l__image_8h}{}\doxysection{C\+:/\+Users/matth/\+One\+Drive/\+Documents/\+S2/\+Methodo/\+TP3/sdl/include/\+SDL2/\+SDL\+\_\+image.h File Reference}
+\label{_s_d_l__image_8h}\index{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/sdl/include/SDL2/SDL\_image.h@{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/sdl/include/SDL2/SDL\_image.h}}
+{\ttfamily \#include \char`\"{}SDL.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}SDL\+\_\+version.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__image_8h_a1396e7f1ff05c29cfc4448b05cf27e69}{SDL\+\_\+\+IMAGE\+\_\+\+MAJOR\+\_\+\+VERSION}}~2
+\item 
+\mbox{\Hypertarget{_s_d_l__image_8h_a9e36accd28b5af95d8d6a1a6df976f52}\label{_s_d_l__image_8h_a9e36accd28b5af95d8d6a1a6df976f52}} 
+\#define {\bfseries SDL\+\_\+\+IMAGE\+\_\+\+MINOR\+\_\+\+VERSION}~6
+\item 
+\mbox{\Hypertarget{_s_d_l__image_8h_aeb8304b069b87190c9c7b69a7425e549}\label{_s_d_l__image_8h_aeb8304b069b87190c9c7b69a7425e549}} 
+\#define {\bfseries SDL\+\_\+\+IMAGE\+\_\+\+PATCHLEVEL}~3
+\item 
+\#define \mbox{\hyperlink{_s_d_l__image_8h_a80cd9402fef02541862a12cea00ed1cc}{SDL\+\_\+\+IMAGE\+\_\+\+VERSION}}(X)
+\item 
+\#define \mbox{\hyperlink{_s_d_l__image_8h_ae877d91fe26a5303aa2ee7d3d8cb7e1a}{SDL\+\_\+\+IMAGE\+\_\+\+COMPILEDVERSION}}~    \mbox{\hyperlink{_s_d_l__version_8h_af77ec4d486c3401e48689a016d304e73}{SDL\+\_\+\+VERSIONNUM}}(\mbox{\hyperlink{_s_d_l__image_8h_a1396e7f1ff05c29cfc4448b05cf27e69}{SDL\+\_\+\+IMAGE\+\_\+\+MAJOR\+\_\+\+VERSION}}, SDL\+\_\+\+IMAGE\+\_\+\+MINOR\+\_\+\+VERSION, SDL\+\_\+\+IMAGE\+\_\+\+PATCHLEVEL)
+\item 
+\#define \mbox{\hyperlink{_s_d_l__image_8h_a4743d0d6cd5a82812754a8564622687f}{SDL\+\_\+\+IMAGE\+\_\+\+VERSION\+\_\+\+ATLEAST}}(X,  Y,  Z)
+\item 
+\#define \mbox{\hyperlink{_s_d_l__image_8h_a4f62490add1442e80bffdc07c959f10f}{IMG\+\_\+\+Set\+Error}}~\mbox{\hyperlink{_s_d_l__error_8h_a26775853eaf43390bbceb27eb21a2240}{SDL\+\_\+\+Set\+Error}}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__image_8h_aa26bff3cc4fbcfd9dcc1756d1a398ba1}{IMG\+\_\+\+Get\+Error}}~\mbox{\hyperlink{_s_d_l__error_8h_adaef317de186f072f8328798de29d51a}{SDL\+\_\+\+Get\+Error}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_s_d_l__image_8h_a6acc46d24550b73cd0820eb922d9a86d}{IMG\+\_\+\+Init\+Flags}} \{ \newline
+{\bfseries IMG\+\_\+\+INIT\+\_\+\+JPG} = 0x00000001
+, {\bfseries IMG\+\_\+\+INIT\+\_\+\+PNG} = 0x00000002
+, {\bfseries IMG\+\_\+\+INIT\+\_\+\+TIF} = 0x00000004
+, {\bfseries IMG\+\_\+\+INIT\+\_\+\+WEBP} = 0x00000008
+, \newline
+{\bfseries IMG\+\_\+\+INIT\+\_\+\+JXL} = 0x00000010
+, {\bfseries IMG\+\_\+\+INIT\+\_\+\+AVIF} = 0x00000020
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+DECLSPEC const \mbox{\hyperlink{struct_s_d_l__version}{SDL\+\_\+version}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a8ab2a691f848bca84f1d3261f6d4e98e}{IMG\+\_\+\+Linked\+\_\+\+Version}} (void)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_aff993a37c1f1859b38e2b4e8ff808a6b}{IMG\+\_\+\+Init}} (int flags)
+\item 
+DECLSPEC void SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a8e5db0b68bf88958f87b189a8960e39c}{IMG\+\_\+\+Quit}} (void)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_acd35c69d298b9954418420d5e94f28f3}{IMG\+\_\+\+Load\+Typed\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src, int freesrc, const char $\ast$type)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_aa21efc052860dbaa49c905fa62d366a4}{IMG\+\_\+\+Load}} (const char $\ast$file)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_ac045c6da943f8fd9284a4abb255dda24}{IMG\+\_\+\+Load\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src, int freesrc)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_ab24f4baed8c09c18f2c2a7c9dbab8613}{IMG\+\_\+\+Load\+Sized\+SVG\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src, int width, int height)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a4cd5d72066ee02df15b528f2c54bb2d9}{IMG\+\_\+\+Read\+XPMFrom\+Array}} (char $\ast$$\ast$xpm)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_aabcc9ea7e45761faecd068ceb0b2a6b9}{IMG\+\_\+\+Read\+XPMFrom\+Array\+To\+RGB888}} (char $\ast$$\ast$xpm)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a4570b11898b9350e5478d3b4394c5d70}{IMG\+\_\+\+Save\+PNG}} (\mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$surface, const char $\ast$file)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a7cf088e13df693a3dcff2d1d563cf4c0}{IMG\+\_\+\+Save\+PNG\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$surface, \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$dst, int freedst)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_aa8ef847f8c7c12f0e445715da3eb7b04}{IMG\+\_\+\+Save\+JPG}} (\mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$surface, const char $\ast$file, int quality)
+\item 
+DECLSPEC int SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_ae319e6660d7d42fa1885ab3ea38c72c7}{IMG\+\_\+\+Save\+JPG\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$surface, \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$dst, int freedst, int quality)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_adaa846ce4ec52f796e26e941f08bf0e9}{IMG\+\_\+\+Load\+Animation}} (const char $\ast$file)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a3a314d29be235c79c7ada13d63f6e8ed}{IMG\+\_\+\+Load\+Animation\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src, int freesrc)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a9f658fc0974f4468067abcb05a76ccce}{IMG\+\_\+\+Load\+Animation\+Typed\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src, int freesrc, const char $\ast$type)
+\item 
+DECLSPEC void SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a4492e0c6df917d09f551f0105a3f7b2b}{IMG\+\_\+\+Free\+Animation}} (\mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}} $\ast$anim)
+\item 
+DECLSPEC \mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}} $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__image_8h_a5b7a3901db8c0564d9d34241543a57ad}{IMG\+\_\+\+Load\+GIFAnimation\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$src)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for SDL\+\_\+image library
+
+A simple library to load images of various formats as SDL surfaces 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_s_d_l__image_8h_aa26bff3cc4fbcfd9dcc1756d1a398ba1}\label{_s_d_l__image_8h_aa26bff3cc4fbcfd9dcc1756d1a398ba1}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_GetError@{IMG\_GetError}}
+\index{IMG\_GetError@{IMG\_GetError}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_GetError}{IMG\_GetError}}
+{\footnotesize\ttfamily \#define IMG\+\_\+\+Get\+Error~\mbox{\hyperlink{_s_d_l__error_8h_adaef317de186f072f8328798de29d51a}{SDL\+\_\+\+Get\+Error}}}
+
+Get last SDL\+\_\+image error
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a4f62490add1442e80bffdc07c959f10f}{IMG\+\_\+\+Set\+Error}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a4f62490add1442e80bffdc07c959f10f}\label{_s_d_l__image_8h_a4f62490add1442e80bffdc07c959f10f}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_SetError@{IMG\_SetError}}
+\index{IMG\_SetError@{IMG\_SetError}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_SetError}{IMG\_SetError}}
+{\footnotesize\ttfamily \#define IMG\+\_\+\+Set\+Error~\mbox{\hyperlink{_s_d_l__error_8h_a26775853eaf43390bbceb27eb21a2240}{SDL\+\_\+\+Set\+Error}}}
+
+Report SDL\+\_\+image errors
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_aa26bff3cc4fbcfd9dcc1756d1a398ba1}{IMG\+\_\+\+Get\+Error}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_ae877d91fe26a5303aa2ee7d3d8cb7e1a}\label{_s_d_l__image_8h_ae877d91fe26a5303aa2ee7d3d8cb7e1a}} 
+\index{SDL\_image.h@{SDL\_image.h}!SDL\_IMAGE\_COMPILEDVERSION@{SDL\_IMAGE\_COMPILEDVERSION}}
+\index{SDL\_IMAGE\_COMPILEDVERSION@{SDL\_IMAGE\_COMPILEDVERSION}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_IMAGE\_COMPILEDVERSION}{SDL\_IMAGE\_COMPILEDVERSION}}
+{\footnotesize\ttfamily \#define SDL\+\_\+\+IMAGE\+\_\+\+COMPILEDVERSION~    \mbox{\hyperlink{_s_d_l__version_8h_af77ec4d486c3401e48689a016d304e73}{SDL\+\_\+\+VERSIONNUM}}(\mbox{\hyperlink{_s_d_l__image_8h_a1396e7f1ff05c29cfc4448b05cf27e69}{SDL\+\_\+\+IMAGE\+\_\+\+MAJOR\+\_\+\+VERSION}}, SDL\+\_\+\+IMAGE\+\_\+\+MINOR\+\_\+\+VERSION, SDL\+\_\+\+IMAGE\+\_\+\+PATCHLEVEL)}
+
+This is the version number macro for the current SDL\+\_\+image version.
+
+In versions higher than 2.\+9.\+0, the minor version overflows into the thousands digit\+: for example, 2.\+23.\+0 is encoded as 4300. This macro will not be available in SDL 3.\+x or SDL\+\_\+image 3.\+x.
+
+Deprecated, use SDL\+\_\+\+IMAGE\+\_\+\+VERSION\+\_\+\+ATLEAST or SDL\+\_\+\+IMAGE\+\_\+\+VERSION instead. \mbox{\Hypertarget{_s_d_l__image_8h_a1396e7f1ff05c29cfc4448b05cf27e69}\label{_s_d_l__image_8h_a1396e7f1ff05c29cfc4448b05cf27e69}} 
+\index{SDL\_image.h@{SDL\_image.h}!SDL\_IMAGE\_MAJOR\_VERSION@{SDL\_IMAGE\_MAJOR\_VERSION}}
+\index{SDL\_IMAGE\_MAJOR\_VERSION@{SDL\_IMAGE\_MAJOR\_VERSION}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_IMAGE\_MAJOR\_VERSION}{SDL\_IMAGE\_MAJOR\_VERSION}}
+{\footnotesize\ttfamily \#define SDL\+\_\+\+IMAGE\+\_\+\+MAJOR\+\_\+\+VERSION~2}
+
+Printable format\+: \char`\"{}\%d.\%d.\%d\char`\"{}, MAJOR, MINOR, PATCHLEVEL \mbox{\Hypertarget{_s_d_l__image_8h_a80cd9402fef02541862a12cea00ed1cc}\label{_s_d_l__image_8h_a80cd9402fef02541862a12cea00ed1cc}} 
+\index{SDL\_image.h@{SDL\_image.h}!SDL\_IMAGE\_VERSION@{SDL\_IMAGE\_VERSION}}
+\index{SDL\_IMAGE\_VERSION@{SDL\_IMAGE\_VERSION}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_IMAGE\_VERSION}{SDL\_IMAGE\_VERSION}}
+{\footnotesize\ttfamily \#define SDL\+\_\+\+IMAGE\+\_\+\+VERSION(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (X)-\/>major\ =\ \mbox{\hyperlink{_s_d_l__image_8h_a1396e7f1ff05c29cfc4448b05cf27e69}{SDL\_IMAGE\_MAJOR\_VERSION}};\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (X)-\/>minor\ =\ SDL\_IMAGE\_MINOR\_VERSION;\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ (X)-\/>patch\ =\ SDL\_IMAGE\_PATCHLEVEL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+This macro can be used to fill a version structure with the compile-\/time version of the SDL\+\_\+image library. \mbox{\Hypertarget{_s_d_l__image_8h_a4743d0d6cd5a82812754a8564622687f}\label{_s_d_l__image_8h_a4743d0d6cd5a82812754a8564622687f}} 
+\index{SDL\_image.h@{SDL\_image.h}!SDL\_IMAGE\_VERSION\_ATLEAST@{SDL\_IMAGE\_VERSION\_ATLEAST}}
+\index{SDL\_IMAGE\_VERSION\_ATLEAST@{SDL\_IMAGE\_VERSION\_ATLEAST}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_IMAGE\_VERSION\_ATLEAST}{SDL\_IMAGE\_VERSION\_ATLEAST}}
+{\footnotesize\ttfamily \#define SDL\+\_\+\+IMAGE\+\_\+\+VERSION\+\_\+\+ATLEAST(\begin{DoxyParamCaption}\item[{}]{X,  }\item[{}]{Y,  }\item[{}]{Z }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ ((\mbox{\hyperlink{_s_d_l__image_8h_a1396e7f1ff05c29cfc4448b05cf27e69}{SDL\_IMAGE\_MAJOR\_VERSION}}\ >=\ X)\ \&\&\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ (\mbox{\hyperlink{_s_d_l__image_8h_a1396e7f1ff05c29cfc4448b05cf27e69}{SDL\_IMAGE\_MAJOR\_VERSION}}\ >\ X\ ||\ SDL\_IMAGE\_MINOR\_VERSION\ >=\ Y)\ \&\&\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ (\mbox{\hyperlink{_s_d_l__image_8h_a1396e7f1ff05c29cfc4448b05cf27e69}{SDL\_IMAGE\_MAJOR\_VERSION}}\ >\ X\ ||\ SDL\_IMAGE\_MINOR\_VERSION\ >\ Y\ ||\ SDL\_IMAGE\_PATCHLEVEL\ >=\ Z))}
+
+\end{DoxyCode}
+This macro will evaluate to true if compiled with SDL\+\_\+image at least X.\+Y.\+Z. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_s_d_l__image_8h_a6acc46d24550b73cd0820eb922d9a86d}\label{_s_d_l__image_8h_a6acc46d24550b73cd0820eb922d9a86d}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_InitFlags@{IMG\_InitFlags}}
+\index{IMG\_InitFlags@{IMG\_InitFlags}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_InitFlags}{IMG\_InitFlags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__image_8h_a6acc46d24550b73cd0820eb922d9a86d}{IMG\+\_\+\+Init\+Flags}}}
+
+Initialization flags 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_s_d_l__image_8h_a4492e0c6df917d09f551f0105a3f7b2b}\label{_s_d_l__image_8h_a4492e0c6df917d09f551f0105a3f7b2b}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_FreeAnimation@{IMG\_FreeAnimation}}
+\index{IMG\_FreeAnimation@{IMG\_FreeAnimation}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_FreeAnimation()}{IMG\_FreeAnimation()}}
+{\footnotesize\ttfamily DECLSPEC void SDLCALL IMG\+\_\+\+Free\+Animation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}} $\ast$}]{anim }\end{DoxyParamCaption})}
+
+Dispose of an \mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}} and free its resources.
+
+The provided {\ttfamily anim} pointer is not valid once this call returns.
+
+
+\begin{DoxyParams}{Parameters}
+{\em anim} & \mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}} to dispose of.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+6.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_adaa846ce4ec52f796e26e941f08bf0e9}{IMG\+\_\+\+Load\+Animation}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a3a314d29be235c79c7ada13d63f6e8ed}{IMG\+\_\+\+Load\+Animation\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9f658fc0974f4468067abcb05a76ccce}{IMG\+\_\+\+Load\+Animation\+Typed\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_aff993a37c1f1859b38e2b4e8ff808a6b}\label{_s_d_l__image_8h_aff993a37c1f1859b38e2b4e8ff808a6b}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_Init@{IMG\_Init}}
+\index{IMG\_Init@{IMG\_Init}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_Init()}{IMG\_Init()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+\+Init (\begin{DoxyParamCaption}\item[{int}]{flags }\end{DoxyParamCaption})}
+
+Initialize SDL\+\_\+image.
+
+This function loads dynamic libraries that SDL\+\_\+image needs, and prepares them for use. This must be the first function you call in SDL\+\_\+image, and if it fails you should not continue with the library.
+
+Flags should be one or more flags from IMG\+\_\+\+Init\+Flags OR\textquotesingle{}d together. It returns the flags successfully initialized, or 0 on failure.
+
+Currently, these flags are\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \+\_\+\+INIT\+\_\+\+JPG}
+\item {\ttfamily \+\_\+\+INIT\+\_\+\+PNG}
+\item {\ttfamily \+\_\+\+INIT\+\_\+\+TIF}
+\item {\ttfamily \+\_\+\+INIT\+\_\+\+WEBP}
+\item {\ttfamily \+\_\+\+INIT\+\_\+\+JXL}
+\item {\ttfamily \+\_\+\+INIT\+\_\+\+AVIF}
+\end{DoxyItemize}
+
+More flags may be added in a future SDL\+\_\+image release.
+
+This function may need to load external shared libraries to support various codecs, which means this function can fail to initialize that support on an otherwise-\/reasonable system if the library isn\textquotesingle{}t available; this is not just a question of exceptional circumstances like running out of memory at startup!
+
+Note that you may call this function more than once to initialize with additional flags. The return value will reflect both new flags that successfully initialized, and also include flags that had previously been initialized as well.
+
+As this will return previously-\/initialized flags, it\textquotesingle{}s legal to call this with zero (no flags set). This is a safe no-\/op that can be used to query the current initialization state without changing it at all.
+
+Since this returns previously-\/initialized flags as well as new ones, and you can call this with zero, you should not check for a zero return value to determine an error condition. Instead, you should check to make sure all the flags you require are set in the return value. If you have a game with data in a specific format, this might be a fatal error. If you\textquotesingle{}re a generic image displaying app, perhaps you are fine with only having JPG and PNG support and can live without WEBP, even if you request support for everything.
+
+Unlike other SDL satellite libraries, calls to IMG\+\_\+\+Init do not stack; a single call to \mbox{\hyperlink{_s_d_l__image_8h_a8e5db0b68bf88958f87b189a8960e39c}{IMG\+\_\+\+Quit()}} will deinitialize everything and does not have to be paired with a matching IMG\+\_\+\+Init call. For that reason, it\textquotesingle{}s considered best practices to have a single IMG\+\_\+\+Init and IMG\+\_\+\+Quit call in your program. While this isn\textquotesingle{}t required, be aware of the risks of deviating from that behavior.
+
+After initializing SDL\+\_\+image, the app may begin to load images into SDL\+\_\+\+Surfaces or SDL\+\_\+\+Textures.
+
+
+\begin{DoxyParams}{Parameters}
+{\em flags} & initialization flags, OR\textquotesingle{}d together. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+all currently initialized flags.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a8e5db0b68bf88958f87b189a8960e39c}{IMG\+\_\+\+Quit}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}\label{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isAVIF@{IMG\_isAVIF}}
+\index{IMG\_isAVIF@{IMG\_isAVIF}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isAVIF()}{IMG\_isAVIF()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+AVIF (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect AVIF image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is AVIF data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+6.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}\label{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isBMP@{IMG\_isBMP}}
+\index{IMG\_isBMP@{IMG\_isBMP}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isBMP()}{IMG\_isBMP()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+BMP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect BMP image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is BMP data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}\label{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isCUR@{IMG\_isCUR}}
+\index{IMG\_isCUR@{IMG\_isCUR}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isCUR()}{IMG\_isCUR()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+CUR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect CUR image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is CUR data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}\label{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isGIF@{IMG\_isGIF}}
+\index{IMG\_isGIF@{IMG\_isGIF}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isGIF()}{IMG\_isGIF()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+GIF (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect GIF image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is GIF data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}\label{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isICO@{IMG\_isICO}}
+\index{IMG\_isICO@{IMG\_isICO}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isICO()}{IMG\_isICO()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+ICO (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect ICO image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is ICO data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}\label{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isJPG@{IMG\_isJPG}}
+\index{IMG\_isJPG@{IMG\_isJPG}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isJPG()}{IMG\_isJPG()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+JPG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect JPG image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is JPG data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}\label{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isJXL@{IMG\_isJXL}}
+\index{IMG\_isJXL@{IMG\_isJXL}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isJXL()}{IMG\_isJXL()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+JXL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect JXL image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is JXL data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+6.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}\label{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isLBM@{IMG\_isLBM}}
+\index{IMG\_isLBM@{IMG\_isLBM}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isLBM()}{IMG\_isLBM()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+LBM (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect LBM image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is LBM data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}\label{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isPCX@{IMG\_isPCX}}
+\index{IMG\_isPCX@{IMG\_isPCX}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isPCX()}{IMG\_isPCX()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+PCX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect PCX image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is PCX data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}\label{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isPNG@{IMG\_isPNG}}
+\index{IMG\_isPNG@{IMG\_isPNG}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isPNG()}{IMG\_isPNG()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+PNG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect PNG image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is PNG data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}\label{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isPNM@{IMG\_isPNM}}
+\index{IMG\_isPNM@{IMG\_isPNM}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isPNM()}{IMG\_isPNM()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+PNM (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect PNM image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is PNM data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}\label{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isQOI@{IMG\_isQOI}}
+\index{IMG\_isQOI@{IMG\_isQOI}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isQOI()}{IMG\_isQOI()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+QOI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect QOI image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is QOI data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+6.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}\label{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isSVG@{IMG\_isSVG}}
+\index{IMG\_isSVG@{IMG\_isSVG}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isSVG()}{IMG\_isSVG()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+SVG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect SVG image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is SVG data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+2.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}\label{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isTIF@{IMG\_isTIF}}
+\index{IMG\_isTIF@{IMG\_isTIF}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isTIF()}{IMG\_isTIF()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+TIF (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect TIFF image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is TIFF data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}\label{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isWEBP@{IMG\_isWEBP}}
+\index{IMG\_isWEBP@{IMG\_isWEBP}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isWEBP()}{IMG\_isWEBP()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+WEBP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect WEBP image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is WEBP data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}\label{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isXCF@{IMG\_isXCF}}
+\index{IMG\_isXCF@{IMG\_isXCF}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isXCF()}{IMG\_isXCF()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+XCF (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect XCF image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is XCF data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}\label{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isXPM@{IMG\_isXPM}}
+\index{IMG\_isXPM@{IMG\_isXPM}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isXPM()}{IMG\_isXPM()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+XPM (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect XPM image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is XPM data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}{IMG\+\_\+is\+XV}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}\label{_s_d_l__image_8h_ae388104ac6f46574382edffdb4f09d00}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_isXV@{IMG\_isXV}}
+\index{IMG\_isXV@{IMG\_isXV}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_isXV()}{IMG\_isXV()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+is\+XV (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Detect XV image data on a readable/seekable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+This function attempts to determine if a file is a given filetype, reading the least amount possible from the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} (usually a few bytes).
+
+There is no distinction made between \char`\"{}not the filetype in question\char`\"{} and basic i/o errors.
+
+This function will always attempt to seek the RWops back to where it started when this function was called, but it will not report any errors in doing so, but assuming seeking works, this means you can immediately use this with a different IMG\+\_\+is\+TYPE function, or load the image without further seeking.
+
+You do not need to call this function to load data; SDL\+\_\+image can work to determine file type in many cases in its standard load functions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & a seekable/readable \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to provide image data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if this is XV data, zero otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a2e55a6a9e001413a077714fdbfc9f592}{IMG\+\_\+is\+AVIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a1156b631a02d4e0d7bbe1613030732fe}{IMG\+\_\+is\+ICO}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a8133fd3d50ad02b997018db5808022cc}{IMG\+\_\+is\+CUR}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a16f1295242a93f8874571822d0a4266f}{IMG\+\_\+is\+BMP}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a44c30b8372d658281397a2075cbd4465}{IMG\+\_\+is\+GIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82a9955fa3426a32cdefac82252c7f46}{IMG\+\_\+is\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40f8d095da3a646cfacc0632d479bdcc}{IMG\+\_\+is\+JXL}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac0cb4f0ee51f1bdf4f35921955781c4f}{IMG\+\_\+is\+LBM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9a7865013705a9f44cc2e2a242326426}{IMG\+\_\+is\+PCX}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_add480a3da37b41b1a2faae64847edddf}{IMG\+\_\+is\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a42f66fa7ec38e5245d759b7d27ab6632}{IMG\+\_\+is\+PNM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f71787cd6a8ab6aa317aff9377e4ea}{IMG\+\_\+is\+SVG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af5a0b8c880400e9e2a6a3b49dcbab6bf}{IMG\+\_\+is\+QOI}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9199b0f040ec188a36431271fc7d741e}{IMG\+\_\+is\+TIF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae6c6a6b54a08b08213d2876a6e043035}{IMG\+\_\+is\+XCF}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a923cd9fc663faa0f5381da2ab535be76}{IMG\+\_\+is\+XPM}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7025426b75f60226f8b28c87aa876c38}{IMG\+\_\+is\+WEBP}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a8ab2a691f848bca84f1d3261f6d4e98e}\label{_s_d_l__image_8h_a8ab2a691f848bca84f1d3261f6d4e98e}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_Linked\_Version@{IMG\_Linked\_Version}}
+\index{IMG\_Linked\_Version@{IMG\_Linked\_Version}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_Linked\_Version()}{IMG\_Linked\_Version()}}
+{\footnotesize\ttfamily DECLSPEC const \mbox{\hyperlink{struct_s_d_l__version}{SDL\+\_\+version}} $\ast$SDLCALL IMG\+\_\+\+Linked\+\_\+\+Version (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function gets the version of the dynamically linked SDL\+\_\+image library.
+
+it should NOT be used to fill a version structure, instead you should use the \mbox{\hyperlink{_s_d_l__image_8h_a80cd9402fef02541862a12cea00ed1cc}{SDL\+\_\+\+IMAGE\+\_\+\+VERSION()}} macro.
+
+\begin{DoxyReturn}{Returns}
+SDL\+\_\+image version 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__image_8h_aa21efc052860dbaa49c905fa62d366a4}\label{_s_d_l__image_8h_aa21efc052860dbaa49c905fa62d366a4}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_Load@{IMG\_Load}}
+\index{IMG\_Load@{IMG\_Load}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_Load()}{IMG\_Load()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file }\end{DoxyParamCaption})}
+
+Load an image from a filesystem path into a software surface.
+
+An \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} is a buffer of pixels in memory accessible by the CPU. Use this if you plan to hand the data to something else or manipulate it further in code.
+
+There are no guarantees about what format the new \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} data will be; in many cases, SDL\+\_\+image will attempt to supply a surface that exactly matches the provided image, but in others it might have to convert (either because the image is in a format that SDL doesn\textquotesingle{}t directly support or because it\textquotesingle{}s compressed data that could reasonably uncompress to various formats and SDL\+\_\+image had to pick one). You can inspect an \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} for its specifics, and use SDL\+\_\+\+Convert\+Surface to then migrate to any supported format.
+
+If the image format supports a transparent pixel, SDL will set the colorkey for the surface. You can enable RLE acceleration on the surface afterwards by calling\+: SDL\+\_\+\+Set\+Color\+Key(image, SDL\+\_\+\+RLEACCEL, image-\/\texorpdfstring{$>$}{>}format-\/\texorpdfstring{$>$}{>}colorkey);
+
+There is a separate function to read files from an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}, if you need an i/o abstraction to provide data from anywhere instead of a simple filesystem read; that function is \mbox{\hyperlink{_s_d_l__image_8h_ac045c6da943f8fd9284a4abb255dda24}{IMG\+\_\+\+Load\+\_\+\+RW()}}.
+
+If you are using SDL\textquotesingle{}s 2D rendering API, there is an equivalent call to load images directly into an SDL\+\_\+\+Texture for use by the GPU without using a software surface\+: call IMG\+\_\+\+Load\+Texture() instead.
+
+When done with the returned surface, the app should dispose of it with a call to \mbox{\hyperlink{_s_d_l__surface_8h_a7b8d4f9cc058822501896a2eed81220e}{SDL\+\_\+\+Free\+Surface()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & a path on the filesystem to load an image from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new SDL surface, or NULL on error.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_acd35c69d298b9954418420d5e94f28f3}{IMG\+\_\+\+Load\+Typed\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac045c6da943f8fd9284a4abb255dda24}{IMG\+\_\+\+Load\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__surface_8h_a7b8d4f9cc058822501896a2eed81220e}{SDL\+\_\+\+Free\+Surface}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_ac045c6da943f8fd9284a4abb255dda24}\label{_s_d_l__image_8h_ac045c6da943f8fd9284a4abb255dda24}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_Load\_RW@{IMG\_Load\_RW}}
+\index{IMG\_Load\_RW@{IMG\_Load\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_Load\_RW()}{IMG\_Load\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src,  }\item[{int}]{freesrc }\end{DoxyParamCaption})}
+
+Load an image from an SDL data source into a software surface.
+
+An \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} is a buffer of pixels in memory accessible by the CPU. Use this if you plan to hand the data to something else or manipulate it further in code.
+
+There are no guarantees about what format the new \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} data will be; in many cases, SDL\+\_\+image will attempt to supply a surface that exactly matches the provided image, but in others it might have to convert (either because the image is in a format that SDL doesn\textquotesingle{}t directly support or because it\textquotesingle{}s compressed data that could reasonably uncompress to various formats and SDL\+\_\+image had to pick one). You can inspect an \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} for its specifics, and use SDL\+\_\+\+Convert\+Surface to then migrate to any supported format.
+
+If the image format supports a transparent pixel, SDL will set the colorkey for the surface. You can enable RLE acceleration on the surface afterwards by calling\+: SDL\+\_\+\+Set\+Color\+Key(image, SDL\+\_\+\+RLEACCEL, image-\/\texorpdfstring{$>$}{>}format-\/\texorpdfstring{$>$}{>}colorkey);
+
+If {\ttfamily freesrc} is non-\/zero, the RWops will be closed before returning, whether this function succeeds or not. SDL\+\_\+image reads everything it needs from the RWops during this call in any case.
+
+There is a separate function to read files from disk without having to deal with \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}\+: {\ttfamily IMG\+\_\+\+Load(\char`\"{}filename.\+jpg\char`\"{})} will call this function and manage those details for you, determining the file type from the filename\textquotesingle{}s extension.
+
+There is also \mbox{\hyperlink{_s_d_l__image_8h_acd35c69d298b9954418420d5e94f28f3}{IMG\+\_\+\+Load\+Typed\+\_\+\+RW()}}, which is equivalent to this function except a file extension (like \char`\"{}\+BMP\char`\"{}, \char`\"{}\+JPG\char`\"{}, etc) can be specified, in case SDL\+\_\+image cannot autodetect the file format.
+
+If you are using SDL\textquotesingle{}s 2D rendering API, there is an equivalent call to load images directly into an SDL\+\_\+\+Texture for use by the GPU without using a software surface\+: call IMG\+\_\+\+Load\+Texture\+\_\+\+RW() instead.
+
+When done with the returned surface, the app should dispose of it with a call to \mbox{\hyperlink{_s_d_l__surface_8h_a7b8d4f9cc058822501896a2eed81220e}{SDL\+\_\+\+Free\+Surface()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} that data will be read from. \\
+\hline
+{\em freesrc} & non-\/zero to close/free the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} before returning, zero to leave it open. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new SDL surface, or NULL on error.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_aa21efc052860dbaa49c905fa62d366a4}{IMG\+\_\+\+Load}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_acd35c69d298b9954418420d5e94f28f3}{IMG\+\_\+\+Load\+Typed\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__surface_8h_a7b8d4f9cc058822501896a2eed81220e}{SDL\+\_\+\+Free\+Surface}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_adaa846ce4ec52f796e26e941f08bf0e9}\label{_s_d_l__image_8h_adaa846ce4ec52f796e26e941f08bf0e9}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadAnimation@{IMG\_LoadAnimation}}
+\index{IMG\_LoadAnimation@{IMG\_LoadAnimation}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadAnimation()}{IMG\_LoadAnimation()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}} $\ast$SDLCALL IMG\+\_\+\+Load\+Animation (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file }\end{DoxyParamCaption})}
+
+Load an animation from a file.
+
+When done with the returned animation, the app should dispose of it with a call to \mbox{\hyperlink{_s_d_l__image_8h_a4492e0c6df917d09f551f0105a3f7b2b}{IMG\+\_\+\+Free\+Animation()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & path on the filesystem containing an animated image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}}, or NULL on error.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+6.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a4492e0c6df917d09f551f0105a3f7b2b}{IMG\+\_\+\+Free\+Animation}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a3a314d29be235c79c7ada13d63f6e8ed}\label{_s_d_l__image_8h_a3a314d29be235c79c7ada13d63f6e8ed}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadAnimation\_RW@{IMG\_LoadAnimation\_RW}}
+\index{IMG\_LoadAnimation\_RW@{IMG\_LoadAnimation\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadAnimation\_RW()}{IMG\_LoadAnimation\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}} $\ast$SDLCALL IMG\+\_\+\+Load\+Animation\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src,  }\item[{int}]{freesrc }\end{DoxyParamCaption})}
+
+Load an animation from an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+If {\ttfamily freesrc} is non-\/zero, the RWops will be closed before returning, whether this function succeeds or not. SDL\+\_\+image reads everything it needs from the RWops during this call in any case.
+
+When done with the returned animation, the app should dispose of it with a call to \mbox{\hyperlink{_s_d_l__image_8h_a4492e0c6df917d09f551f0105a3f7b2b}{IMG\+\_\+\+Free\+Animation()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} that data will be read from. \\
+\hline
+{\em freesrc} & non-\/zero to close/free the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} before returning, zero to leave it open. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}}, or NULL on error.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+6.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a4492e0c6df917d09f551f0105a3f7b2b}{IMG\+\_\+\+Free\+Animation}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a9f658fc0974f4468067abcb05a76ccce}\label{_s_d_l__image_8h_a9f658fc0974f4468067abcb05a76ccce}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadAnimationTyped\_RW@{IMG\_LoadAnimationTyped\_RW}}
+\index{IMG\_LoadAnimationTyped\_RW@{IMG\_LoadAnimationTyped\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadAnimationTyped\_RW()}{IMG\_LoadAnimationTyped\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}} $\ast$SDLCALL IMG\+\_\+\+Load\+Animation\+Typed\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src,  }\item[{int}]{freesrc,  }\item[{const char $\ast$}]{type }\end{DoxyParamCaption})}
+
+Load an animation from an SDL datasource
+
+Even though this function accepts a file type, SDL\+\_\+image may still try other decoders that are capable of detecting file type from the contents of the image data, but may rely on the caller-\/provided type string for formats that it cannot autodetect. If {\ttfamily type} is NULL, SDL\+\_\+image will rely solely on its ability to guess the format.
+
+If {\ttfamily freesrc} is non-\/zero, the RWops will be closed before returning, whether this function succeeds or not. SDL\+\_\+image reads everything it needs from the RWops during this call in any case.
+
+When done with the returned animation, the app should dispose of it with a call to \mbox{\hyperlink{_s_d_l__image_8h_a4492e0c6df917d09f551f0105a3f7b2b}{IMG\+\_\+\+Free\+Animation()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} that data will be read from. \\
+\hline
+{\em freesrc} & non-\/zero to close/free the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} before returning, zero to leave it open. \\
+\hline
+{\em type} & a filename extension that represent this data (\char`\"{}\+GIF\char`\"{}, etc). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}}, or NULL on error.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+6.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_adaa846ce4ec52f796e26e941f08bf0e9}{IMG\+\_\+\+Load\+Animation}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a3a314d29be235c79c7ada13d63f6e8ed}{IMG\+\_\+\+Load\+Animation\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a4492e0c6df917d09f551f0105a3f7b2b}{IMG\+\_\+\+Free\+Animation}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}\label{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadAVIF\_RW@{IMG\_LoadAVIF\_RW}}
+\index{IMG\_LoadAVIF\_RW@{IMG\_LoadAVIF\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadAVIF\_RW()}{IMG\_LoadAVIF\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+AVIF\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a AVIF image directly.
+
+If you know you definitely have a AVIF image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+6.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}\label{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadBMP\_RW@{IMG\_LoadBMP\_RW}}
+\index{IMG\_LoadBMP\_RW@{IMG\_LoadBMP\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadBMP\_RW()}{IMG\_LoadBMP\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+BMP\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a BMP image directly.
+
+If you know you definitely have a BMP image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}\label{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadCUR\_RW@{IMG\_LoadCUR\_RW}}
+\index{IMG\_LoadCUR\_RW@{IMG\_LoadCUR\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadCUR\_RW()}{IMG\_LoadCUR\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+CUR\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a CUR image directly.
+
+If you know you definitely have a CUR image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}\label{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadGIF\_RW@{IMG\_LoadGIF\_RW}}
+\index{IMG\_LoadGIF\_RW@{IMG\_LoadGIF\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadGIF\_RW()}{IMG\_LoadGIF\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+GIF\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a GIF image directly.
+
+If you know you definitely have a GIF image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a5b7a3901db8c0564d9d34241543a57ad}\label{_s_d_l__image_8h_a5b7a3901db8c0564d9d34241543a57ad}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadGIFAnimation\_RW@{IMG\_LoadGIFAnimation\_RW}}
+\index{IMG\_LoadGIFAnimation\_RW@{IMG\_LoadGIFAnimation\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadGIFAnimation\_RW()}{IMG\_LoadGIFAnimation\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}} $\ast$SDLCALL IMG\+\_\+\+Load\+GIFAnimation\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a GIF animation directly.
+
+If you know you definitely have a GIF image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} that data will be read from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \mbox{\hyperlink{struct_i_m_g___animation}{IMG\+\_\+\+Animation}}, or NULL on error.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+6.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_adaa846ce4ec52f796e26e941f08bf0e9}{IMG\+\_\+\+Load\+Animation}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a3a314d29be235c79c7ada13d63f6e8ed}{IMG\+\_\+\+Load\+Animation\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9f658fc0974f4468067abcb05a76ccce}{IMG\+\_\+\+Load\+Animation\+Typed\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a4492e0c6df917d09f551f0105a3f7b2b}{IMG\+\_\+\+Free\+Animation}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}\label{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadICO\_RW@{IMG\_LoadICO\_RW}}
+\index{IMG\_LoadICO\_RW@{IMG\_LoadICO\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadICO\_RW()}{IMG\_LoadICO\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+ICO\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a ICO image directly.
+
+If you know you definitely have a ICO image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}\label{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadJPG\_RW@{IMG\_LoadJPG\_RW}}
+\index{IMG\_LoadJPG\_RW@{IMG\_LoadJPG\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadJPG\_RW()}{IMG\_LoadJPG\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+JPG\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a JPG image directly.
+
+If you know you definitely have a JPG image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}\label{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadJXL\_RW@{IMG\_LoadJXL\_RW}}
+\index{IMG\_LoadJXL\_RW@{IMG\_LoadJXL\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadJXL\_RW()}{IMG\_LoadJXL\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+JXL\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a JXL image directly.
+
+If you know you definitely have a JXL image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+6.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}\label{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadLBM\_RW@{IMG\_LoadLBM\_RW}}
+\index{IMG\_LoadLBM\_RW@{IMG\_LoadLBM\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadLBM\_RW()}{IMG\_LoadLBM\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+LBM\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a LBM image directly.
+
+If you know you definitely have a LBM image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}\label{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadPCX\_RW@{IMG\_LoadPCX\_RW}}
+\index{IMG\_LoadPCX\_RW@{IMG\_LoadPCX\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadPCX\_RW()}{IMG\_LoadPCX\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+PCX\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a PCX image directly.
+
+If you know you definitely have a PCX image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}\label{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadPNG\_RW@{IMG\_LoadPNG\_RW}}
+\index{IMG\_LoadPNG\_RW@{IMG\_LoadPNG\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadPNG\_RW()}{IMG\_LoadPNG\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+PNG\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a PNG image directly.
+
+If you know you definitely have a PNG image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}\label{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadPNM\_RW@{IMG\_LoadPNM\_RW}}
+\index{IMG\_LoadPNM\_RW@{IMG\_LoadPNM\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadPNM\_RW()}{IMG\_LoadPNM\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+PNM\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a PNM image directly.
+
+If you know you definitely have a PNM image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}\label{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadQOI\_RW@{IMG\_LoadQOI\_RW}}
+\index{IMG\_LoadQOI\_RW@{IMG\_LoadQOI\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadQOI\_RW()}{IMG\_LoadQOI\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+QOI\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a QOI image directly.
+
+If you know you definitely have a QOI image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+6.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_ab24f4baed8c09c18f2c2a7c9dbab8613}\label{_s_d_l__image_8h_ab24f4baed8c09c18f2c2a7c9dbab8613}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadSizedSVG\_RW@{IMG\_LoadSizedSVG\_RW}}
+\index{IMG\_LoadSizedSVG\_RW@{IMG\_LoadSizedSVG\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadSizedSVG\_RW()}{IMG\_LoadSizedSVG\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+Sized\+SVG\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+Load an SVG image, scaled to a specific size.
+
+Since SVG files are resolution-\/independent, you specify the size you would like the output image to be and it will be generated at those dimensions.
+
+Either width or height may be 0 and the image will be auto-\/sized to preserve aspect ratio.
+
+When done with the returned surface, the app should dispose of it with a call to \mbox{\hyperlink{_s_d_l__surface_8h_a7b8d4f9cc058822501896a2eed81220e}{SDL\+\_\+\+Free\+Surface()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load SVG data from. \\
+\hline
+{\em width} & desired width of the generated surface, in pixels. \\
+\hline
+{\em height} & desired height of the generated surface, in pixels. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new SDL surface, or NULL on error.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+6.\+0. 
+\end{DoxySince}
+\mbox{\Hypertarget{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}\label{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadSVG\_RW@{IMG\_LoadSVG\_RW}}
+\index{IMG\_LoadSVG\_RW@{IMG\_LoadSVG\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadSVG\_RW()}{IMG\_LoadSVG\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+SVG\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a SVG image directly.
+
+If you know you definitely have a SVG image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+2.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}\label{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadTGA\_RW@{IMG\_LoadTGA\_RW}}
+\index{IMG\_LoadTGA\_RW@{IMG\_LoadTGA\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadTGA\_RW()}{IMG\_LoadTGA\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+TGA\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a TGA image directly.
+
+If you know you definitely have a TGA image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}\label{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadTIF\_RW@{IMG\_LoadTIF\_RW}}
+\index{IMG\_LoadTIF\_RW@{IMG\_LoadTIF\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadTIF\_RW()}{IMG\_LoadTIF\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+TIF\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a TIFF image directly.
+
+If you know you definitely have a TIFF image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_acd35c69d298b9954418420d5e94f28f3}\label{_s_d_l__image_8h_acd35c69d298b9954418420d5e94f28f3}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadTyped\_RW@{IMG\_LoadTyped\_RW}}
+\index{IMG\_LoadTyped\_RW@{IMG\_LoadTyped\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadTyped\_RW()}{IMG\_LoadTyped\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+Typed\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src,  }\item[{int}]{freesrc,  }\item[{const char $\ast$}]{type }\end{DoxyParamCaption})}
+
+Load an image from an SDL data source into a software surface.
+
+An \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} is a buffer of pixels in memory accessible by the CPU. Use this if you plan to hand the data to something else or manipulate it further in code.
+
+There are no guarantees about what format the new \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} data will be; in many cases, SDL\+\_\+image will attempt to supply a surface that exactly matches the provided image, but in others it might have to convert (either because the image is in a format that SDL doesn\textquotesingle{}t directly support or because it\textquotesingle{}s compressed data that could reasonably uncompress to various formats and SDL\+\_\+image had to pick one). You can inspect an \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} for its specifics, and use SDL\+\_\+\+Convert\+Surface to then migrate to any supported format.
+
+If the image format supports a transparent pixel, SDL will set the colorkey for the surface. You can enable RLE acceleration on the surface afterwards by calling\+: SDL\+\_\+\+Set\+Color\+Key(image, SDL\+\_\+\+RLEACCEL, image-\/\texorpdfstring{$>$}{>}format-\/\texorpdfstring{$>$}{>}colorkey);
+
+If {\ttfamily freesrc} is non-\/zero, the RWops will be closed before returning, whether this function succeeds or not. SDL\+\_\+image reads everything it needs from the RWops during this call in any case.
+
+Even though this function accepts a file type, SDL\+\_\+image may still try other decoders that are capable of detecting file type from the contents of the image data, but may rely on the caller-\/provided type string for formats that it cannot autodetect. If {\ttfamily type} is NULL, SDL\+\_\+image will rely solely on its ability to guess the format.
+
+There is a separate function to read files from disk without having to deal with \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}\+: {\ttfamily IMG\+\_\+\+Load(\char`\"{}filename.\+jpg\char`\"{})} will call this function and manage those details for you, determining the file type from the filename\textquotesingle{}s extension.
+
+There is also \mbox{\hyperlink{_s_d_l__image_8h_ac045c6da943f8fd9284a4abb255dda24}{IMG\+\_\+\+Load\+\_\+\+RW()}}, which is equivalent to this function except that it will rely on SDL\+\_\+image to determine what type of data it is loading, much like passing a NULL for type.
+
+If you are using SDL\textquotesingle{}s 2D rendering API, there is an equivalent call to load images directly into an SDL\+\_\+\+Texture for use by the GPU without using a software surface\+: call IMG\+\_\+\+Load\+Texture\+Typed\+\_\+\+RW() instead.
+
+When done with the returned surface, the app should dispose of it with a call to \mbox{\hyperlink{_s_d_l__surface_8h_a7b8d4f9cc058822501896a2eed81220e}{SDL\+\_\+\+Free\+Surface()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} that data will be read from. \\
+\hline
+{\em freesrc} & non-\/zero to close/free the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} before returning, zero to leave it open. \\
+\hline
+{\em type} & a filename extension that represent this data (\char`\"{}\+BMP\char`\"{}, \char`\"{}\+GIF\char`\"{}, \char`\"{}\+PNG\char`\"{}, etc). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new SDL surface, or NULL on error.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_aa21efc052860dbaa49c905fa62d366a4}{IMG\+\_\+\+Load}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac045c6da943f8fd9284a4abb255dda24}{IMG\+\_\+\+Load\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__surface_8h_a7b8d4f9cc058822501896a2eed81220e}{SDL\+\_\+\+Free\+Surface}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}\label{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadWEBP\_RW@{IMG\_LoadWEBP\_RW}}
+\index{IMG\_LoadWEBP\_RW@{IMG\_LoadWEBP\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadWEBP\_RW()}{IMG\_LoadWEBP\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+WEBP\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a WEBP image directly.
+
+If you know you definitely have a WEBP image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}\label{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadXCF\_RW@{IMG\_LoadXCF\_RW}}
+\index{IMG\_LoadXCF\_RW@{IMG\_LoadXCF\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadXCF\_RW()}{IMG\_LoadXCF\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+XCF\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a XCF image directly.
+
+If you know you definitely have a XCF image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}\label{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadXPM\_RW@{IMG\_LoadXPM\_RW}}
+\index{IMG\_LoadXPM\_RW@{IMG\_LoadXPM\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadXPM\_RW()}{IMG\_LoadXPM\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+XPM\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a XPM image directly.
+
+If you know you definitely have a XPM image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}{IMG\+\_\+\+Load\+XV\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}\label{_s_d_l__image_8h_af1aebb147f6a4e6c386d8b954739bcc1}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_LoadXV\_RW@{IMG\_LoadXV\_RW}}
+\index{IMG\_LoadXV\_RW@{IMG\_LoadXV\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_LoadXV\_RW()}{IMG\_LoadXV\_RW()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Load\+XV\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Load a XV image directly.
+
+If you know you definitely have a XV image, you can call this function, which will skip SDL\+\_\+image\textquotesingle{}s file format detection routines. Generally it\textquotesingle{}s better to use the abstract interfaces; also, there is only an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} interface available here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to load image data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL surface, or NULL on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ac5d5c73e3ce6e5de382b37e12792cd56}{IMG\+\_\+\+Load\+AVIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7d98fe773172ac0beeb38c9f467142fd}{IMG\+\_\+\+Load\+ICO\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a51309e70ec65f63419bbf1a9c535e357}{IMG\+\_\+\+Load\+CUR\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a82331e860ed3ee86c4456251e73c5a89}{IMG\+\_\+\+Load\+BMP\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_afd5f3cd0d53a3712bd376c07158abd1c}{IMG\+\_\+\+Load\+GIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a47e4f89e574ec9ecc1a7e1e3d88785a3}{IMG\+\_\+\+Load\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a40c866590e972fc023b0c1371eccdedd}{IMG\+\_\+\+Load\+JXL\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a11e9a938c23c903b85ab604be25a69ad}{IMG\+\_\+\+Load\+LBM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ac3f2f97096945107027bd2f22944785a}{IMG\+\_\+\+Load\+PCX\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a2f12a4946c45df84cadf12ac4378ec4d}{IMG\+\_\+\+Load\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ad1243468c641b99350ef52e41b3524e6}{IMG\+\_\+\+Load\+PNM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aca4156ffc85ec8f43205515c650ca09e}{IMG\+\_\+\+Load\+SVG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a06f405b12b31d793c961c4c1404dc519}{IMG\+\_\+\+Load\+QOI\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a46316cf78da8c10a132d7d28981187be}{IMG\+\_\+\+Load\+TGA\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a9df9afa54e440f8b2863197df10fd1ba}{IMG\+\_\+\+Load\+TIF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a458c50ce937a1efa1f8cb1b60190ddd8}{IMG\+\_\+\+Load\+XCF\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab4a3231009b398e784be6c639a6f513b}{IMG\+\_\+\+Load\+XPM\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ab8bd54f73497cd6024170e10a155d2bf}{IMG\+\_\+\+Load\+WEBP\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a8e5db0b68bf88958f87b189a8960e39c}\label{_s_d_l__image_8h_a8e5db0b68bf88958f87b189a8960e39c}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_Quit@{IMG\_Quit}}
+\index{IMG\_Quit@{IMG\_Quit}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_Quit()}{IMG\_Quit()}}
+{\footnotesize\ttfamily DECLSPEC void SDLCALL IMG\+\_\+\+Quit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Deinitialize SDL\+\_\+image.
+
+This should be the last function you call in SDL\+\_\+image, after freeing all other resources. This will unload any shared libraries it is using for various codecs.
+
+After this call, a call to IMG\+\_\+\+Init(0) will return 0 (no codecs loaded).
+
+You can safely call \mbox{\hyperlink{_s_d_l__image_8h_aff993a37c1f1859b38e2b4e8ff808a6b}{IMG\+\_\+\+Init()}} to reload various codec support after this call.
+
+Unlike other SDL satellite libraries, calls to IMG\+\_\+\+Init do not stack; a single call to \mbox{\hyperlink{_s_d_l__image_8h_a8e5db0b68bf88958f87b189a8960e39c}{IMG\+\_\+\+Quit()}} will deinitialize everything and does not have to be paired with a matching IMG\+\_\+\+Init call. For that reason, it\textquotesingle{}s considered best practices to have a single IMG\+\_\+\+Init and IMG\+\_\+\+Quit call in your program. While this isn\textquotesingle{}t required, be aware of the risks of deviating from that behavior.
+
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_aff993a37c1f1859b38e2b4e8ff808a6b}{IMG\+\_\+\+Init}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a4cd5d72066ee02df15b528f2c54bb2d9}\label{_s_d_l__image_8h_a4cd5d72066ee02df15b528f2c54bb2d9}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_ReadXPMFromArray@{IMG\_ReadXPMFromArray}}
+\index{IMG\_ReadXPMFromArray@{IMG\_ReadXPMFromArray}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_ReadXPMFromArray()}{IMG\_ReadXPMFromArray()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Read\+XPMFrom\+Array (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{xpm }\end{DoxyParamCaption})}
+
+Load an XPM image from a memory array.
+
+The returned surface will be an 8bpp indexed surface, if possible, otherwise it will be 32bpp. If you always want 32-\/bit data, use \mbox{\hyperlink{_s_d_l__image_8h_aabcc9ea7e45761faecd068ceb0b2a6b9}{IMG\+\_\+\+Read\+XPMFrom\+Array\+To\+RGB888()}} instead.
+
+When done with the returned surface, the app should dispose of it with a call to \mbox{\hyperlink{_s_d_l__surface_8h_a7b8d4f9cc058822501896a2eed81220e}{SDL\+\_\+\+Free\+Surface()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpm} & a null-\/terminated array of strings that comprise XPM data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new SDL surface, or NULL on error.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_aabcc9ea7e45761faecd068ceb0b2a6b9}{IMG\+\_\+\+Read\+XPMFrom\+Array\+To\+RGB888}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_aabcc9ea7e45761faecd068ceb0b2a6b9}\label{_s_d_l__image_8h_aabcc9ea7e45761faecd068ceb0b2a6b9}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_ReadXPMFromArrayToRGB888@{IMG\_ReadXPMFromArrayToRGB888}}
+\index{IMG\_ReadXPMFromArrayToRGB888@{IMG\_ReadXPMFromArrayToRGB888}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_ReadXPMFromArrayToRGB888()}{IMG\_ReadXPMFromArrayToRGB888()}}
+{\footnotesize\ttfamily DECLSPEC \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$SDLCALL IMG\+\_\+\+Read\+XPMFrom\+Array\+To\+RGB888 (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{xpm }\end{DoxyParamCaption})}
+
+Load an XPM image from a memory array.
+
+The returned surface will always be a 32-\/bit RGB surface. If you want 8-\/bit indexed colors (and the XPM data allows it), use \mbox{\hyperlink{_s_d_l__image_8h_a4cd5d72066ee02df15b528f2c54bb2d9}{IMG\+\_\+\+Read\+XPMFrom\+Array()}} instead.
+
+When done with the returned surface, the app should dispose of it with a call to \mbox{\hyperlink{_s_d_l__surface_8h_a7b8d4f9cc058822501896a2eed81220e}{SDL\+\_\+\+Free\+Surface()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpm} & a null-\/terminated array of strings that comprise XPM data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new SDL surface, or NULL on error.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+6.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a4cd5d72066ee02df15b528f2c54bb2d9}{IMG\+\_\+\+Read\+XPMFrom\+Array}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_aa8ef847f8c7c12f0e445715da3eb7b04}\label{_s_d_l__image_8h_aa8ef847f8c7c12f0e445715da3eb7b04}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_SaveJPG@{IMG\_SaveJPG}}
+\index{IMG\_SaveJPG@{IMG\_SaveJPG}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_SaveJPG()}{IMG\_SaveJPG()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+\+Save\+JPG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{const char $\ast$}]{file,  }\item[{int}]{quality }\end{DoxyParamCaption})}
+
+Save an \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} into a JPEG image file.
+
+If the file already exists, it will be overwritten.
+
+
+\begin{DoxyParams}{Parameters}
+{\em surface} & the SDL surface to save \\
+\hline
+{\em file} & path on the filesystem to write new file to. \\
+\hline
+{\em quality} & \mbox{[}0; 33\mbox{]} is Lowest quality, \mbox{[}34; 66\mbox{]} is Middle quality, \mbox{[}67; 100\mbox{]} is Highest quality \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, -\/1 on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+2.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_ae319e6660d7d42fa1885ab3ea38c72c7}{IMG\+\_\+\+Save\+JPG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a4570b11898b9350e5478d3b4394c5d70}{IMG\+\_\+\+Save\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7cf088e13df693a3dcff2d1d563cf4c0}{IMG\+\_\+\+Save\+PNG\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_ae319e6660d7d42fa1885ab3ea38c72c7}\label{_s_d_l__image_8h_ae319e6660d7d42fa1885ab3ea38c72c7}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_SaveJPG\_RW@{IMG\_SaveJPG\_RW}}
+\index{IMG\_SaveJPG\_RW@{IMG\_SaveJPG\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_SaveJPG\_RW()}{IMG\_SaveJPG\_RW()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+\+Save\+JPG\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{dst,  }\item[{int}]{freedst,  }\item[{int}]{quality }\end{DoxyParamCaption})}
+
+Save an \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} into JPEG image data, via an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+If you just want to save to a filename, you can use \mbox{\hyperlink{_s_d_l__image_8h_aa8ef847f8c7c12f0e445715da3eb7b04}{IMG\+\_\+\+Save\+JPG()}} instead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em surface} & the SDL surface to save \\
+\hline
+{\em dst} & the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to save the image data to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, -\/1 on error.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+2.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_aa8ef847f8c7c12f0e445715da3eb7b04}{IMG\+\_\+\+Save\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a4570b11898b9350e5478d3b4394c5d70}{IMG\+\_\+\+Save\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_a7cf088e13df693a3dcff2d1d563cf4c0}{IMG\+\_\+\+Save\+PNG\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a4570b11898b9350e5478d3b4394c5d70}\label{_s_d_l__image_8h_a4570b11898b9350e5478d3b4394c5d70}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_SavePNG@{IMG\_SavePNG}}
+\index{IMG\_SavePNG@{IMG\_SavePNG}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_SavePNG()}{IMG\_SavePNG()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+\+Save\+PNG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{const char $\ast$}]{file }\end{DoxyParamCaption})}
+
+Save an \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} into a PNG image file.
+
+If the file already exists, it will be overwritten.
+
+
+\begin{DoxyParams}{Parameters}
+{\em surface} & the SDL surface to save \\
+\hline
+{\em file} & path on the filesystem to write new file to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, -\/1 on error
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a7cf088e13df693a3dcff2d1d563cf4c0}{IMG\+\_\+\+Save\+PNG\+\_\+\+RW}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aa8ef847f8c7c12f0e445715da3eb7b04}{IMG\+\_\+\+Save\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae319e6660d7d42fa1885ab3ea38c72c7}{IMG\+\_\+\+Save\+JPG\+\_\+\+RW}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__image_8h_a7cf088e13df693a3dcff2d1d563cf4c0}\label{_s_d_l__image_8h_a7cf088e13df693a3dcff2d1d563cf4c0}} 
+\index{SDL\_image.h@{SDL\_image.h}!IMG\_SavePNG\_RW@{IMG\_SavePNG\_RW}}
+\index{IMG\_SavePNG\_RW@{IMG\_SavePNG\_RW}!SDL\_image.h@{SDL\_image.h}}
+\doxysubsubsection{\texorpdfstring{IMG\_SavePNG\_RW()}{IMG\_SavePNG\_RW()}}
+{\footnotesize\ttfamily DECLSPEC int SDLCALL IMG\+\_\+\+Save\+PNG\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} $\ast$}]{dst,  }\item[{int}]{freedst }\end{DoxyParamCaption})}
+
+Save an \mbox{\hyperlink{struct_s_d_l___surface}{SDL\+\_\+\+Surface}} into PNG image data, via an \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}}.
+
+If you just want to save to a filename, you can use \mbox{\hyperlink{_s_d_l__image_8h_a4570b11898b9350e5478d3b4394c5d70}{IMG\+\_\+\+Save\+PNG()}} instead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em surface} & the SDL surface to save \\
+\hline
+{\em dst} & the \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\+\_\+\+RWops}} to save the image data to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, -\/1 on error.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL\+\_\+image 2.\+0.\+0.
+\end{DoxySince}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__image_8h_a4570b11898b9350e5478d3b4394c5d70}{IMG\+\_\+\+Save\+PNG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_aa8ef847f8c7c12f0e445715da3eb7b04}{IMG\+\_\+\+Save\+JPG}} 
+
+\mbox{\hyperlink{_s_d_l__image_8h_ae319e6660d7d42fa1885ab3ea38c72c7}{IMG\+\_\+\+Save\+JPG\+\_\+\+RW}} 
+\end{DoxySeeAlso}

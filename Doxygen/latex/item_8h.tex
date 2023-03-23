@@ -1,0 +1,264 @@
+\hypertarget{item_8h}{}\doxysection{C\+:/\+Users/matth/\+One\+Drive/\+Documents/\+S2/\+Methodo/\+TP3/\+Item/item.h File Reference}
+\label{item_8h}\index{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Item/item.h@{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Item/item.h}}
+
+
+Fichier qui gère les items (Pos, listes,colision,inventaire)  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../sdl\textbackslash{}include\textbackslash{}\+SDL.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Constante.\+c\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Joueur/joueurs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../sdl/include/\+SDL2/\+SDL\+\_\+ttf.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structitem}{item}}
+\begin{DoxyCompactList}\small\item\em Structure d\textquotesingle{}un item, gère aussi son positionnement sur la map. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcase_inv}{case\+Inv}}
+\begin{DoxyCompactList}\small\item\em Structure d\textquotesingle{}une case de l\textquotesingle{}inventaire. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structinventory}{inventory}}
+\begin{DoxyCompactList}\small\item\em Structure de l\textquotesingle{}inventaire. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structitem_map_list}{item\+Map\+List}}
+\begin{DoxyCompactList}\small\item\em Structure de la liste des items sur la map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{item_8h_a5f7c318c142af804ee86f66bf961b9f0}\label{item_8h_a5f7c318c142af804ee86f66bf961b9f0}} 
+typedef struct \mbox{\hyperlink{structitem}{item}} {\bfseries item\+\_\+t}
+\item 
+\mbox{\Hypertarget{item_8h_a8ee0edf4964650c621c8da9c5d0e0e15}\label{item_8h_a8ee0edf4964650c621c8da9c5d0e0e15}} 
+typedef struct \mbox{\hyperlink{structcase_inv}{case\+Inv}} {\bfseries case\+Inv\+\_\+t}
+\item 
+\mbox{\Hypertarget{item_8h_a491d2e2201366049ac8ff2ffc19db39c}\label{item_8h_a491d2e2201366049ac8ff2ffc19db39c}} 
+typedef struct \mbox{\hyperlink{structinventory}{inventory}} {\bfseries inventory\+\_\+t}
+\item 
+\mbox{\Hypertarget{item_8h_a0299732e76441a2c5f6e36dc2b8cbf3f}\label{item_8h_a0299732e76441a2c5f6e36dc2b8cbf3f}} 
+typedef struct \mbox{\hyperlink{structitem_map_list}{item\+Map\+List}} {\bfseries item\+Map\+List\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$ \mbox{\hyperlink{item_8h_a79c68db5e3d92473da8cab75b6895634}{init\+Item}} (int id, char $\ast$name, int stock, char $\ast$type, char $\ast$file, int damage)
+\begin{DoxyCompactList}\small\item\em Create un item\+\_\+t. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structinventory}{inventory\+\_\+t}} $\ast$ \mbox{\hyperlink{item_8h_ae5343abd007bb602d0c3b3edcad8c3bb}{init\+Inventory}} (SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$win)
+\begin{DoxyCompactList}\small\item\em Initialise l\textquotesingle{}inventaire. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structitem_map_list}{item\+Map\+List\+\_\+t}} $\ast$ \mbox{\hyperlink{item_8h_ab3a449d35896169af4b3ae41c0f47bdc}{init\+Item\+Map\+List}} ()
+\begin{DoxyCompactList}\small\item\em Initialise la liste des items sur la map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structcase_inv}{case\+Inv\+\_\+t}} $\ast$ \mbox{\hyperlink{item_8h_a2ee56e2dd41231221efeb1c0f7c8e182}{init\+Case\+Inv}} (int id, SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$win, \mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$\mbox{\hyperlink{structitem}{item}}, int x, int y)
+\begin{DoxyCompactList}\small\item\em Initialise une case de l\textquotesingle{}inventaire. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{item_8h_a8dc97f12517b489e28ae469e7d3c0b46}{Item\+Add\+To\+Inv}} (\mbox{\hyperlink{structinventory}{inventory\+\_\+t}} $\ast$inv, \mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$\mbox{\hyperlink{structitem}{item}}, int stock, \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\+\_\+\+Font}} $\ast$font, SDL\+\_\+\+Renderer $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em Ajoute un item à l\textquotesingle{}inventaire. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{item_8h_a0026e0868620ff131956b0a184f52864}{Item\+Remove\+From\+Inv}} (\mbox{\hyperlink{structinventory}{inventory\+\_\+t}} $\ast$inv, \mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$\mbox{\hyperlink{structitem}{item}}, int stock, \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\+\_\+\+Font}} $\ast$font, SDL\+\_\+\+Renderer $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em Retire un item de l\textquotesingle{}inventaire. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{item_8h_a5d70601a8e0dcaf9ae95a445fe9989cd}{Add\+Item\+On\+Map}} (\mbox{\hyperlink{structitem_map_list}{item\+Map\+List\+\_\+t}} $\ast$\mbox{\hyperlink{structitem_map_list}{item\+Map\+List}}, \mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$\mbox{\hyperlink{structitem}{item}}, int x, int y)
+\begin{DoxyCompactList}\small\item\em Ajoute un item à la liste des items sur la map. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{item_8h_a201ca4a95ba10262101c8c4665e52f16}{Remove\+Item\+On\+Map}} (\mbox{\hyperlink{structitem_map_list}{item\+Map\+List\+\_\+t}} $\ast$\mbox{\hyperlink{structitem_map_list}{item\+Map\+List}}, \mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$\mbox{\hyperlink{structitem}{item}})
+\begin{DoxyCompactList}\small\item\em Retire un item de la liste des items sur la map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{item_8h_aad74939620b504738b9e06b4e566ab86}{afficher\+\_\+inv}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$win, SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{structinventory}{inventory\+\_\+t}} $\ast$inv, \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\+\_\+\+Font}} $\ast$font, \mbox{\hyperlink{struct_s_d_l___color}{SDL\+\_\+\+Color}} White)
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}inventaire. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{item_8h_a79cc0c21dcda947471276abdad7d2b03}{item\+Check\+Case}} (\mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$\mbox{\hyperlink{structitem}{item}}, \mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$j)
+\begin{DoxyCompactList}\small\item\em Verifie si un item est autour du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fichier qui gère les items (Pos, listes,colision,inventaire) 
+
+\begin{DoxyAuthor}{Author}
+M Moulias 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/03-\/23
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{item_8h_a5d70601a8e0dcaf9ae95a445fe9989cd}\label{item_8h_a5d70601a8e0dcaf9ae95a445fe9989cd}} 
+\index{item.h@{item.h}!AddItemOnMap@{AddItemOnMap}}
+\index{AddItemOnMap@{AddItemOnMap}!item.h@{item.h}}
+\doxysubsubsection{\texorpdfstring{AddItemOnMap()}{AddItemOnMap()}}
+{\footnotesize\ttfamily int Add\+Item\+On\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structitem_map_list}{item\+Map\+List\+\_\+t}} $\ast$}]{item\+Map\+List,  }\item[{\mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$}]{item,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Ajoute un item à la liste des items sur la map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{structitem_map_list}{item\+Map\+List}}} & \\
+\hline
+{\em item} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item_8h_aad74939620b504738b9e06b4e566ab86}\label{item_8h_aad74939620b504738b9e06b4e566ab86}} 
+\index{item.h@{item.h}!afficher\_inv@{afficher\_inv}}
+\index{afficher\_inv@{afficher\_inv}!item.h@{item.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_inv()}{afficher\_inv()}}
+{\footnotesize\ttfamily void afficher\+\_\+inv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$}]{win,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{structinventory}{inventory\+\_\+t}} $\ast$}]{inv,  }\item[{\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\+\_\+\+Font}} $\ast$}]{font,  }\item[{\mbox{\hyperlink{struct_s_d_l___color}{SDL\+\_\+\+Color}}}]{White }\end{DoxyParamCaption})}
+
+
+
+Affiche l\textquotesingle{}inventaire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em win} & \\
+\hline
+{\em renderer} & \\
+\hline
+{\em inv} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{item_8h_a2ee56e2dd41231221efeb1c0f7c8e182}\label{item_8h_a2ee56e2dd41231221efeb1c0f7c8e182}} 
+\index{item.h@{item.h}!initCaseInv@{initCaseInv}}
+\index{initCaseInv@{initCaseInv}!item.h@{item.h}}
+\doxysubsubsection{\texorpdfstring{initCaseInv()}{initCaseInv()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcase_inv}{case\+Inv\+\_\+t}} $\ast$ init\+Case\+Inv (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$}]{item,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Initialise une case de l\textquotesingle{}inventaire. 
+
+\begin{DoxyReturn}{Returns}
+case\+Inv\+\_\+t$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item_8h_ae5343abd007bb602d0c3b3edcad8c3bb}\label{item_8h_ae5343abd007bb602d0c3b3edcad8c3bb}} 
+\index{item.h@{item.h}!initInventory@{initInventory}}
+\index{initInventory@{initInventory}!item.h@{item.h}}
+\doxysubsubsection{\texorpdfstring{initInventory()}{initInventory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structinventory}{inventory\+\_\+t}} $\ast$ init\+Inventory (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$}]{win }\end{DoxyParamCaption})}
+
+
+
+Initialise l\textquotesingle{}inventaire. 
+
+\begin{DoxyReturn}{Returns}
+inventory\+\_\+t$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item_8h_a79c68db5e3d92473da8cab75b6895634}\label{item_8h_a79c68db5e3d92473da8cab75b6895634}} 
+\index{item.h@{item.h}!initItem@{initItem}}
+\index{initItem@{initItem}!item.h@{item.h}}
+\doxysubsubsection{\texorpdfstring{initItem()}{initItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$ init\+Item (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{char $\ast$}]{name,  }\item[{int}]{stock,  }\item[{char $\ast$}]{type,  }\item[{char $\ast$}]{file,  }\item[{int}]{damage }\end{DoxyParamCaption})}
+
+
+
+Create un item\+\_\+t. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em name} & \\
+\hline
+{\em stock} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+item\+\_\+t$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item_8h_ab3a449d35896169af4b3ae41c0f47bdc}\label{item_8h_ab3a449d35896169af4b3ae41c0f47bdc}} 
+\index{item.h@{item.h}!initItemMapList@{initItemMapList}}
+\index{initItemMapList@{initItemMapList}!item.h@{item.h}}
+\doxysubsubsection{\texorpdfstring{initItemMapList()}{initItemMapList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structitem_map_list}{item\+Map\+List\+\_\+t}} $\ast$ init\+Item\+Map\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialise la liste des items sur la map. 
+
+\begin{DoxyReturn}{Returns}
+item\+Map\+List\+\_\+t$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item_8h_a8dc97f12517b489e28ae469e7d3c0b46}\label{item_8h_a8dc97f12517b489e28ae469e7d3c0b46}} 
+\index{item.h@{item.h}!ItemAddToInv@{ItemAddToInv}}
+\index{ItemAddToInv@{ItemAddToInv}!item.h@{item.h}}
+\doxysubsubsection{\texorpdfstring{ItemAddToInv()}{ItemAddToInv()}}
+{\footnotesize\ttfamily void Item\+Add\+To\+Inv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structinventory}{inventory\+\_\+t}} $\ast$}]{inv,  }\item[{\mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$}]{item,  }\item[{int}]{stock,  }\item[{\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\+\_\+\+Font}} $\ast$}]{font,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Ajoute un item à l\textquotesingle{}inventaire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \\
+\hline
+{\em stock} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{item_8h_a79cc0c21dcda947471276abdad7d2b03}\label{item_8h_a79cc0c21dcda947471276abdad7d2b03}} 
+\index{item.h@{item.h}!itemCheckCase@{itemCheckCase}}
+\index{itemCheckCase@{itemCheckCase}!item.h@{item.h}}
+\doxysubsubsection{\texorpdfstring{itemCheckCase()}{itemCheckCase()}}
+{\footnotesize\ttfamily int item\+Check\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$}]{item,  }\item[{\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$}]{j }\end{DoxyParamCaption})}
+
+
+
+Verifie si un item est autour du joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \\
+\hline
+{\em j} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item_8h_a0026e0868620ff131956b0a184f52864}\label{item_8h_a0026e0868620ff131956b0a184f52864}} 
+\index{item.h@{item.h}!ItemRemoveFromInv@{ItemRemoveFromInv}}
+\index{ItemRemoveFromInv@{ItemRemoveFromInv}!item.h@{item.h}}
+\doxysubsubsection{\texorpdfstring{ItemRemoveFromInv()}{ItemRemoveFromInv()}}
+{\footnotesize\ttfamily void Item\+Remove\+From\+Inv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structinventory}{inventory\+\_\+t}} $\ast$}]{inv,  }\item[{\mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$}]{item,  }\item[{int}]{stock,  }\item[{\mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\+\_\+\+Font}} $\ast$}]{font,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Retire un item de l\textquotesingle{}inventaire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \\
+\hline
+{\em stock} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{item_8h_a201ca4a95ba10262101c8c4665e52f16}\label{item_8h_a201ca4a95ba10262101c8c4665e52f16}} 
+\index{item.h@{item.h}!RemoveItemOnMap@{RemoveItemOnMap}}
+\index{RemoveItemOnMap@{RemoveItemOnMap}!item.h@{item.h}}
+\doxysubsubsection{\texorpdfstring{RemoveItemOnMap()}{RemoveItemOnMap()}}
+{\footnotesize\ttfamily int Remove\+Item\+On\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structitem_map_list}{item\+Map\+List\+\_\+t}} $\ast$}]{item\+Map\+List,  }\item[{\mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+
+
+Retire un item de la liste des items sur la map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{structitem_map_list}{item\+Map\+List}}} & \\
+\hline
+{\em item} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 Si l\textquotesingle{}item a été retiré, 1 sinon 
+\end{DoxyReturn}

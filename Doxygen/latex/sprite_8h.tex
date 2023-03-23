@@ -1,0 +1,117 @@
+\hypertarget{sprite_8h}{}\doxysection{C\+:/\+Users/matth/\+One\+Drive/\+Documents/\+S2/\+Methodo/\+TP3/\+Sprites/sprite.h File Reference}
+\label{sprite_8h}\index{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Sprites/sprite.h@{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Sprites/sprite.h}}
+
+
+Fichier gérant les sprites ainsi que les animations (plusieurs sprites qui défilent)  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../sdl\textbackslash{}include\textbackslash{}\+SDL.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_sprite}{Sprite}}
+\begin{DoxyCompactList}\small\item\em Structure Sprite\+\_\+t. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sprite_8h_acfd9b5a1bf417dc33f161b01dbb5ffe0}\label{sprite_8h_acfd9b5a1bf417dc33f161b01dbb5ffe0}} 
+typedef struct \mbox{\hyperlink{struct_sprite}{Sprite}} {\bfseries Sprite\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite\+\_\+t}} $\ast$ \mbox{\hyperlink{sprite_8h_a743d225bc9c6901c15dd6c0ccdf8f916}{init\+Sprite}} (SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$win, char $\ast$path, int Start\+Frame, int nb\+Frame)
+\begin{DoxyCompactList}\small\item\em Create un Sprite\+\_\+t. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprite_8h_a2a65d1b661f758fad143778f12d0a93d}{draw\+Sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite\+\_\+t}} $\ast$sprite, SDL\+\_\+\+Renderer $\ast$renderer, int x, int y, int w, int h)
+\begin{DoxyCompactList}\small\item\em Affiche le sprite sur la fenetre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprite_8h_aafd7be42c145a62d0cc931ae200ca0e0}{free\+Sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite\+\_\+t}} $\ast$sprite)
+\begin{DoxyCompactList}\small\item\em Libere la memoire du sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fichier gérant les sprites ainsi que les animations (plusieurs sprites qui défilent) 
+
+\begin{DoxyAuthor}{Author}
+M Moulias 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/03-\/23
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sprite_8h_a2a65d1b661f758fad143778f12d0a93d}\label{sprite_8h_a2a65d1b661f758fad143778f12d0a93d}} 
+\index{sprite.h@{sprite.h}!drawSprite@{drawSprite}}
+\index{drawSprite@{drawSprite}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{drawSprite()}{drawSprite()}}
+{\footnotesize\ttfamily void draw\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite\+\_\+t}} $\ast$}]{sprite,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Affiche le sprite sur la fenetre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & \\
+\hline
+{\em renderer} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em w} & \\
+\hline
+{\em h} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sprite_8h_aafd7be42c145a62d0cc931ae200ca0e0}\label{sprite_8h_aafd7be42c145a62d0cc931ae200ca0e0}} 
+\index{sprite.h@{sprite.h}!freeSprite@{freeSprite}}
+\index{freeSprite@{freeSprite}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{freeSprite()}{freeSprite()}}
+{\footnotesize\ttfamily void free\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite\+\_\+t}} $\ast$}]{sprite }\end{DoxyParamCaption})}
+
+
+
+Libere la memoire du sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sprite_8h_a743d225bc9c6901c15dd6c0ccdf8f916}\label{sprite_8h_a743d225bc9c6901c15dd6c0ccdf8f916}} 
+\index{sprite.h@{sprite.h}!initSprite@{initSprite}}
+\index{initSprite@{initSprite}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{initSprite()}{initSprite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite\+\_\+t}} $\ast$ init\+Sprite (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$}]{win,  }\item[{char $\ast$}]{path,  }\item[{int}]{Start\+Frame,  }\item[{int}]{nb\+Frame }\end{DoxyParamCaption})}
+
+
+
+Create un Sprite\+\_\+t. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & \\
+\hline
+{\em win} & \\
+\hline
+{\em path} & \\
+\hline
+{\em Start\+Frame} & \\
+\hline
+{\em nb\+Frame} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sprite\+\_\+t$\ast$ 
+\end{DoxyReturn}

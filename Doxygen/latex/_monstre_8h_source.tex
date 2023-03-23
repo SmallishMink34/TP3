@@ -1,0 +1,50 @@
+\hypertarget{_monstre_8h_source}{}\doxysection{Monstre.\+h}
+\label{_monstre_8h_source}\index{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Monstre/Monstre.h@{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Monstre/Monstre.h}}
+\mbox{\hyperlink{_monstre_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ Monstre\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ Monstre\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}../Joueur/joueurs.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}../Constante.c"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmonstre}{monstre}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ pos\ [2];}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ life;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ maxlife;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{char}\ name[20];}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ attaque;}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmonstre}{monstre}}\ \mbox{\hyperlink{structmonstre}{monstre\_t}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structliste_mst}{listeMst}}\{}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{structmonstre}{monstre\_t}}*\ listeM[TMAP*TMAP];}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ nbMst;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structliste_mst}{listeMst}}\ \mbox{\hyperlink{structliste_mst}{listeMst\_t}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \mbox{\hyperlink{structliste_mst}{listeMst\_t}}*\ \mbox{\hyperlink{_monstre_8h_a31b495efd71735a6df45542e85de6958}{creationListeM}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_monstre_8h_aaa61e0bd74be5b2576603d9644baac56}{ajoutMst}}(\ \mbox{\hyperlink{structliste_mst}{listeMst\_t}}*\ listeM,\ \textcolor{keywordtype}{int}\ j\_pos0,\ \textcolor{keywordtype}{int}\ j\_pos1);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_monstre_8h_a20a1702b94e7ca1dc2d7b0b82a05d8da}{enleverMst}}(\ \mbox{\hyperlink{structmonstre}{monstre\_t}}*\ m,\ \mbox{\hyperlink{structliste_mst}{listeMst\_t}}*\ listeMonster);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_monstre_8h_ab522b38546da435f447c7f5184f63ba0}{checkinlist}}(\mbox{\hyperlink{structliste_mst}{listeMst\_t}}*\ listeM,\ \textcolor{keywordtype}{int}\ j\_pos0,\ \textcolor{keywordtype}{int}\ j\_pos1);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_monstre_8h_ab97f6f53e359e71656a3c826bc567f63}{checkAround}}(\ \mbox{\hyperlink{structmonstre}{monstre\_t}}*\ m,\ \mbox{\hyperlink{structjoueur}{joueur\_t}}*\ j);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00087\ \textcolor{keywordtype}{int}\ len(\mbox{\hyperlink{structliste_mst}{listeMst\_t}}*\ listeM);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{_monstre_8h_ac983ed2a10d134fb8db90344e2d97112}{toStringMst}}(\mbox{\hyperlink{structmonstre}{monstre\_t}}*\ M);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{comment}{//\ char*\ toStringLstMst(listeMst*\ listeM);}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,150 @@
+\hypertarget{struct_s_d_l___haptic_custom}{}\doxysection{SDL\+\_\+\+Haptic\+Custom Struct Reference}
+\label{struct_s_d_l___haptic_custom}\index{SDL\_HapticCustom@{SDL\_HapticCustom}}
+
+
+A structure containing a template for the \mbox{\hyperlink{_s_d_l__haptic_8h_a8a18c4de1076ac9bebd718329d16db29}{SDL\+\_\+\+HAPTIC\+\_\+\+CUSTOM}} effect.  
+
+
+
+
+{\ttfamily \#include $<$SDL\+\_\+haptic.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+Uint16 \mbox{\hyperlink{struct_s_d_l___haptic_custom_a8db4a3e9f29940892f2773bca31c74e1}{type}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___haptic_direction}{SDL\+\_\+\+Haptic\+Direction}} \mbox{\hyperlink{struct_s_d_l___haptic_custom_a9fe6fc39233e26d6c0705ae77e43d96c}{direction}}
+\item 
+Uint32 \mbox{\hyperlink{struct_s_d_l___haptic_custom_afbde362d49894774c8b9c9e85ac0a913}{length}}
+\item 
+Uint16 \mbox{\hyperlink{struct_s_d_l___haptic_custom_a069408e960d0f2ba482421f2dd2ec003}{delay}}
+\item 
+Uint16 \mbox{\hyperlink{struct_s_d_l___haptic_custom_a9dab31b41646c5d046ea33d0cfb3794a}{button}}
+\item 
+Uint16 \mbox{\hyperlink{struct_s_d_l___haptic_custom_a263a60513b1bdb1e91b28bd2e128e9d4}{interval}}
+\item 
+Uint8 \mbox{\hyperlink{struct_s_d_l___haptic_custom_a2a6435e054f3ee99cbef44344bf83289}{channels}}
+\item 
+Uint16 \mbox{\hyperlink{struct_s_d_l___haptic_custom_aacbf2f8754962f2848ff53502e42e64b}{period}}
+\item 
+Uint16 \mbox{\hyperlink{struct_s_d_l___haptic_custom_afe09cc5fd2bca18a01641bc94ff31b2c}{samples}}
+\item 
+Uint16 $\ast$ \mbox{\hyperlink{struct_s_d_l___haptic_custom_a111ff9da6466e6bd4b5cc4fe3d1ddca8}{data}}
+\item 
+Uint16 \mbox{\hyperlink{struct_s_d_l___haptic_custom_ac1af5d594e082747b14fa520f74764c0}{attack\+\_\+length}}
+\item 
+Uint16 \mbox{\hyperlink{struct_s_d_l___haptic_custom_accde1dae084b0e3b5027c7731cde9080}{attack\+\_\+level}}
+\item 
+Uint16 \mbox{\hyperlink{struct_s_d_l___haptic_custom_a576ff5ee847dd20a8f1c4a69ce09ba79}{fade\+\_\+length}}
+\item 
+Uint16 \mbox{\hyperlink{struct_s_d_l___haptic_custom_a03b48c5ffd631a0f35741e1aa7f482dd}{fade\+\_\+level}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A structure containing a template for the \mbox{\hyperlink{_s_d_l__haptic_8h_a8a18c4de1076ac9bebd718329d16db29}{SDL\+\_\+\+HAPTIC\+\_\+\+CUSTOM}} effect. 
+
+This struct is exclusively for the \mbox{\hyperlink{_s_d_l__haptic_8h_a8a18c4de1076ac9bebd718329d16db29}{SDL\+\_\+\+HAPTIC\+\_\+\+CUSTOM}} effect.
+
+A custom force feedback effect is much like a periodic effect, where the application can define its exact shape. You will have to allocate the data yourself. Data should consist of channels $\ast$ samples Uint16 samples.
+
+If channels is one, the effect is rotated using the defined direction. Otherwise it uses the samples in data for the different axes.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__haptic_8h_a8a18c4de1076ac9bebd718329d16db29}{SDL\+\_\+\+HAPTIC\+\_\+\+CUSTOM}} 
+
+\mbox{\hyperlink{union_s_d_l___haptic_effect}{SDL\+\_\+\+Haptic\+Effect}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_s_d_l___haptic_custom_ac1af5d594e082747b14fa520f74764c0}\label{struct_s_d_l___haptic_custom_ac1af5d594e082747b14fa520f74764c0}} 
+\index{SDL\_HapticCustom@{SDL\_HapticCustom}!attack\_length@{attack\_length}}
+\index{attack\_length@{attack\_length}!SDL\_HapticCustom@{SDL\_HapticCustom}}
+\doxysubsubsection{\texorpdfstring{attack\_length}{attack\_length}}
+{\footnotesize\ttfamily Uint16 attack\+\_\+length}
+
+Duration of the attack. \mbox{\Hypertarget{struct_s_d_l___haptic_custom_accde1dae084b0e3b5027c7731cde9080}\label{struct_s_d_l___haptic_custom_accde1dae084b0e3b5027c7731cde9080}} 
+\index{SDL\_HapticCustom@{SDL\_HapticCustom}!attack\_level@{attack\_level}}
+\index{attack\_level@{attack\_level}!SDL\_HapticCustom@{SDL\_HapticCustom}}
+\doxysubsubsection{\texorpdfstring{attack\_level}{attack\_level}}
+{\footnotesize\ttfamily Uint16 attack\+\_\+level}
+
+Level at the start of the attack. \mbox{\Hypertarget{struct_s_d_l___haptic_custom_a9dab31b41646c5d046ea33d0cfb3794a}\label{struct_s_d_l___haptic_custom_a9dab31b41646c5d046ea33d0cfb3794a}} 
+\index{SDL\_HapticCustom@{SDL\_HapticCustom}!button@{button}}
+\index{button@{button}!SDL\_HapticCustom@{SDL\_HapticCustom}}
+\doxysubsubsection{\texorpdfstring{button}{button}}
+{\footnotesize\ttfamily Uint16 button}
+
+Button that triggers the effect. \mbox{\Hypertarget{struct_s_d_l___haptic_custom_a2a6435e054f3ee99cbef44344bf83289}\label{struct_s_d_l___haptic_custom_a2a6435e054f3ee99cbef44344bf83289}} 
+\index{SDL\_HapticCustom@{SDL\_HapticCustom}!channels@{channels}}
+\index{channels@{channels}!SDL\_HapticCustom@{SDL\_HapticCustom}}
+\doxysubsubsection{\texorpdfstring{channels}{channels}}
+{\footnotesize\ttfamily Uint8 channels}
+
+Axes to use, minimum of one. \mbox{\Hypertarget{struct_s_d_l___haptic_custom_a111ff9da6466e6bd4b5cc4fe3d1ddca8}\label{struct_s_d_l___haptic_custom_a111ff9da6466e6bd4b5cc4fe3d1ddca8}} 
+\index{SDL\_HapticCustom@{SDL\_HapticCustom}!data@{data}}
+\index{data@{data}!SDL\_HapticCustom@{SDL\_HapticCustom}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily Uint16$\ast$ data}
+
+Should contain channels$\ast$samples items. \mbox{\Hypertarget{struct_s_d_l___haptic_custom_a069408e960d0f2ba482421f2dd2ec003}\label{struct_s_d_l___haptic_custom_a069408e960d0f2ba482421f2dd2ec003}} 
+\index{SDL\_HapticCustom@{SDL\_HapticCustom}!delay@{delay}}
+\index{delay@{delay}!SDL\_HapticCustom@{SDL\_HapticCustom}}
+\doxysubsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily Uint16 delay}
+
+Delay before starting the effect. \mbox{\Hypertarget{struct_s_d_l___haptic_custom_a9fe6fc39233e26d6c0705ae77e43d96c}\label{struct_s_d_l___haptic_custom_a9fe6fc39233e26d6c0705ae77e43d96c}} 
+\index{SDL\_HapticCustom@{SDL\_HapticCustom}!direction@{direction}}
+\index{direction@{direction}!SDL\_HapticCustom@{SDL\_HapticCustom}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___haptic_direction}{SDL\+\_\+\+Haptic\+Direction}} direction}
+
+Direction of the effect. \mbox{\Hypertarget{struct_s_d_l___haptic_custom_a576ff5ee847dd20a8f1c4a69ce09ba79}\label{struct_s_d_l___haptic_custom_a576ff5ee847dd20a8f1c4a69ce09ba79}} 
+\index{SDL\_HapticCustom@{SDL\_HapticCustom}!fade\_length@{fade\_length}}
+\index{fade\_length@{fade\_length}!SDL\_HapticCustom@{SDL\_HapticCustom}}
+\doxysubsubsection{\texorpdfstring{fade\_length}{fade\_length}}
+{\footnotesize\ttfamily Uint16 fade\+\_\+length}
+
+Duration of the fade. \mbox{\Hypertarget{struct_s_d_l___haptic_custom_a03b48c5ffd631a0f35741e1aa7f482dd}\label{struct_s_d_l___haptic_custom_a03b48c5ffd631a0f35741e1aa7f482dd}} 
+\index{SDL\_HapticCustom@{SDL\_HapticCustom}!fade\_level@{fade\_level}}
+\index{fade\_level@{fade\_level}!SDL\_HapticCustom@{SDL\_HapticCustom}}
+\doxysubsubsection{\texorpdfstring{fade\_level}{fade\_level}}
+{\footnotesize\ttfamily Uint16 fade\+\_\+level}
+
+Level at the end of the fade. \mbox{\Hypertarget{struct_s_d_l___haptic_custom_a263a60513b1bdb1e91b28bd2e128e9d4}\label{struct_s_d_l___haptic_custom_a263a60513b1bdb1e91b28bd2e128e9d4}} 
+\index{SDL\_HapticCustom@{SDL\_HapticCustom}!interval@{interval}}
+\index{interval@{interval}!SDL\_HapticCustom@{SDL\_HapticCustom}}
+\doxysubsubsection{\texorpdfstring{interval}{interval}}
+{\footnotesize\ttfamily Uint16 interval}
+
+How soon it can be triggered again after button. \mbox{\Hypertarget{struct_s_d_l___haptic_custom_afbde362d49894774c8b9c9e85ac0a913}\label{struct_s_d_l___haptic_custom_afbde362d49894774c8b9c9e85ac0a913}} 
+\index{SDL\_HapticCustom@{SDL\_HapticCustom}!length@{length}}
+\index{length@{length}!SDL\_HapticCustom@{SDL\_HapticCustom}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily Uint32 length}
+
+Duration of the effect. \mbox{\Hypertarget{struct_s_d_l___haptic_custom_aacbf2f8754962f2848ff53502e42e64b}\label{struct_s_d_l___haptic_custom_aacbf2f8754962f2848ff53502e42e64b}} 
+\index{SDL\_HapticCustom@{SDL\_HapticCustom}!period@{period}}
+\index{period@{period}!SDL\_HapticCustom@{SDL\_HapticCustom}}
+\doxysubsubsection{\texorpdfstring{period}{period}}
+{\footnotesize\ttfamily Uint16 period}
+
+Sample periods. \mbox{\Hypertarget{struct_s_d_l___haptic_custom_afe09cc5fd2bca18a01641bc94ff31b2c}\label{struct_s_d_l___haptic_custom_afe09cc5fd2bca18a01641bc94ff31b2c}} 
+\index{SDL\_HapticCustom@{SDL\_HapticCustom}!samples@{samples}}
+\index{samples@{samples}!SDL\_HapticCustom@{SDL\_HapticCustom}}
+\doxysubsubsection{\texorpdfstring{samples}{samples}}
+{\footnotesize\ttfamily Uint16 samples}
+
+Amount of samples. \mbox{\Hypertarget{struct_s_d_l___haptic_custom_a8db4a3e9f29940892f2773bca31c74e1}\label{struct_s_d_l___haptic_custom_a8db4a3e9f29940892f2773bca31c74e1}} 
+\index{SDL\_HapticCustom@{SDL\_HapticCustom}!type@{type}}
+\index{type@{type}!SDL\_HapticCustom@{SDL\_HapticCustom}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily Uint16 type}
+
+\mbox{\hyperlink{_s_d_l__haptic_8h_a8a18c4de1076ac9bebd718329d16db29}{SDL\+\_\+\+HAPTIC\+\_\+\+CUSTOM}} 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/matth/\+One\+Drive/\+Documents/\+S2/\+Methodo/\+TP3/sdl/include/\mbox{\hyperlink{_s_d_l__haptic_8h}{SDL\+\_\+haptic.\+h}}\end{DoxyCompactItemize}

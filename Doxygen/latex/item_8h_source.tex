@@ -1,0 +1,81 @@
+\hypertarget{item_8h_source}{}\doxysection{item.\+h}
+\label{item_8h_source}\index{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Item/item.h@{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Item/item.h}}
+\mbox{\hyperlink{item_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}../sdl\(\backslash\)include\(\backslash\)SDL.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}../Constante.c"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}../Joueur/joueurs.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}../sdl/include/SDL2/SDL\_ttf.h"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#ifndef\ Item\_H}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ Item\_H}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structitem}{item}}\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ id;\ \textcolor{comment}{//\ ID\ unique\ de\ l'item}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{char}\ *name;\ \textcolor{comment}{//\ Nom\ de\ l'item}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{char}\ *type;\ \textcolor{comment}{//\ Type\ de\ l'item\ (arme,\ armure,\ potion,\ etc...)}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{char}\ *file;\ \textcolor{comment}{//\ Nom\ du\ fichier\ de\ l'image}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ stock;\ \textcolor{comment}{//\ Stock\ de\ l'item}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ stock\_max;\ \textcolor{comment}{//\ Stock\ max\ de\ l'item}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ damage;\ \textcolor{comment}{//\ Dégats\ de\ l'item}}
+\DoxyCodeLine{00041\ \ \ \ \ SDL\_Texture\ *texture;\ \textcolor{comment}{//\ Texture\ de\ l'item}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ x;\ \textcolor{comment}{//\ position\ sur\ la\ map}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ y;}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structitem}{item}}\ \mbox{\hyperlink{structitem}{item\_t}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcase_inv}{caseInv}}\{}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ rect;}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ rectText;}
+\DoxyCodeLine{00060\ \ \ \ \ SDL\_Texture\ *fond;}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *surfaceMessage;}
+\DoxyCodeLine{00062\ \ \ \ \ SDL\_Texture\ *textureMessage;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{structitem}{item\_t}}\ *\mbox{\hyperlink{structitem}{item}};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ Selected;}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcase_inv}{caseInv}}\ \mbox{\hyperlink{structcase_inv}{caseInv\_t}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structinventory}{inventory}}\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{structcase_inv}{caseInv\_t}}\ *cases[10];}
+\DoxyCodeLine{00077\ \ \ \ \ SDL\_Texture\ *fond;}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{int}\ nb\_items;}
+\DoxyCodeLine{00079\ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structinventory}{inventory}}\ \mbox{\hyperlink{structinventory}{inventory\_t}};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structitem_map_list}{itemMapList}}\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{structitem}{item\_t}}*\ itemslist[TMAP*TMAP];}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ nbItem;}
+\DoxyCodeLine{00092\ \};}
+\DoxyCodeLine{00093\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structitem_map_list}{itemMapList}}\ \mbox{\hyperlink{structitem_map_list}{itemMapList\_t}};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00105\ \mbox{\hyperlink{structitem}{item\_t}}\ *\mbox{\hyperlink{item_8h_a79c68db5e3d92473da8cab75b6895634}{initItem}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{char}\ *name,\ \textcolor{keywordtype}{int}\ stock,\ \textcolor{keywordtype}{char}\ *\ type,\ \textcolor{keywordtype}{char}\ *\ file,\ \textcolor{keywordtype}{int}\ damage);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00112\ \mbox{\hyperlink{structinventory}{inventory\_t}}\ *\mbox{\hyperlink{item_8h_ae5343abd007bb602d0c3b3edcad8c3bb}{initInventory}}(SDL\_Renderer\ *renderer,\ \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\_Window}}\ *win);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00119\ \mbox{\hyperlink{structitem_map_list}{itemMapList\_t}}\ *\mbox{\hyperlink{item_8h_ab3a449d35896169af4b3ae41c0f47bdc}{initItemMapList}}();}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00126\ \mbox{\hyperlink{structcase_inv}{caseInv\_t}}\ *\mbox{\hyperlink{item_8h_a2ee56e2dd41231221efeb1c0f7c8e182}{initCaseInv}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ SDL\_Renderer\ *renderer,\ \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\_Window}}\ *win,\ \mbox{\hyperlink{structitem}{item\_t}}\ *\mbox{\hyperlink{structitem}{item}},\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/Fonctions\ d'Ajout\ d'item-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00135\ \textcolor{comment}{}\textcolor{keywordtype}{void}\ \mbox{\hyperlink{item_8h_a8dc97f12517b489e28ae469e7d3c0b46}{ItemAddToInv}}(\mbox{\hyperlink{structinventory}{inventory\_t}}\ *inv,\mbox{\hyperlink{structitem}{item\_t}}\ *\mbox{\hyperlink{structitem}{item}},\ \textcolor{keywordtype}{int}\ stock,\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ SDL\_Renderer\ *renderer);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00143\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{item_8h_a0026e0868620ff131956b0a184f52864}{ItemRemoveFromInv}}(\mbox{\hyperlink{structinventory}{inventory\_t}}\ *inv,\mbox{\hyperlink{structitem}{item\_t}}\ *\mbox{\hyperlink{structitem}{item}},\ \textcolor{keywordtype}{int}\ stock,\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ SDL\_Renderer\ *renderer);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00154\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{item_8h_a5d70601a8e0dcaf9ae95a445fe9989cd}{AddItemOnMap}}(\mbox{\hyperlink{structitem_map_list}{itemMapList\_t}}\ *\mbox{\hyperlink{structitem_map_list}{itemMapList}},\ \mbox{\hyperlink{structitem}{item\_t}}\ *\mbox{\hyperlink{structitem}{item}},\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00165\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{item_8h_a201ca4a95ba10262101c8c4665e52f16}{RemoveItemOnMap}}(\mbox{\hyperlink{structitem_map_list}{itemMapList\_t}}\ *\mbox{\hyperlink{structitem_map_list}{itemMapList}},\ \mbox{\hyperlink{structitem}{item\_t}}\ *\mbox{\hyperlink{structitem}{item}});}
+\DoxyCodeLine{00173\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{item_8h_aad74939620b504738b9e06b4e566ab86}{afficher\_inv}}(\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\_Window}}\ *win,\ SDL\_Renderer\ *renderer,\ \mbox{\hyperlink{structinventory}{inventory\_t}}\ *inv,\ \mbox{\hyperlink{_s_d_l__ttf_8h_ac3b14e1c2946c0cf19776fe568d9abcf}{TTF\_Font}}\ *font,\ \mbox{\hyperlink{struct_s_d_l___color}{SDL\_Color}}\ White);}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00182\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{item_8h_a79cc0c21dcda947471276abdad7d2b03}{itemCheckCase}}(\ \mbox{\hyperlink{structitem}{item\_t}}*\ \mbox{\hyperlink{structitem}{item}},\ \mbox{\hyperlink{structjoueur}{joueur\_t}}*\ j);}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

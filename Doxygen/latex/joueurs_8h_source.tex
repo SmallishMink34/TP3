@@ -1,0 +1,48 @@
+\hypertarget{joueurs_8h_source}{}\doxysection{joueurs.\+h}
+\label{joueurs_8h_source}\index{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Joueur/joueurs.h@{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Joueur/joueurs.h}}
+\mbox{\hyperlink{joueurs_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}../sdl\(\backslash\)include\(\backslash\)SDL.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}../Camera/Cam.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}../Sprites/sprite.h"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#ifndef\ Joueurs\_H}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ Joueurs\_H}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structjoueur}{joueur}}}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ pos[2];}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ life;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ maxlife;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ mana;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ maxmana;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{char}\ name[20];}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ attaque;}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{struct_sprite}{Sprite\_t}}\ *texture;}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structjoueur}{joueur}}\ \mbox{\hyperlink{structjoueur}{joueur\_t}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{joueurs_8h_a045753a774830d8c014f847415f3fdc2}{deplacement}}(\mbox{\hyperlink{structjoueur}{joueur\_t}}\ *\ j);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00066\ \mbox{\hyperlink{structjoueur}{joueur\_t}}\ *\ \mbox{\hyperlink{joueurs_8h_a8f3b89e10a8203c56d5c189e4cf5799b}{creationJoueur}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ SDL\_Renderer\ *\ renderer,\ \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\_Window}}\ *\ win);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00074\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{joueurs_8h_a023da2b401dc0b71c1173b2bdbd44766}{toStringJr}}(\mbox{\hyperlink{structjoueur}{joueur\_t}}\ *\ j);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00086\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{joueurs_8h_a6fd163c3116ce9c945a4e142521dce49}{lifeJoueur}}(\mbox{\hyperlink{structjoueur}{joueur\_t}}\ *\ j,\ \textcolor{keywordtype}{int}\ degat);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00094\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{joueurs_8h_af8045c2e053fc1a7d45b3f25ad226b7b}{getPositionJoueur}}(\mbox{\hyperlink{structjoueur}{joueur\_t}}\ *j);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00102\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{joueurs_8h_ac50e3fa66e0376ef12fcd1b75922cc58}{getPositionJoueurX}}(\mbox{\hyperlink{structjoueur}{joueur\_t}}\ *j);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00110\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{joueurs_8h_a97dbdfd4e6d08f3fa7b0891fe6455486}{getPositionJoueurY}}(\mbox{\hyperlink{structjoueur}{joueur\_t}}\ *j);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00120\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{joueurs_8h_a752e295282192afcc90bb017b6975fa8}{deplaceto}}(\mbox{\hyperlink{structjoueur}{joueur\_t}}\ *\ j,\ \textcolor{keywordtype}{char}\ c,\ \mbox{\hyperlink{struct_camera}{Camera\_t}}\ *\ cam);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

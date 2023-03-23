@@ -1,0 +1,40 @@
+\hypertarget{_s_d_l__platform_8h}{}\doxysection{C\+:/\+Users/matth/\+One\+Drive/\+Documents/\+S2/\+Methodo/\+TP3/sdl/include/\+SDL\+\_\+platform.h File Reference}
+\label{_s_d_l__platform_8h}\index{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/sdl/include/SDL\_platform.h@{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/sdl/include/SDL\_platform.h}}
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+DECLSPEC const char $\ast$SDLCALL \mbox{\hyperlink{_s_d_l__platform_8h_a2fde3bb5b1578f29e786289a8d689255}{SDL\+\_\+\+Get\+Platform}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Try to get a standard set of platform defines. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_s_d_l__platform_8h_a2fde3bb5b1578f29e786289a8d689255}\label{_s_d_l__platform_8h_a2fde3bb5b1578f29e786289a8d689255}} 
+\index{SDL\_platform.h@{SDL\_platform.h}!SDL\_GetPlatform@{SDL\_GetPlatform}}
+\index{SDL\_GetPlatform@{SDL\_GetPlatform}!SDL\_platform.h@{SDL\_platform.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetPlatform()}{SDL\_GetPlatform()}}
+{\footnotesize\ttfamily DECLSPEC const char $\ast$SDLCALL SDL\+\_\+\+Get\+Platform (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Get the name of the platform.
+
+Here are the names returned for some (but not all) supported platforms\+:
+
+
+\begin{DoxyItemize}
+\item \char`\"{}\+Windows\char`\"{}
+\item \char`\"{}\+Mac OS X\char`\"{}
+\item \char`\"{}\+Linux\char`\"{}
+\item \char`\"{}i\+OS\char`\"{}
+\item \char`\"{}\+Android\char`\"{}
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+the name of the platform. If the correct platform name is not available, returns a string beginning with the text \char`\"{}\+Unknown\char`\"{}.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+This function is available since SDL 2.\+0.\+0. 
+\end{DoxySince}

@@ -1,0 +1,194 @@
+\hypertarget{_monstre_8h}{}\doxysection{C\+:/\+Users/matth/\+One\+Drive/\+Documents/\+S2/\+Methodo/\+TP3/\+Monstre/\+Monstre.h File Reference}
+\label{_monstre_8h}\index{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Monstre/Monstre.h@{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Monstre/Monstre.h}}
+
+
+Fichier qui gère Les monstres (Pos, listes,colision, etc...)  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Joueur/joueurs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Constante.\+c\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmonstre}{monstre}}
+\item 
+struct \mbox{\hyperlink{structliste_mst}{liste\+Mst}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_monstre_8h_acb769a9847cb8c53d69a76b84469b26a}\label{_monstre_8h_acb769a9847cb8c53d69a76b84469b26a}} 
+typedef struct \mbox{\hyperlink{structmonstre}{monstre}} {\bfseries monstre\+\_\+t}
+\item 
+\mbox{\Hypertarget{_monstre_8h_a68e93bec1375ce254b74a446d24db8ba}\label{_monstre_8h_a68e93bec1375ce254b74a446d24db8ba}} 
+typedef struct \mbox{\hyperlink{structliste_mst}{liste\+Mst}} {\bfseries liste\+Mst\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$ \mbox{\hyperlink{_monstre_8h_a31b495efd71735a6df45542e85de6958}{creation\+ListeM}} ()
+\begin{DoxyCompactList}\small\item\em Create un monstre\+\_\+t. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_monstre_8h_aaa61e0bd74be5b2576603d9644baac56}{ajout\+Mst}} (\mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$listeM, int j\+\_\+pos0, int j\+\_\+pos1)
+\begin{DoxyCompactList}\small\item\em Ajoute un monstre dans la liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_monstre_8h_a20a1702b94e7ca1dc2d7b0b82a05d8da}{enlever\+Mst}} (\mbox{\hyperlink{structmonstre}{monstre\+\_\+t}} $\ast$m, \mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$liste\+Monster)
+\begin{DoxyCompactList}\small\item\em Enleve un monstre de la liste. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_monstre_8h_ab522b38546da435f447c7f5184f63ba0}{checkinlist}} (\mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$listeM, int j\+\_\+pos0, int j\+\_\+pos1)
+\begin{DoxyCompactList}\small\item\em Check si un monstre est dans la liste. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_monstre_8h_ab97f6f53e359e71656a3c826bc567f63}{check\+Around}} (\mbox{\hyperlink{structmonstre}{monstre\+\_\+t}} $\ast$m, \mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$j)
+\begin{DoxyCompactList}\small\item\em Check si un monstre est autour du joueur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_monstre_8h_ab4ebfe05b9561566e0a63e75b015fdf1}{len}} (\mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$listeM)
+\begin{DoxyCompactList}\small\item\em Retourne la taille de la liste. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{_monstre_8h_ac983ed2a10d134fb8db90344e2d97112}{to\+String\+Mst}} (\mbox{\hyperlink{structmonstre}{monstre\+\_\+t}} $\ast$M)
+\begin{DoxyCompactList}\small\item\em Affiche un monstre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fichier qui gère Les monstres (Pos, listes,colision, etc...) 
+
+\begin{DoxyAuthor}{Author}
+M Moulias 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/03-\/23
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_monstre_8h_aaa61e0bd74be5b2576603d9644baac56}\label{_monstre_8h_aaa61e0bd74be5b2576603d9644baac56}} 
+\index{Monstre.h@{Monstre.h}!ajoutMst@{ajoutMst}}
+\index{ajoutMst@{ajoutMst}!Monstre.h@{Monstre.h}}
+\doxysubsubsection{\texorpdfstring{ajoutMst()}{ajoutMst()}}
+{\footnotesize\ttfamily int ajout\+Mst (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$}]{listeM,  }\item[{int}]{j\+\_\+pos0,  }\item[{int}]{j\+\_\+pos1 }\end{DoxyParamCaption})}
+
+
+
+Ajoute un monstre dans la liste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em listeM} & \\
+\hline
+{\em j\+\_\+pos0} & \\
+\hline
+{\em j\+\_\+pos1} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_monstre_8h_ab97f6f53e359e71656a3c826bc567f63}\label{_monstre_8h_ab97f6f53e359e71656a3c826bc567f63}} 
+\index{Monstre.h@{Monstre.h}!checkAround@{checkAround}}
+\index{checkAround@{checkAround}!Monstre.h@{Monstre.h}}
+\doxysubsubsection{\texorpdfstring{checkAround()}{checkAround()}}
+{\footnotesize\ttfamily int check\+Around (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmonstre}{monstre\+\_\+t}} $\ast$}]{m,  }\item[{\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$}]{j }\end{DoxyParamCaption})}
+
+
+
+Check si un monstre est autour du joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+{\em j} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_monstre_8h_ab522b38546da435f447c7f5184f63ba0}\label{_monstre_8h_ab522b38546da435f447c7f5184f63ba0}} 
+\index{Monstre.h@{Monstre.h}!checkinlist@{checkinlist}}
+\index{checkinlist@{checkinlist}!Monstre.h@{Monstre.h}}
+\doxysubsubsection{\texorpdfstring{checkinlist()}{checkinlist()}}
+{\footnotesize\ttfamily int checkinlist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$}]{listeM,  }\item[{int}]{j\+\_\+pos0,  }\item[{int}]{j\+\_\+pos1 }\end{DoxyParamCaption})}
+
+
+
+Check si un monstre est dans la liste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em listeM} & \\
+\hline
+{\em j\+\_\+pos0} & \\
+\hline
+{\em j\+\_\+pos1} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_monstre_8h_a31b495efd71735a6df45542e85de6958}\label{_monstre_8h_a31b495efd71735a6df45542e85de6958}} 
+\index{Monstre.h@{Monstre.h}!creationListeM@{creationListeM}}
+\index{creationListeM@{creationListeM}!Monstre.h@{Monstre.h}}
+\doxysubsubsection{\texorpdfstring{creationListeM()}{creationListeM()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$ creation\+ListeM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create un monstre\+\_\+t. 
+
+\begin{DoxyReturn}{Returns}
+liste\+Mst\+\_\+t$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_monstre_8h_a20a1702b94e7ca1dc2d7b0b82a05d8da}\label{_monstre_8h_a20a1702b94e7ca1dc2d7b0b82a05d8da}} 
+\index{Monstre.h@{Monstre.h}!enleverMst@{enleverMst}}
+\index{enleverMst@{enleverMst}!Monstre.h@{Monstre.h}}
+\doxysubsubsection{\texorpdfstring{enleverMst()}{enleverMst()}}
+{\footnotesize\ttfamily void enlever\+Mst (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmonstre}{monstre\+\_\+t}} $\ast$}]{m,  }\item[{\mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$}]{liste\+Monster }\end{DoxyParamCaption})}
+
+
+
+Enleve un monstre de la liste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+{\em liste\+Monster} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_monstre_8h_ab4ebfe05b9561566e0a63e75b015fdf1}\label{_monstre_8h_ab4ebfe05b9561566e0a63e75b015fdf1}} 
+\index{Monstre.h@{Monstre.h}!len@{len}}
+\index{len@{len}!Monstre.h@{Monstre.h}}
+\doxysubsubsection{\texorpdfstring{len()}{len()}}
+{\footnotesize\ttfamily int len (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$}]{listeM }\end{DoxyParamCaption})}
+
+
+
+Retourne la taille de la liste. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em listeM} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_monstre_8h_ac983ed2a10d134fb8db90344e2d97112}\label{_monstre_8h_ac983ed2a10d134fb8db90344e2d97112}} 
+\index{Monstre.h@{Monstre.h}!toStringMst@{toStringMst}}
+\index{toStringMst@{toStringMst}!Monstre.h@{Monstre.h}}
+\doxysubsubsection{\texorpdfstring{toStringMst()}{toStringMst()}}
+{\footnotesize\ttfamily char $\ast$ to\+String\+Mst (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmonstre}{monstre\+\_\+t}} $\ast$}]{M }\end{DoxyParamCaption})}
+
+
+
+Affiche un monstre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em M} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ 
+\end{DoxyReturn}

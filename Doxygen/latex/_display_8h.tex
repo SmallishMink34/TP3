@@ -1,0 +1,321 @@
+\hypertarget{_display_8h}{}\doxysection{C\+:/\+Users/matth/\+One\+Drive/\+Documents/\+S2/\+Methodo/\+TP3/\+Display/\+Display.h File Reference}
+\label{_display_8h}\index{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Display/Display.h@{C:/Users/matth/OneDrive/Documents/S2/Methodo/TP3/Display/Display.h}}
+
+
+Fichier qui gère l\textquotesingle{}ensemble de l\textquotesingle{}affichage sur le jeu, gère SDL.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Monstre/\+Monstre.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Joueur/joueurs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../sdl\textbackslash{}include\textbackslash{}\+SDL.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Item/item.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_element_on_map}{Element\+On\+Map}}
+\begin{DoxyCompactList}\small\item\em Create un Element\+On\+Map\+\_\+t. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\+\_\+\+Texture\+Map}}
+\begin{DoxyCompactList}\small\item\em Create un SDL\+\_\+\+Texture\+Map\+\_\+t. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_display_8h_ad8911cedb23a0ad99f64909017eea650}\label{_display_8h_ad8911cedb23a0ad99f64909017eea650}} 
+typedef struct \mbox{\hyperlink{struct_element_on_map}{Element\+On\+Map}} {\bfseries Element\+On\+Map\+\_\+t}
+\item 
+\mbox{\Hypertarget{_display_8h_a147cf2a5ba5d5624c58a8727aa451b88}\label{_display_8h_a147cf2a5ba5d5624c58a8727aa451b88}} 
+typedef struct \mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\+\_\+\+Texture\+Map}} {\bfseries SDL\+\_\+\+Texture\+Map\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\+\_\+\+Texture\+Map\+\_\+t}} $\ast$ \mbox{\hyperlink{_display_8h_a73a83e094e8442029637b7e575257011}{Create\+Texture\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Create un SDL\+\_\+\+Texture\+Map\+\_\+t. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_display_8h_a85c29afe8758ebd4b900c943edd3c0d8}{afficher}} (\mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$monstre\+\_\+list, \mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$j, int Taille\+Map)
+\begin{DoxyCompactList}\small\item\em Affiche la map dans la console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_display_8h_af26c884dc592b6954cd1a76287f92afc}{afficher\+\_\+zoom}} (\mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$monstre\+\_\+list, \mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$j, int Taille\+Map)
+\begin{DoxyCompactList}\small\item\em Affiche la map dans la console avec un zoom sur le joueur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_display_8h_abed124ab111ee095d48f08e2a3ea4446}{SDL\+\_\+\+Exit\+With\+Error}} (const char $\ast$message)
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}erreur SDL et Exit le programme. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_display_8h_ac4b6577390e9e8cf564c0c5b412442dd}{SDL\+\_\+\+Render\+Image}} (SDL\+\_\+\+Renderer $\ast$renderer, SDL\+\_\+\+Texture $\ast$texture, int x, int y, int w, int h, int angle)
+\begin{DoxyCompactList}\small\item\em Affiche une image(texture) sur la fenetre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_display_8h_aa68244ada1ac35e981e68cfdcd014baf}{SDL\+\_\+\+Create\+Image}} (SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$win, char $\ast$path, int x, int y, int w, int h)
+\begin{DoxyCompactList}\small\item\em Crée une image et l\textquotesingle{}affiche sur la fenetre. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Texture $\ast$ \mbox{\hyperlink{_display_8h_af16b2a90cd594dcded65fbd11c7a6e7d}{SDL\+\_\+\+Render\+Texture}} (SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$win, char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Crée une texture a partir d\textquotesingle{}une image. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_display_8h_ac242299ab097f2a162803401787dfa84}{Ajouter\+Monstre\+Map}} (\mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\+\_\+\+Texture\+Map\+\_\+t}} $\ast$Monstre\+Texture, SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$win, \mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$monstre\+\_\+list, int x, int y)
+\begin{DoxyCompactList}\small\item\em Ajoute un monstre a la map. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_display_8h_acb01cec2a6ce023a27225f1b1b6deac9}{Ajouter\+Item\+Map}} (\mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\+\_\+\+Texture\+Map\+\_\+t}} $\ast$Item\+Texture\+Liste, SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$win, \mbox{\hyperlink{structitem_map_list}{item\+Map\+List\+\_\+t}} $\ast$item\+Map, \mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$\mbox{\hyperlink{structitem}{item}}, int x, int y)
+\begin{DoxyCompactList}\small\item\em Ajoute un item a la map. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{_display_8h_a4043f7fc8603c4f227d8b14ea6fd3caa}{Remove\+Monstre\+Map}} (\mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\+\_\+\+Texture\+Map\+\_\+t}} $\ast$Monstre\+Texture, SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$win, \mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$monstre\+\_\+list, \mbox{\hyperlink{structmonstre}{monstre\+\_\+t}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Supprime un monstre de la map. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{_display_8h_aec0d21e8f5e10f556826b97284d8de83}{Remove\+Item\+Map}} (\mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\+\_\+\+Texture\+Map\+\_\+t}} $\ast$Item\+Texture\+Liste, SDL\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$win, \mbox{\hyperlink{structitem_map_list}{item\+Map\+List\+\_\+t}} $\ast$item\+Map, \mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$\mbox{\hyperlink{structitem}{item}})
+\begin{DoxyCompactList}\small\item\em Supprime un item de la map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fichier qui gère l\textquotesingle{}ensemble de l\textquotesingle{}affichage sur le jeu, gère SDL. 
+
+\begin{DoxyAuthor}{Author}
+M Moulias 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/03-\/23
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_display_8h_a85c29afe8758ebd4b900c943edd3c0d8}\label{_display_8h_a85c29afe8758ebd4b900c943edd3c0d8}} 
+\index{Display.h@{Display.h}!afficher@{afficher}}
+\index{afficher@{afficher}!Display.h@{Display.h}}
+\doxysubsubsection{\texorpdfstring{afficher()}{afficher()}}
+{\footnotesize\ttfamily void afficher (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$}]{monstre\+\_\+list,  }\item[{\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$}]{j,  }\item[{int}]{Taille\+Map }\end{DoxyParamCaption})}
+
+
+
+Affiche la map dans la console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em monstre\+\_\+list} & \\
+\hline
+{\em j} & \\
+\hline
+{\em Taille\+Map} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_display_8h_af26c884dc592b6954cd1a76287f92afc}\label{_display_8h_af26c884dc592b6954cd1a76287f92afc}} 
+\index{Display.h@{Display.h}!afficher\_zoom@{afficher\_zoom}}
+\index{afficher\_zoom@{afficher\_zoom}!Display.h@{Display.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_zoom()}{afficher\_zoom()}}
+{\footnotesize\ttfamily void afficher\+\_\+zoom (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$}]{monstre\+\_\+list,  }\item[{\mbox{\hyperlink{joueurs_8h_af9b80b32df724c709b18bba024d55866}{joueur\+\_\+t}} $\ast$}]{j,  }\item[{int}]{Taille\+Map }\end{DoxyParamCaption})}
+
+
+
+Affiche la map dans la console avec un zoom sur le joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em monstre\+\_\+list} & \\
+\hline
+{\em j} & \\
+\hline
+{\em Taille\+Map} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_display_8h_acb01cec2a6ce023a27225f1b1b6deac9}\label{_display_8h_acb01cec2a6ce023a27225f1b1b6deac9}} 
+\index{Display.h@{Display.h}!AjouterItemMap@{AjouterItemMap}}
+\index{AjouterItemMap@{AjouterItemMap}!Display.h@{Display.h}}
+\doxysubsubsection{\texorpdfstring{AjouterItemMap()}{AjouterItemMap()}}
+{\footnotesize\ttfamily int Ajouter\+Item\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\+\_\+\+Texture\+Map\+\_\+t}} $\ast$}]{Item\+Texture\+Liste,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structitem_map_list}{item\+Map\+List\+\_\+t}} $\ast$}]{item\+Map,  }\item[{\mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$}]{item,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Ajoute un item a la map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Item\+Texture\+Liste} & \\
+\hline
+{\em renderer} & \\
+\hline
+{\em win} & \\
+\hline
+{\em item\+Map} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_display_8h_ac242299ab097f2a162803401787dfa84}\label{_display_8h_ac242299ab097f2a162803401787dfa84}} 
+\index{Display.h@{Display.h}!AjouterMonstreMap@{AjouterMonstreMap}}
+\index{AjouterMonstreMap@{AjouterMonstreMap}!Display.h@{Display.h}}
+\doxysubsubsection{\texorpdfstring{AjouterMonstreMap()}{AjouterMonstreMap()}}
+{\footnotesize\ttfamily int Ajouter\+Monstre\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\+\_\+\+Texture\+Map\+\_\+t}} $\ast$}]{Monstre\+Texture,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$}]{monstre\+\_\+list,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Ajoute un monstre a la map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Monstre\+Texture} & \\
+\hline
+{\em renderer} & \\
+\hline
+{\em win} & \\
+\hline
+{\em monstre\+\_\+list} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_display_8h_a73a83e094e8442029637b7e575257011}\label{_display_8h_a73a83e094e8442029637b7e575257011}} 
+\index{Display.h@{Display.h}!CreateTextureMap@{CreateTextureMap}}
+\index{CreateTextureMap@{CreateTextureMap}!Display.h@{Display.h}}
+\doxysubsubsection{\texorpdfstring{CreateTextureMap()}{CreateTextureMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\+\_\+\+Texture\+Map\+\_\+t}} $\ast$ Create\+Texture\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create un SDL\+\_\+\+Texture\+Map\+\_\+t. 
+
+\begin{DoxyReturn}{Returns}
+SDL\+\_\+\+Texture\+Map\+\_\+t$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_display_8h_aec0d21e8f5e10f556826b97284d8de83}\label{_display_8h_aec0d21e8f5e10f556826b97284d8de83}} 
+\index{Display.h@{Display.h}!RemoveItemMap@{RemoveItemMap}}
+\index{RemoveItemMap@{RemoveItemMap}!Display.h@{Display.h}}
+\doxysubsubsection{\texorpdfstring{RemoveItemMap()}{RemoveItemMap()}}
+{\footnotesize\ttfamily void $\ast$ Remove\+Item\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\+\_\+\+Texture\+Map\+\_\+t}} $\ast$}]{Item\+Texture\+Liste,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structitem_map_list}{item\+Map\+List\+\_\+t}} $\ast$}]{item\+Map,  }\item[{\mbox{\hyperlink{structitem}{item\+\_\+t}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+
+
+Supprime un item de la map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Item\+Texture\+Liste} & \\
+\hline
+{\em renderer} & \\
+\hline
+{\em win} & \\
+\hline
+{\em item\+Map} & \\
+\hline
+{\em item} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_display_8h_a4043f7fc8603c4f227d8b14ea6fd3caa}\label{_display_8h_a4043f7fc8603c4f227d8b14ea6fd3caa}} 
+\index{Display.h@{Display.h}!RemoveMonstreMap@{RemoveMonstreMap}}
+\index{RemoveMonstreMap@{RemoveMonstreMap}!Display.h@{Display.h}}
+\doxysubsubsection{\texorpdfstring{RemoveMonstreMap()}{RemoveMonstreMap()}}
+{\footnotesize\ttfamily void $\ast$ Remove\+Monstre\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___texture_map}{SDL\+\_\+\+Texture\+Map\+\_\+t}} $\ast$}]{Monstre\+Texture,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structliste_mst}{liste\+Mst\+\_\+t}} $\ast$}]{monstre\+\_\+list,  }\item[{\mbox{\hyperlink{structmonstre}{monstre\+\_\+t}} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+Supprime un monstre de la map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Monstre\+Texture} & \\
+\hline
+{\em renderer} & \\
+\hline
+{\em win} & \\
+\hline
+{\em monstre\+\_\+list} & \\
+\hline
+{\em m} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_display_8h_aa68244ada1ac35e981e68cfdcd014baf}\label{_display_8h_aa68244ada1ac35e981e68cfdcd014baf}} 
+\index{Display.h@{Display.h}!SDL\_CreateImage@{SDL\_CreateImage}}
+\index{SDL\_CreateImage@{SDL\_CreateImage}!Display.h@{Display.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_CreateImage()}{SDL\_CreateImage()}}
+{\footnotesize\ttfamily void SDL\+\_\+\+Create\+Image (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$}]{win,  }\item[{char $\ast$}]{path,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Crée une image et l\textquotesingle{}affiche sur la fenetre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & \\
+\hline
+{\em win} & \\
+\hline
+{\em path} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em w} & \\
+\hline
+{\em h} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_display_8h_abed124ab111ee095d48f08e2a3ea4446}\label{_display_8h_abed124ab111ee095d48f08e2a3ea4446}} 
+\index{Display.h@{Display.h}!SDL\_ExitWithError@{SDL\_ExitWithError}}
+\index{SDL\_ExitWithError@{SDL\_ExitWithError}!Display.h@{Display.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_ExitWithError()}{SDL\_ExitWithError()}}
+{\footnotesize\ttfamily void SDL\+\_\+\+Exit\+With\+Error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{message }\end{DoxyParamCaption})}
+
+
+
+Affiche l\textquotesingle{}erreur SDL et Exit le programme. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_display_8h_ac4b6577390e9e8cf564c0c5b412442dd}\label{_display_8h_ac4b6577390e9e8cf564c0c5b412442dd}} 
+\index{Display.h@{Display.h}!SDL\_RenderImage@{SDL\_RenderImage}}
+\index{SDL\_RenderImage@{SDL\_RenderImage}!Display.h@{Display.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_RenderImage()}{SDL\_RenderImage()}}
+{\footnotesize\ttfamily void SDL\+\_\+\+Render\+Image (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{SDL\+\_\+\+Texture $\ast$}]{texture,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{angle }\end{DoxyParamCaption})}
+
+
+
+Affiche une image(texture) sur la fenetre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & \\
+\hline
+{\em texture} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em w} & \\
+\hline
+{\em h} & \\
+\hline
+{\em angle} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_display_8h_af16b2a90cd594dcded65fbd11c7a6e7d}\label{_display_8h_af16b2a90cd594dcded65fbd11c7a6e7d}} 
+\index{Display.h@{Display.h}!SDL\_RenderTexture@{SDL\_RenderTexture}}
+\index{SDL\_RenderTexture@{SDL\_RenderTexture}!Display.h@{Display.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_RenderTexture()}{SDL\_RenderTexture()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture $\ast$ SDL\+\_\+\+Render\+Texture (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\+\_\+\+Window}} $\ast$}]{win,  }\item[{char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Crée une texture a partir d\textquotesingle{}une image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & \\
+\hline
+{\em win} & \\
+\hline
+{\em path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SDL\+\_\+\+Texture$\ast$ 
+\end{DoxyReturn}

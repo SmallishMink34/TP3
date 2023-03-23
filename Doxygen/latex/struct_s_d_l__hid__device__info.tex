@@ -1,0 +1,131 @@
+\hypertarget{struct_s_d_l__hid__device__info}{}\doxysection{SDL\+\_\+hid\+\_\+device\+\_\+info Struct Reference}
+\label{struct_s_d_l__hid__device__info}\index{SDL\_hid\_device\_info@{SDL\_hid\_device\_info}}
+
+
+Information about a connected HID device.  
+
+
+
+
+{\ttfamily \#include $<$SDL\+\_\+hidapi.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{struct_s_d_l__hid__device__info_a44196e6a5696d10442c29e639437196e}{path}}
+\item 
+unsigned short \mbox{\hyperlink{struct_s_d_l__hid__device__info_a8dd854779c738741e0c68caad12fc8a6}{vendor\+\_\+id}}
+\item 
+unsigned short \mbox{\hyperlink{struct_s_d_l__hid__device__info_a7cc759e6106a68b56401f2323a5c5c2a}{product\+\_\+id}}
+\item 
+wchar\+\_\+t $\ast$ \mbox{\hyperlink{struct_s_d_l__hid__device__info_ac825bb09859effc914fd5b4706d9319b}{serial\+\_\+number}}
+\item 
+unsigned short \mbox{\hyperlink{struct_s_d_l__hid__device__info_ad36ab7c44ed3ee603ffab9510ab3a969}{release\+\_\+number}}
+\item 
+wchar\+\_\+t $\ast$ \mbox{\hyperlink{struct_s_d_l__hid__device__info_af67900318163cffdc46b9c9bb40b4774}{manufacturer\+\_\+string}}
+\item 
+wchar\+\_\+t $\ast$ \mbox{\hyperlink{struct_s_d_l__hid__device__info_a84e0609ad2163cf5be0bad1b950bd628}{product\+\_\+string}}
+\item 
+unsigned short \mbox{\hyperlink{struct_s_d_l__hid__device__info_a0c5f1243402d4cd4e7649b2d0f64d39b}{usage\+\_\+page}}
+\item 
+unsigned short \mbox{\hyperlink{struct_s_d_l__hid__device__info_a7a2a07edbca64ab55c6b4b8c1e24d3ee}{usage}}
+\item 
+int \mbox{\hyperlink{struct_s_d_l__hid__device__info_a449a181621bad7e4c47c036800ec237a}{interface\+\_\+number}}
+\item 
+int \mbox{\hyperlink{struct_s_d_l__hid__device__info_afaf8f4b7be484e31bb8fe6ee1f4e64d5}{interface\+\_\+class}}
+\item 
+\mbox{\Hypertarget{struct_s_d_l__hid__device__info_ab93d97982395f970f207b6e8cd9ed1a8}\label{struct_s_d_l__hid__device__info_ab93d97982395f970f207b6e8cd9ed1a8}} 
+int {\bfseries interface\+\_\+subclass}
+\item 
+\mbox{\Hypertarget{struct_s_d_l__hid__device__info_a7d2131953903c7b7df5d527afb76931a}\label{struct_s_d_l__hid__device__info_a7d2131953903c7b7df5d527afb76931a}} 
+int {\bfseries interface\+\_\+protocol}
+\item 
+struct \mbox{\hyperlink{struct_s_d_l__hid__device__info}{SDL\+\_\+hid\+\_\+device\+\_\+info}} $\ast$ \mbox{\hyperlink{struct_s_d_l__hid__device__info_a22142418936d8b9bd83aa0dbfcdbbfad}{next}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Information about a connected HID device. 
+
+hidapi info structure 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_s_d_l__hid__device__info_afaf8f4b7be484e31bb8fe6ee1f4e64d5}\label{struct_s_d_l__hid__device__info_afaf8f4b7be484e31bb8fe6ee1f4e64d5}} 
+\index{SDL\_hid\_device\_info@{SDL\_hid\_device\_info}!interface\_class@{interface\_class}}
+\index{interface\_class@{interface\_class}!SDL\_hid\_device\_info@{SDL\_hid\_device\_info}}
+\doxysubsubsection{\texorpdfstring{interface\_class}{interface\_class}}
+{\footnotesize\ttfamily int interface\+\_\+class}
+
+Additional information about the USB interface. Valid on libusb and Android implementations. \mbox{\Hypertarget{struct_s_d_l__hid__device__info_a449a181621bad7e4c47c036800ec237a}\label{struct_s_d_l__hid__device__info_a449a181621bad7e4c47c036800ec237a}} 
+\index{SDL\_hid\_device\_info@{SDL\_hid\_device\_info}!interface\_number@{interface\_number}}
+\index{interface\_number@{interface\_number}!SDL\_hid\_device\_info@{SDL\_hid\_device\_info}}
+\doxysubsubsection{\texorpdfstring{interface\_number}{interface\_number}}
+{\footnotesize\ttfamily int interface\+\_\+number}
+
+The USB interface which this logical device represents.
+
+Valid on both Linux implementations in all cases. Valid on the Windows implementation only if the device contains more than one interface. \mbox{\Hypertarget{struct_s_d_l__hid__device__info_af67900318163cffdc46b9c9bb40b4774}\label{struct_s_d_l__hid__device__info_af67900318163cffdc46b9c9bb40b4774}} 
+\index{SDL\_hid\_device\_info@{SDL\_hid\_device\_info}!manufacturer\_string@{manufacturer\_string}}
+\index{manufacturer\_string@{manufacturer\_string}!SDL\_hid\_device\_info@{SDL\_hid\_device\_info}}
+\doxysubsubsection{\texorpdfstring{manufacturer\_string}{manufacturer\_string}}
+{\footnotesize\ttfamily wchar\+\_\+t$\ast$ manufacturer\+\_\+string}
+
+Manufacturer String \mbox{\Hypertarget{struct_s_d_l__hid__device__info_a22142418936d8b9bd83aa0dbfcdbbfad}\label{struct_s_d_l__hid__device__info_a22142418936d8b9bd83aa0dbfcdbbfad}} 
+\index{SDL\_hid\_device\_info@{SDL\_hid\_device\_info}!next@{next}}
+\index{next@{next}!SDL\_hid\_device\_info@{SDL\_hid\_device\_info}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_s_d_l__hid__device__info}{SDL\+\_\+hid\+\_\+device\+\_\+info}}$\ast$ next}
+
+Pointer to the next device \mbox{\Hypertarget{struct_s_d_l__hid__device__info_a44196e6a5696d10442c29e639437196e}\label{struct_s_d_l__hid__device__info_a44196e6a5696d10442c29e639437196e}} 
+\index{SDL\_hid\_device\_info@{SDL\_hid\_device\_info}!path@{path}}
+\index{path@{path}!SDL\_hid\_device\_info@{SDL\_hid\_device\_info}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily char$\ast$ path}
+
+Platform-\/specific device path \mbox{\Hypertarget{struct_s_d_l__hid__device__info_a7cc759e6106a68b56401f2323a5c5c2a}\label{struct_s_d_l__hid__device__info_a7cc759e6106a68b56401f2323a5c5c2a}} 
+\index{SDL\_hid\_device\_info@{SDL\_hid\_device\_info}!product\_id@{product\_id}}
+\index{product\_id@{product\_id}!SDL\_hid\_device\_info@{SDL\_hid\_device\_info}}
+\doxysubsubsection{\texorpdfstring{product\_id}{product\_id}}
+{\footnotesize\ttfamily unsigned short product\+\_\+id}
+
+Device Product ID \mbox{\Hypertarget{struct_s_d_l__hid__device__info_a84e0609ad2163cf5be0bad1b950bd628}\label{struct_s_d_l__hid__device__info_a84e0609ad2163cf5be0bad1b950bd628}} 
+\index{SDL\_hid\_device\_info@{SDL\_hid\_device\_info}!product\_string@{product\_string}}
+\index{product\_string@{product\_string}!SDL\_hid\_device\_info@{SDL\_hid\_device\_info}}
+\doxysubsubsection{\texorpdfstring{product\_string}{product\_string}}
+{\footnotesize\ttfamily wchar\+\_\+t$\ast$ product\+\_\+string}
+
+Product string \mbox{\Hypertarget{struct_s_d_l__hid__device__info_ad36ab7c44ed3ee603ffab9510ab3a969}\label{struct_s_d_l__hid__device__info_ad36ab7c44ed3ee603ffab9510ab3a969}} 
+\index{SDL\_hid\_device\_info@{SDL\_hid\_device\_info}!release\_number@{release\_number}}
+\index{release\_number@{release\_number}!SDL\_hid\_device\_info@{SDL\_hid\_device\_info}}
+\doxysubsubsection{\texorpdfstring{release\_number}{release\_number}}
+{\footnotesize\ttfamily unsigned short release\+\_\+number}
+
+Device Release Number in binary-\/coded decimal, also known as Device Version Number \mbox{\Hypertarget{struct_s_d_l__hid__device__info_ac825bb09859effc914fd5b4706d9319b}\label{struct_s_d_l__hid__device__info_ac825bb09859effc914fd5b4706d9319b}} 
+\index{SDL\_hid\_device\_info@{SDL\_hid\_device\_info}!serial\_number@{serial\_number}}
+\index{serial\_number@{serial\_number}!SDL\_hid\_device\_info@{SDL\_hid\_device\_info}}
+\doxysubsubsection{\texorpdfstring{serial\_number}{serial\_number}}
+{\footnotesize\ttfamily wchar\+\_\+t$\ast$ serial\+\_\+number}
+
+Serial Number \mbox{\Hypertarget{struct_s_d_l__hid__device__info_a7a2a07edbca64ab55c6b4b8c1e24d3ee}\label{struct_s_d_l__hid__device__info_a7a2a07edbca64ab55c6b4b8c1e24d3ee}} 
+\index{SDL\_hid\_device\_info@{SDL\_hid\_device\_info}!usage@{usage}}
+\index{usage@{usage}!SDL\_hid\_device\_info@{SDL\_hid\_device\_info}}
+\doxysubsubsection{\texorpdfstring{usage}{usage}}
+{\footnotesize\ttfamily unsigned short usage}
+
+Usage for this Device/\+Interface (Windows/\+Mac only). \mbox{\Hypertarget{struct_s_d_l__hid__device__info_a0c5f1243402d4cd4e7649b2d0f64d39b}\label{struct_s_d_l__hid__device__info_a0c5f1243402d4cd4e7649b2d0f64d39b}} 
+\index{SDL\_hid\_device\_info@{SDL\_hid\_device\_info}!usage\_page@{usage\_page}}
+\index{usage\_page@{usage\_page}!SDL\_hid\_device\_info@{SDL\_hid\_device\_info}}
+\doxysubsubsection{\texorpdfstring{usage\_page}{usage\_page}}
+{\footnotesize\ttfamily unsigned short usage\+\_\+page}
+
+Usage Page for this Device/\+Interface (Windows/\+Mac only). \mbox{\Hypertarget{struct_s_d_l__hid__device__info_a8dd854779c738741e0c68caad12fc8a6}\label{struct_s_d_l__hid__device__info_a8dd854779c738741e0c68caad12fc8a6}} 
+\index{SDL\_hid\_device\_info@{SDL\_hid\_device\_info}!vendor\_id@{vendor\_id}}
+\index{vendor\_id@{vendor\_id}!SDL\_hid\_device\_info@{SDL\_hid\_device\_info}}
+\doxysubsubsection{\texorpdfstring{vendor\_id}{vendor\_id}}
+{\footnotesize\ttfamily unsigned short vendor\+\_\+id}
+
+Device Vendor ID 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/matth/\+One\+Drive/\+Documents/\+S2/\+Methodo/\+TP3/sdl/include/\mbox{\hyperlink{_s_d_l__hidapi_8h}{SDL\+\_\+hidapi.\+h}}\end{DoxyCompactItemize}
