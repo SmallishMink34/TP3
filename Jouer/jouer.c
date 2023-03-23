@@ -322,7 +322,6 @@ void SpawnAllElements(SDL_Window *window, SDL_Renderer *renderer, SDL_TextureMap
     for (int i = 0; i < random(10,16); i++){
         do{
             error = AjouterMonstreMap(MonstreTextureListe, renderer, window, monstre_list, random(0, TMAP), random(0, TMAP));
-            if (error == 1) errorsuccessive++;
         }while (error == 1 );
     }
 
